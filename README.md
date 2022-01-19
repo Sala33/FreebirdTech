@@ -131,7 +131,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       <a href="https://github.com/rhanielvalle">
         <img src="https://avatars.githubusercontent.com/u/7490651?v=4" width="100px;" alt="Foto do Rhaniel"/><br>
         <sub>
-          <b>Gustavo Cooke</b>
+          <b>Rhaniel Valle</b>
         </sub>
       </a>
     </td>
