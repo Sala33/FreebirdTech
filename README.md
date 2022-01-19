@@ -7,7 +7,7 @@
 ![Size](https://img.shields.io/github/repo-size/Sala33/FreebirdTech)
 ![License](https://img.shields.io/github/license/Sala33/FreebirdTech)
 
-<img src="wwwroot/img/backg1.png" alt="exemplo imagem">
+<img src="Readme/Opcao2.png" alt="exemplo imagem">
 
 >Ferramenta Open Source para fomentar empresas, ecossistemas, organizações e associações da Indústria Criativa. Cada usuário tem liberdade para executar, acessar, modificar e desenvolver o código fonte para ser implementado em ecossistemas criativos.
 
@@ -114,6 +114,9 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
+## Agradecimentos
+
+<img src="Readme/regua.png" alt="logos">
 
 ## 📝 Licença
 
