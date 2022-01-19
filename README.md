@@ -105,9 +105,25 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
     <td align="center">
       <a href="https://github.com/enirya">
-        <img src="https://avatars.githubusercontent.com/u/24363588?v=4" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <img src="https://avatars.githubusercontent.com/u/24363588?v=4" width="100px;" alt="Foto da Tayrine"/><br>
         <sub>
           <b>Tayrine Lopes</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/fabricciocanhete">
+        <img src="https://avatars.githubusercontent.com/u/82179914?v=4" width="100px;" alt="Foto do Fabriccio"/><br>
+        <sub>
+          <b>Fabriccio Canhete</b>
+        </sub>
+      </a>
+    </td>
+        <td align="center">
+      <a href="https://github.com/guscooke">
+        <img src="https://avatars.githubusercontent.com/u/54864329?v=4" width="100px;" alt="Foto do Gustavo"/><br>
+        <sub>
+          <b>Gustavo Cooke</b>
         </sub>
       </a>
     </td>
