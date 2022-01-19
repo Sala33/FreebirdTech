@@ -1,3 +1,3 @@
-﻿docker build -t registry.heroku.com/freebirdcore/web .
-docker push registry.heroku.com/freebirdcore/web
-heroku container:release web --app freebirdcore
+﻿docker build -t registry.heroku.com/{APP-NAME}/web .
+docker push registry.heroku.com/{APP-NAME}/web
+heroku container:release web --app {APP-NAME}
