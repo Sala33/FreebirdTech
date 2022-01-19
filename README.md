@@ -119,9 +119,17 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         </sub>
       </a>
     </td>
-        <td align="center">
+    <td align="center">
       <a href="https://github.com/guscooke">
         <img src="https://avatars.githubusercontent.com/u/54864329?v=4" width="100px;" alt="Foto do Gustavo"/><br>
+        <sub>
+          <b>Gustavo Cooke</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/rhanielvalle">
+        <img src="https://avatars.githubusercontent.com/u/7490651?v=4" width="100px;" alt="Foto do Rhaniel"/><br>
         <sub>
           <b>Gustavo Cooke</b>
         </sub>
