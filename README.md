@@ -41,6 +41,7 @@ Para instalar o Freebird, siga estas etapas:
 * Use o serviço de database de sua preferência, recomendamos o Tier grátis do [Heroku](https://devcenter.heroku.com/articles/heroku-postgresql)
 * Vá até o arquivo appsettings.json e encontre as chaves `{HOST}` `{DATABASE}` `{PORT}` `{USERNAME}` `{PASSWORD}` e modifique para utilizar os valores fornecidos pelo serviço utilizado
 * Ou caso seja disponível troque pela string de conexão fornecida pelo banco de dados.
+* Utilize o comando Update-Databases no Package Console do Visual Studio.
 
 ### O projeto é baseado em docker para facilitar a implantação.
 
@@ -58,19 +59,18 @@ docker run <nome>
 
 Caso esteja usando o Visual Studio para edição do código o freebird é configurado para utilizar o botão run do docker no Visual Studio;
 
-## ☕ Usando <nome_do_projeto>
+## ☕ Usando o Freebird
 
-Para usar <nome_do_projeto>, siga estas etapas:
+Para usar Freebird, siga estas etapas:
 
-```
-<exemplo_de_uso>
-```
+* Após executar a imagem do Docker, entre no endereço mostrado.
+* Para Editar os templates de acordo com sua vontade entre na pasta `Views`.
+* A pasta `Models` contém os modelos para utilização da Database.
+* A pasta `Controllers` faz a conexão entre a Database e as respectivas páginas.
 
-Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus!
-
-## 📫 Contribuindo para <nome_do_projeto>
+## 📫 Contribuindo para o Freebird
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
-Para contribuir com <nome_do_projeto>, siga estas etapas:
+Para contribuir com o Freebird, entre no Discord e siga estas etapas:
 
 1. Bifurque este repositório.
 2. Crie um branch: `git checkout -b <nome_branch>`.
@@ -88,35 +88,23 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/7014553?s=400&u=065c83fe069588dff1cbf06aa54690f50fda7e2c&v=4" width="100px;" alt="Foto do Danilo Ribeiro no GitHub"/><br>
         <sub>
-          <b>Iuri Silva</b>
+          <b>Danilo Ribeiro</b>
         </sub>
       </a>
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://s2.glbimg.com/FUcw2usZfSTL6yCCGj3L3v3SpJ8=/smart/e.glbimg.com/og/ed/f/original/2019/04/25/zuckerberg_podcast.jpg" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <img src="https://avatars.githubusercontent.com/u/24363588?v=4" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
         <sub>
-          <b>Mark Zuckerberg</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="#">
-        <img src="https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg" width="100px;" alt="Foto do Steve Jobs"/><br>
-        <sub>
-          <b>Steve Jobs</b>
+          <b>Tayrine Lopes</b>
         </sub>
       </a>
     </td>
   </tr>
 </table>
 
-
-## 😄 Seja um dos contribuidores<br>
-
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.
 
 ## 📝 Licença
 
