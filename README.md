@@ -11,6 +11,15 @@
 
 >Ferramenta Open Source para fomentar empresas, ecossistemas, organizações e associações da Indústria Criativa. Cada usuário tem liberdade para executar, acessar, modificar e desenvolver o código fonte para ser implementado em ecossistemas criativos.
 
+## Implementações
+
+O Freebird vem em três formas:
+* A versão em [MVC](https://towardsdatascience.com/everything-you-need-to-know-about-mvc-architecture-3c827930b4c1) desse repositório
+* A versão orientada à microsserviços, separada em API/Cliente - Programada para o dia 31/01
+* A linguagem do Back-end é c# .NetCore 5.0
+* O front end do MVC está em [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor)
+* O front end do cliente está em React.
+
 ### Ajustes e melhorias
 
 Roadmap:
