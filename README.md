@@ -32,11 +32,24 @@ Roadmap:
 
 Para instalar o Freebird, siga estas etapas:
 
-Primeiro obtenha uma chave da API grátis do [Google Maps](https://developers.google.com/maps/documentation)
+### Maps API
+* Primeiro obtenha uma chave da API grátis do [Google Maps](https://developers.google.com/maps/documentation)
+* Vá até Views/Servicos/Details.cshtml e procure a linha 206.
+* Modifique a chave {YOUR_API_KEY_HERE} para utilizar a chave obtida pelo google
 
-O projeto é baseado em docker para facilitar a implantação.
+### PostGres
+* Use o serviço de database de sua preferência, recomendamos o Tier grátis do [Heroku](https://devcenter.heroku.com/articles/heroku-postgresql)
+* Vá até o arquivo appsettings.json e encontre as chaves `{HOST}` `{DATABASE}` `{PORT}` `{USERNAME}` `{PASSWORD}` e modifique para utilizar os valores fornecidos pelo serviço utilizado
+* Ou caso seja disponível troque pela string de conexão fornecida pelo banco de dados.
 
-### Docker:
+### O projeto é baseado em docker para facilitar a implantação.
+
+* Para disponibilizar o app online recomendamos a utilização do Tier grátis do [Heroku](https://medium.com/@lorranpalmeira/deploy-de-uma-aplica%C3%A7%C3%A3o-net-core-3-0-docker-no-heroku-481c21f8d3c5) o projeto já está configurado para a utilização no Heroku, portanto só os passos de configuração da conta e do CLI são necessários.
+* Abra o arquivo Deploy.ps1 no seu editor de texto de preferência.
+* Troque o nome nas chaves `{APP-NAME}` para o nome definido no passo anterior.
+* Abra o Powershell ou CMD no windows e execute o arquivo Deploy.ps1
+
+### Construir a imagem do Docker manualmente:
 ```
 docker build -t <nome> .
 docker run <nome>
