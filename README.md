@@ -127,14 +127,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         </sub>
       </a>
     </td>
-    <td align="center">
-      <a href="https://github.com/rhanielvalle">
-        <img src="https://avatars.githubusercontent.com/u/7490651?v=4" width="100px;" alt="Foto do Rhaniel"/><br>
-        <sub>
-          <b>Rhaniel Valle</b>
-        </sub>
-      </a>
-    </td>
   </tr>
 </table>
 
