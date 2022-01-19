@@ -1,0 +1,168 @@
+\hypertarget{class_project_1_1_controllers_1_1_calendar_events_controller}{}\doxysection{Project.\+Controllers.\+Calendar\+Events\+Controller Class Reference}
+\label{class_project_1_1_controllers_1_1_calendar_events_controller}\index{Project.Controllers.CalendarEventsController@{Project.Controllers.CalendarEventsController}}
+
+
+This class is responsible for controlling the Calendar Events. Some of it\textquotesingle{}s responsabilities are\+:  
+
+
+Inheritance diagram for Project.\+Controllers.\+Calendar\+Events\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_project_1_1_controllers_1_1_calendar_events_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_project_1_1_controllers_1_1_calendar_events_controller_aa3d53589fbd4fdf90946912915c64a8d}{Calendar\+Events\+Controller}} (\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}} context, User\+Manager$<$ Identity\+User $>$ user\+Manager)
+\begin{DoxyCompactList}\small\item\em The method defines the context of the controller \end{DoxyCompactList}\item 
+async Task$<$ Action\+Result$<$ IEnumerable$<$ \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_calendar_event}{Calendar\+Event}} $>$ $>$ $>$ \mbox{\hyperlink{class_project_1_1_controllers_1_1_calendar_events_controller_a42046f3ba6e148d0efe8c6117e4165fb}{Get\+Events}} (\mbox{[}From\+Query\mbox{]} Date\+Time start, \mbox{[}From\+Query\mbox{]} Date\+Time end)
+\begin{DoxyCompactList}\small\item\em The method gets events from a slice of time determined by the User \end{DoxyCompactList}\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_calendar_event}{Calendar\+Event}} $>$ $>$ \mbox{\hyperlink{class_project_1_1_controllers_1_1_calendar_events_controller_adab6d57abe00a8a488c285299b4f1b56}{Get\+Calendar\+Event}} (int id)
+\begin{DoxyCompactList}\small\item\em The method gets a Calendar Event by it\textquotesingle{}s Id wich can be used to acess and modify Events in other part of the software \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_project_1_1_controllers_1_1_calendar_events_controller_a14bb15d4f8926035db54f090d9afb648}{Put\+Calendar\+Event}} (int id, \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_calendar_event}{Calendar\+Event}} calendar\+Event)
+\begin{DoxyCompactList}\small\item\em The method saves the modified Calendar Event, updating it on the database. \end{DoxyCompactList}\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_calendar_event}{Calendar\+Event}} $>$ $>$ \mbox{\hyperlink{class_project_1_1_controllers_1_1_calendar_events_controller_a54e9f5c800fd1331fe84ba3afe472a9a}{Post\+Calendar\+Event}} (\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_calendar_event}{Calendar\+Event}} calendar\+Event)
+\begin{DoxyCompactList}\small\item\em The method posts a Calendar Event created \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_project_1_1_controllers_1_1_calendar_events_controller_aa82e74d652912512508363004e558715}{Delete\+Calendar\+Event}} (int id)
+\begin{DoxyCompactList}\small\item\em The method deletes the selected Calendar Event based on the id \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is responsible for controlling the Calendar Events. Some of it\textquotesingle{}s responsabilities are\+: 
+
+
+\begin{DoxyItemize}
+\item define context \mbox{\hyperlink{class_project_1_1_controllers_1_1_calendar_events_controller}{Calendar\+Events\+Controller}}
+\item query Calendar Events by a time space \mbox{\hyperlink{class_project_1_1_controllers_1_1_calendar_events_controller_a42046f3ba6e148d0efe8c6117e4165fb}{Get\+Events}}
+\item exhibit artist Details (returns Artist View) Details(int?)
+\item get artist and redirect to creation Create\+Async Create(\+Artist)
+\item edit Artist attributes Edit(int, Artist)
+\item get current Avatar Image Get\+Current\+Avatar\+Image(\+Artist)
+\item delete Artist Delete(int?)
+\item confirming deletion Delete\+Confirmed(int). 
+\end{DoxyItemize}
+
+~\newline
+ 
+
+Definition at line \mbox{\hyperlink{_calendar_events_controller_8cs_source_l00031}{31}} of file \mbox{\hyperlink{_calendar_events_controller_8cs_source}{Calendar\+Events\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_project_1_1_controllers_1_1_calendar_events_controller_aa3d53589fbd4fdf90946912915c64a8d}\label{class_project_1_1_controllers_1_1_calendar_events_controller_aa3d53589fbd4fdf90946912915c64a8d}} 
+\index{Project.Controllers.CalendarEventsController@{Project.Controllers.CalendarEventsController}!CalendarEventsController@{CalendarEventsController}}
+\index{CalendarEventsController@{CalendarEventsController}!Project.Controllers.CalendarEventsController@{Project.Controllers.CalendarEventsController}}
+\doxysubsubsection{\texorpdfstring{CalendarEventsController()}{CalendarEventsController()}}
+{\footnotesize\ttfamily Project.\+Controllers.\+Calendar\+Events\+Controller.\+Calendar\+Events\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}}}]{context,  }\item[{User\+Manager$<$ Identity\+User $>$}]{user\+Manager }\end{DoxyParamCaption})}
+
+
+
+The method defines the context of the controller 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The Application\+Db\+Context of the controller\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_calendar_events_controller_8cs_source_l00041}{41}} of file \mbox{\hyperlink{_calendar_events_controller_8cs_source}{Calendar\+Events\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_project_1_1_controllers_1_1_calendar_events_controller_aa82e74d652912512508363004e558715}\label{class_project_1_1_controllers_1_1_calendar_events_controller_aa82e74d652912512508363004e558715}} 
+\index{Project.Controllers.CalendarEventsController@{Project.Controllers.CalendarEventsController}!DeleteCalendarEvent@{DeleteCalendarEvent}}
+\index{DeleteCalendarEvent@{DeleteCalendarEvent}!Project.Controllers.CalendarEventsController@{Project.Controllers.CalendarEventsController}}
+\doxysubsubsection{\texorpdfstring{DeleteCalendarEvent()}{DeleteCalendarEvent()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Project.\+Controllers.\+Calendar\+Events\+Controller.\+Delete\+Calendar\+Event (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+The method deletes the selected Calendar Event based on the id 
+
+\begin{DoxyReturn}{Returns}
+No\+Content\+Result object that produces an empty Microsoft.\+Asp\+Net\+Core.\+Http.\+Status\+Codes.\+Status204\+No\+Content response.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_calendar_events_controller_8cs_source_l00145}{145}} of file \mbox{\hyperlink{_calendar_events_controller_8cs_source}{Calendar\+Events\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_project_1_1_controllers_1_1_calendar_events_controller_adab6d57abe00a8a488c285299b4f1b56}\label{class_project_1_1_controllers_1_1_calendar_events_controller_adab6d57abe00a8a488c285299b4f1b56}} 
+\index{Project.Controllers.CalendarEventsController@{Project.Controllers.CalendarEventsController}!GetCalendarEvent@{GetCalendarEvent}}
+\index{GetCalendarEvent@{GetCalendarEvent}!Project.Controllers.CalendarEventsController@{Project.Controllers.CalendarEventsController}}
+\doxysubsubsection{\texorpdfstring{GetCalendarEvent()}{GetCalendarEvent()}}
+{\footnotesize\ttfamily async Task$<$ Action\+Result$<$ \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_calendar_event}{Calendar\+Event}} $>$ $>$ Project.\+Controllers.\+Calendar\+Events\+Controller.\+Get\+Calendar\+Event (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+The method gets a Calendar Event by it\textquotesingle{}s Id wich can be used to acess and modify Events in other part of the software 
+
+\begin{DoxyReturn}{Returns}
+Not found if the Id doesn\textquotesingle{}t exist or Calendar Event query if exists
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_calendar_events_controller_8cs_source_l00075}{75}} of file \mbox{\hyperlink{_calendar_events_controller_8cs_source}{Calendar\+Events\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_project_1_1_controllers_1_1_calendar_events_controller_a42046f3ba6e148d0efe8c6117e4165fb}\label{class_project_1_1_controllers_1_1_calendar_events_controller_a42046f3ba6e148d0efe8c6117e4165fb}} 
+\index{Project.Controllers.CalendarEventsController@{Project.Controllers.CalendarEventsController}!GetEvents@{GetEvents}}
+\index{GetEvents@{GetEvents}!Project.Controllers.CalendarEventsController@{Project.Controllers.CalendarEventsController}}
+\doxysubsubsection{\texorpdfstring{GetEvents()}{GetEvents()}}
+{\footnotesize\ttfamily async Task$<$ Action\+Result$<$ IEnumerable$<$ \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_calendar_event}{Calendar\+Event}} $>$ $>$ $>$ Project.\+Controllers.\+Calendar\+Events\+Controller.\+Get\+Events (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Query\mbox{]} Date\+Time}]{start,  }\item[{\mbox{[}\+From\+Query\mbox{]} Date\+Time}]{end }\end{DoxyParamCaption})}
+
+
+
+The method gets events from a slice of time determined by the User 
+
+\begin{DoxyReturn}{Returns}
+List of Calendar Events queried
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_calendar_events_controller_8cs_source_l00053}{53}} of file \mbox{\hyperlink{_calendar_events_controller_8cs_source}{Calendar\+Events\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_project_1_1_controllers_1_1_calendar_events_controller_a54e9f5c800fd1331fe84ba3afe472a9a}\label{class_project_1_1_controllers_1_1_calendar_events_controller_a54e9f5c800fd1331fe84ba3afe472a9a}} 
+\index{Project.Controllers.CalendarEventsController@{Project.Controllers.CalendarEventsController}!PostCalendarEvent@{PostCalendarEvent}}
+\index{PostCalendarEvent@{PostCalendarEvent}!Project.Controllers.CalendarEventsController@{Project.Controllers.CalendarEventsController}}
+\doxysubsubsection{\texorpdfstring{PostCalendarEvent()}{PostCalendarEvent()}}
+{\footnotesize\ttfamily async Task$<$ Action\+Result$<$ \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_calendar_event}{Calendar\+Event}} $>$ $>$ Project.\+Controllers.\+Calendar\+Events\+Controller.\+Post\+Calendar\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_calendar_event}{Calendar\+Event}}}]{calendar\+Event }\end{DoxyParamCaption})}
+
+
+
+The method posts a Calendar Event created 
+
+\begin{DoxyReturn}{Returns}
+The created Calendar event for the response
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_calendar_events_controller_8cs_source_l00129}{129}} of file \mbox{\hyperlink{_calendar_events_controller_8cs_source}{Calendar\+Events\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_project_1_1_controllers_1_1_calendar_events_controller_a14bb15d4f8926035db54f090d9afb648}\label{class_project_1_1_controllers_1_1_calendar_events_controller_a14bb15d4f8926035db54f090d9afb648}} 
+\index{Project.Controllers.CalendarEventsController@{Project.Controllers.CalendarEventsController}!PutCalendarEvent@{PutCalendarEvent}}
+\index{PutCalendarEvent@{PutCalendarEvent}!Project.Controllers.CalendarEventsController@{Project.Controllers.CalendarEventsController}}
+\doxysubsubsection{\texorpdfstring{PutCalendarEvent()}{PutCalendarEvent()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Project.\+Controllers.\+Calendar\+Events\+Controller.\+Put\+Calendar\+Event (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_calendar_event}{Calendar\+Event}}}]{calendar\+Event }\end{DoxyParamCaption})}
+
+
+
+The method saves the modified Calendar Event, updating it on the database. 
+
+\begin{DoxyReturn}{Returns}
+The Created No\+Content\+Result object for the response
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_calendar_events_controller_8cs_source_l00094}{94}} of file \mbox{\hyperlink{_calendar_events_controller_8cs_source}{Calendar\+Events\+Controller.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Danilo/source/repos/\+Freebird\+Tech/\+Controllers/\mbox{\hyperlink{_calendar_events_controller_8cs}{Calendar\+Events\+Controller.\+cs}}\end{DoxyCompactItemize}

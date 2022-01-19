@@ -1,0 +1,57 @@
+\hypertarget{_servico_extensions_8cs_source}{}\doxysection{Servico\+Extensions.\+cs}
+\label{_servico_extensions_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Extensions/ServicoExtensions.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Extensions/ServicoExtensions.cs}}
+\mbox{\hyperlink{_servico_extensions_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00001}00001 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_data}{Data}};}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00002}00002 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_models}{Models}};}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00003}00003 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_utility}{Utility}};}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00004}00004 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_view_components}{ViewComponents}};}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00005}00005 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00006}00006 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00007}00007 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00008}00008 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00009}00009 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00011}00011 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_extensions}{FreebirdTech.Extensions}}}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00012}00012 \{}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00013}00013     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{class }ServicoExtensions}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00014}00014     \{}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00015}00015         \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio}{Portfolio}}[] PopulatePortfolio(\textcolor{keyword}{this} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico}{Servico}} servico, \mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}} context)}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00016}00016         \{}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00017}00017             var s = servico;}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00019}00019             var p = context.\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_a4a0bd7643a783b5eda02549c00a06d47}{Portfolios}}.AsNoTracking().Where(m => m.OwnerServico == s).Include(m => m.Image).ToArray();}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00021}00021             \textcolor{keywordflow}{foreach} (var item \textcolor{keywordflow}{in} p)}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00022}00022             \{}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00023}00023                 \textcolor{keywordflow}{if} (item.Image != \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00024}00024                     item.EmbedLink = item.Image.DecodeImage();}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00025}00025             \}}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00027}00027             \textcolor{keywordflow}{return} p;}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00028}00028         \}}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00030}00030         \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{class_freebird_tech_1_1_view_components_1_1_card_info}{CardInfo}} CreateCardInfo(\textcolor{keyword}{this} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico}{Servico}} servico, \mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}} context)}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00031}00031         \{}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00032}00032             var capaPortfolio = context.\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_a4a0bd7643a783b5eda02549c00a06d47}{Portfolios}}.Include(m => m.Image)}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00033}00033                                                     .AsNoTracking()}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00034}00034                                                     .Where(m => m.OwnerServico == servico \&\& m.PortfolioType.Equals(\mbox{\hyperlink{namespace_freebird_tech_1_1_utility_a8107f6bfce3a4659129d1fd490c646ce}{EPortfolioType}}.IMAGEM\_CAPA.ToString()))}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00035}00035                                                     .FirstOrDefault();           }
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00036}00036             var img = capaPortfolio.Image.DecodeImage();}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00038}00038             var card = \textcolor{keyword}{new} \mbox{\hyperlink{class_freebird_tech_1_1_view_components_1_1_card_info}{CardInfo}}}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00039}00039             \{}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00040}00040                 ID = servico.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a3c38a6b07b513e2989efe764cbd4654b}{Id}},}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00041}00041                 ImageData = img,}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00042}00042                 OwnerName = servico.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a745632ed76885decffed1104ed04ae8d}{OwnerID}}.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_ac4d1f9fb8f8a802bb0eae411d9876105}{Name}},}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00043}00043                 BriefDescription = servico.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_af72d857d9afd0a6519be1d25469899f2}{BriefDescription}},}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00044}00044                 Title = servico.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_ad225d301dd257a46a1f5721590ca04fa}{Title}},}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00045}00045                 Categoria = servico.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_aaa131db884b3b7d9b0d884bcf3a93872}{GigCategory}}}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00046}00046             \};}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00048}00048             \textcolor{keywordflow}{return} card;}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00049}00049         \}}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00050}00050     \}}
+\DoxyCodeLine{\Hypertarget{_servico_extensions_8cs_source_l00051}00051 \}}
+
+\end{DoxyCode}

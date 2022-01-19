@@ -1,0 +1,262 @@
+\hypertarget{class_freebird_tech_1_1_controllers_1_1_portfolios_controller}{}\doxysection{Freebird\+Tech.\+Controllers.\+Portfolios\+Controller Class Reference}
+\label{class_freebird_tech_1_1_controllers_1_1_portfolios_controller}\index{FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}}
+
+
+This class is responsible for controlling the porfolios. Some of it\textquotesingle{}s responsabilities are\+:  
+
+
+Inheritance diagram for Freebird\+Tech.\+Controllers.\+Portfolios\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_freebird_tech_1_1_controllers_1_1_portfolios_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a60b942e916d70d1d66593776e71d2bd2}{Portfolios\+Controller}} (\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}} context)
+\begin{DoxyCompactList}\small\item\em The method defines the context \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_acfb5abf59dbf9754e0c42de33f16fb04}{Index}} ()
+\begin{DoxyCompactList}\small\item\em The method is responsible for returning a view with list of porfolios \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a79692ea57bff7c7a06075d83a0f3ea92}{Details}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method searches for an existing porfolio to exhibit it\textquotesingle{}s details \end{DoxyCompactList}\item 
+IAction\+Result \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_ad245a2fbc027fbc17cc3dd1a89dd2ffb}{Create}} ()
+\begin{DoxyCompactList}\small\item\em The method Creates a view \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a4ed071f85ab3d7553edf3ab0023a86ad}{Create}} (\mbox{[}Bind(\char`\"{}Id,Portfolio\+Type,Embed\+Link\char`\"{})\mbox{]} Portfolio portfolio)
+\begin{DoxyCompactList}\small\item\em The method sends the data necessary for creating a portfolio \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a889340f8691bedb260eb0f4b9c7cc863}{Edit}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method finds a portfolio related to the id \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a56661e059e4f18acef54d18d684d1a84}{Edit}} (int id, \mbox{[}Bind(\char`\"{}Id,Portfolio\+Type,Embed\+Link\char`\"{})\mbox{]} Portfolio portfolio)
+\begin{DoxyCompactList}\small\item\em The method edits a portfolio and saves the changes in the database \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_af1e9ec983a77d06f373b6c3d24cb0f5e}{Delete}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method deletes a portfolio from the database \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_aeda4abce14c7b3c5b433fc4bdba7c5cb}{Delete\+Confirmed}} (int id)
+\begin{DoxyCompactList}\small\item\em The method confirms if a portfolio was deleted \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is responsible for controlling the porfolios. Some of it\textquotesingle{}s responsabilities are\+: 
+
+
+\begin{DoxyItemize}
+\item define context and user \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller}{Artists\+Controller}}
+\item show Index \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_acfb5abf59dbf9754e0c42de33f16fb04}{Index}}
+\item exhibit portfolio Details \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a79692ea57bff7c7a06075d83a0f3ea92}{Details(int?)}}
+\item Create a View \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_ad245a2fbc027fbc17cc3dd1a89dd2ffb}{Create()}}
+\item Create a Portfolio \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a4ed071f85ab3d7553edf3ab0023a86ad}{Create(\+Portfolio)}}
+\item Retrieves the portfolio to be edited \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a889340f8691bedb260eb0f4b9c7cc863}{Edit(int?)}}
+\item Edits a portfolio in the database \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a56661e059e4f18acef54d18d684d1a84}{Edit(int, Portfolio)}}
+\item Deletes a portfolio \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_af1e9ec983a77d06f373b6c3d24cb0f5e}{Delete(int?)}}
+\item Checks the deletion of a portfolio \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_aeda4abce14c7b3c5b433fc4bdba7c5cb}{Delete\+Confirmed(int)}}
+\item Check if a portfolio exists Portfolio\+Exists(int) 
+\end{DoxyItemize}
+
+~\newline
+ 
+
+Definition at line \mbox{\hyperlink{_portfolios_controller_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_portfolios_controller_8cs_source}{Portfolios\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a60b942e916d70d1d66593776e71d2bd2}\label{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a60b942e916d70d1d66593776e71d2bd2}} 
+\index{FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}!PortfoliosController@{PortfoliosController}}
+\index{PortfoliosController@{PortfoliosController}!FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}}
+\doxysubsubsection{\texorpdfstring{PortfoliosController()}{PortfoliosController()}}
+{\footnotesize\ttfamily Freebird\+Tech.\+Controllers.\+Portfolios\+Controller.\+Portfolios\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}}}]{context }\end{DoxyParamCaption})}
+
+
+
+The method defines the context 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The Application\+Db\+Context of the controller\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_portfolios_controller_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_portfolios_controller_8cs_source}{Portfolios\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_ad245a2fbc027fbc17cc3dd1a89dd2ffb}\label{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_ad245a2fbc027fbc17cc3dd1a89dd2ffb}} 
+\index{FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}!Create@{Create}}
+\index{Create@{Create}!FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily IAction\+Result Freebird\+Tech.\+Controllers.\+Portfolios\+Controller.\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method Creates a view 
+
+\begin{DoxyReturn}{Returns}
+A created view
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_portfolios_controller_8cs_source_l00079}{79}} of file \mbox{\hyperlink{_portfolios_controller_8cs_source}{Portfolios\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a4ed071f85ab3d7553edf3ab0023a86ad}\label{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a4ed071f85ab3d7553edf3ab0023a86ad}} 
+\index{FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}!Create@{Create}}
+\index{Create@{Create}!FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Portfolios\+Controller.\+Create (\begin{DoxyParamCaption}\item[{\mbox{[}\+Bind(\char`\"{}\+Id,\+Portfolio\+Type,\+Embed\+Link\char`\"{})\mbox{]} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio}{Portfolio}}}]{portfolio }\end{DoxyParamCaption})}
+
+
+
+The method sends the data necessary for creating a portfolio 
+
+
+\begin{DoxyParams}{Parameters}
+{\em portfolio} & The portfolio \begin{DoxyReturn}{Returns}
+A view with the portfolio or a Redirect\+To\+Action
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_portfolios_controller_8cs_source_l00094}{94}} of file \mbox{\hyperlink{_portfolios_controller_8cs_source}{Portfolios\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_af1e9ec983a77d06f373b6c3d24cb0f5e}\label{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_af1e9ec983a77d06f373b6c3d24cb0f5e}} 
+\index{FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}!Delete@{Delete}}
+\index{Delete@{Delete}!FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Portfolios\+Controller.\+Delete (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method deletes a portfolio from the database 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The portfolio id \begin{DoxyReturn}{Returns}
+A view with the portfolio or Not\+Found
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_portfolios_controller_8cs_source_l00173}{173}} of file \mbox{\hyperlink{_portfolios_controller_8cs_source}{Portfolios\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_aeda4abce14c7b3c5b433fc4bdba7c5cb}\label{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_aeda4abce14c7b3c5b433fc4bdba7c5cb}} 
+\index{FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}!DeleteConfirmed@{DeleteConfirmed}}
+\index{DeleteConfirmed@{DeleteConfirmed}!FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}}
+\doxysubsubsection{\texorpdfstring{DeleteConfirmed()}{DeleteConfirmed()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Portfolios\+Controller.\+Delete\+Confirmed (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+The method confirms if a portfolio was deleted 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The portfolio id \begin{DoxyReturn}{Returns}
+A Redirect\+To\+Action
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_portfolios_controller_8cs_source_l00198}{198}} of file \mbox{\hyperlink{_portfolios_controller_8cs_source}{Portfolios\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a79692ea57bff7c7a06075d83a0f3ea92}\label{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a79692ea57bff7c7a06075d83a0f3ea92}} 
+\index{FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}!Details@{Details}}
+\index{Details@{Details}!FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}}
+\doxysubsubsection{\texorpdfstring{Details()}{Details()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Portfolios\+Controller.\+Details (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method searches for an existing porfolio to exhibit it\textquotesingle{}s details 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The Id of the porfolio \begin{DoxyReturn}{Returns}
+A new view of the porfolio selected
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_portfolios_controller_8cs_source_l00057}{57}} of file \mbox{\hyperlink{_portfolios_controller_8cs_source}{Portfolios\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a56661e059e4f18acef54d18d684d1a84}\label{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a56661e059e4f18acef54d18d684d1a84}} 
+\index{FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}!Edit@{Edit}}
+\index{Edit@{Edit}!FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Portfolios\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{[}\+Bind(\char`\"{}\+Id,\+Portfolio\+Type,\+Embed\+Link\char`\"{})\mbox{]} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio}{Portfolio}}}]{portfolio }\end{DoxyParamCaption})}
+
+
+
+The method edits a portfolio and saves the changes in the database 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The portfolio id 
+\begin{DoxyParams}{Parameters}
+{\em message} & The portfolio to be sent \begin{DoxyReturn}{Returns}
+A view with the portfolio, Not\+Found or a Redirect\+To\+Action
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_portfolios_controller_8cs_source_l00137}{137}} of file \mbox{\hyperlink{_portfolios_controller_8cs_source}{Portfolios\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a889340f8691bedb260eb0f4b9c7cc863}\label{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_a889340f8691bedb260eb0f4b9c7cc863}} 
+\index{FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}!Edit@{Edit}}
+\index{Edit@{Edit}!FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Portfolios\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method finds a portfolio related to the id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The portfolio id \begin{DoxyReturn}{Returns}
+A view with the portfolio or a Not\+Found
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_portfolios_controller_8cs_source_l00111}{111}} of file \mbox{\hyperlink{_portfolios_controller_8cs_source}{Portfolios\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_acfb5abf59dbf9754e0c42de33f16fb04}\label{class_freebird_tech_1_1_controllers_1_1_portfolios_controller_acfb5abf59dbf9754e0c42de33f16fb04}} 
+\index{FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}!Index@{Index}}
+\index{Index@{Index}!FreebirdTech.Controllers.PortfoliosController@{FreebirdTech.Controllers.PortfoliosController}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Portfolios\+Controller.\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method is responsible for returning a view with list of porfolios 
+
+\begin{DoxyReturn}{Returns}
+A new view with a list of porfolios
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_portfolios_controller_8cs_source_l00046}{46}} of file \mbox{\hyperlink{_portfolios_controller_8cs_source}{Portfolios\+Controller.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Danilo/source/repos/\+Freebird\+Tech/\+Controllers/\mbox{\hyperlink{_portfolios_controller_8cs}{Portfolios\+Controller.\+cs}}\end{DoxyCompactItemize}

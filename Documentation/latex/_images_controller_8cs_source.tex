@@ -1,0 +1,159 @@
+\hypertarget{_images_controller_8cs_source}{}\doxysection{Images\+Controller.\+cs}
+\label{_images_controller_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Controllers/ImagesController.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Controllers/ImagesController.cs}}
+\mbox{\hyperlink{_images_controller_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00005}00005 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.Rendering;}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00007}00007 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00008}00008 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_data}{Data}};}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00009}00009 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_models}{Models}};}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00011}00011 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_controllers}{FreebirdTech.Controllers}}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00012}00012 \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00026}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller}{00026}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller}{ImagesController}} : Controller}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00027}00027     \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00028}00028         \textcolor{keyword}{private} readonly \mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}} \_context;}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00035}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a83788cc69ec855a21157a4d0a44d4f64}{00035}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a83788cc69ec855a21157a4d0a44d4f64}{ImagesController}}(\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}} context)}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00036}00036         \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00037}00037             \_context = context;}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00038}00038         \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00044}00044         \textcolor{comment}{// GET: Images}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00045}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_adcc926efbeb840a91643f5ef05d06dea}{00045}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_adcc926efbeb840a91643f5ef05d06dea}{Index}}()}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00046}00046         \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00047}00047             \textcolor{keywordflow}{return} View(await \_context.Images.ToListAsync());}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00048}00048         \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00058}00058         \textcolor{comment}{// GET: Images/Details/5}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00059}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a05e28e71440c397212454e246f83da91}{00059}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a05e28e71440c397212454e246f83da91}{Details}}(\textcolor{keywordtype}{int}? \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00060}00060         \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00061}00061             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00062}00062             \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00063}00063                 \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00064}00064             \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00066}00066             var image = await \_context.Images}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00067}00067                 .FirstOrDefaultAsync(m => m.Id == \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00068}00068             \textcolor{keywordflow}{if} (image == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00069}00069             \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00070}00070                 \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00071}00071             \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00073}00073             \textcolor{keywordflow}{return} View(image);}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00074}00074         \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00080}00080         \textcolor{comment}{// GET: Images/Create}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00081}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a76811bb464f1f436b9f5fb6590bb699a}{00081}}         \textcolor{keyword}{public} IActionResult \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a76811bb464f1f436b9f5fb6590bb699a}{Create}}()}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00082}00082         \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00083}00083             \textcolor{keywordflow}{return} View();}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00084}00084         \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00096}00096         \textcolor{comment}{// POST: Images/Create}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00097}00097         \textcolor{comment}{// To protect from overposting attacks, enable the specific properties you want to bind to.}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00098}00098         \textcolor{comment}{// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00099}00099         [HttpPost]}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00100}00100         [ValidateAntiForgeryToken]}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00101}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a421b9a13b9ee34faa483598f72870dc7}{00101}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a421b9a13b9ee34faa483598f72870dc7}{Create}}([Bind(\textcolor{stringliteral}{"{}Id,ImageTitle,ImageData"{}})] \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image}{Image}} image)}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00102}00102         \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00103}00103             \textcolor{keywordflow}{if} (ModelState.IsValid)}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00104}00104             \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00105}00105                 \_context.Add(image);}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00106}00106                 await \_context.SaveChangesAsync();}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00107}00107                 \textcolor{keywordflow}{return} RedirectToAction(nameof(\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_adcc926efbeb840a91643f5ef05d06dea}{Index}}));}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00108}00108             \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00109}00109             \textcolor{keywordflow}{return} View(image);}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00110}00110         \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00121}00121         \textcolor{comment}{// GET: Images/Edit/5}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00122}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a1c16d8aba32f8fb6bf85978e1d100e60}{00122}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a1c16d8aba32f8fb6bf85978e1d100e60}{Edit}}(\textcolor{keywordtype}{int}? \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00123}00123         \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00124}00124             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00125}00125             \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00126}00126                 \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00127}00127             \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00129}00129             var image = await \_context.Images.FindAsync(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00130}00130             \textcolor{keywordflow}{if} (image == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00131}00131             \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00132}00132                 \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00133}00133             \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00134}00134             \textcolor{keywordflow}{return} View(image);}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00135}00135         \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00136}00136 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00144}00144         \textcolor{comment}{// POST: Images/Edit/5}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00145}00145         \textcolor{comment}{// To protect from overposting attacks, enable the specific properties you want to bind to.}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00146}00146         \textcolor{comment}{// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00147}00147         [HttpPost]}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00148}00148         [ValidateAntiForgeryToken]}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00149}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_ae31e70fb76f7f364462e0ddf25996ed3}{00149}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_ae31e70fb76f7f364462e0ddf25996ed3}{Edit}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, [Bind(\textcolor{stringliteral}{"{}Id,ImageTitle,ImageData"{}})] \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image}{Image}} image)}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00150}00150         \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00151}00151             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} != image.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image_a7ff1eef80aabdec8a2f2ed3d08659065}{Id}})}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00152}00152             \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00153}00153                 \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00154}00154             \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00155}00155 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00156}00156             \textcolor{keywordflow}{if} (ModelState.IsValid)}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00157}00157             \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00158}00158                 \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00159}00159                 \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00160}00160                     \_context.Update(image);}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00161}00161                     await \_context.SaveChangesAsync();}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00162}00162                 \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00163}00163                 \textcolor{keywordflow}{catch} (DbUpdateConcurrencyException)}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00164}00164                 \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00165}00165                     \textcolor{keywordflow}{if} (!ImageExists(image.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image_a7ff1eef80aabdec8a2f2ed3d08659065}{Id}}))}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00166}00166                     \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00167}00167                         \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00168}00168                     \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00169}00169                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00170}00170                     \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00171}00171                         \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00172}00172                     \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00173}00173                 \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00174}00174                 \textcolor{keywordflow}{return} RedirectToAction(nameof(\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_adcc926efbeb840a91643f5ef05d06dea}{Index}}));}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00175}00175             \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00176}00176             \textcolor{keywordflow}{return} View(image);}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00177}00177         \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00184}00184         \textcolor{comment}{// GET: Images/Delete/5}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00185}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a766352a83ff3b7f4103a9d24c69ab616}{00185}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a766352a83ff3b7f4103a9d24c69ab616}{Delete}}(\textcolor{keywordtype}{int}? \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00186}00186         \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00187}00187             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00188}00188             \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00189}00189                 \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00190}00190             \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00191}00191 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00192}00192             var image = await \_context.Images}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00193}00193                 .FirstOrDefaultAsync(m => m.Id == \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00194}00194             \textcolor{keywordflow}{if} (image == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00195}00195             \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00196}00196                 \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00197}00197             \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00198}00198 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00199}00199             \textcolor{keywordflow}{return} View(image);}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00200}00200         \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00201}00201 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00207}00207         \textcolor{comment}{// POST: Images/Delete/5}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00208}00208         [HttpPost, ActionName(\textcolor{stringliteral}{"{}Delete"{}})]}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00209}00209         [ValidateAntiForgeryToken]}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00210}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a69266394aa1a954ae6ee1118765b1403}{00210}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a69266394aa1a954ae6ee1118765b1403}{DeleteConfirmed}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00211}00211         \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00212}00212             var image = await \_context.Images.FindAsync(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00213}00213             \_context.Images.Remove(image);}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00214}00214             await \_context.SaveChangesAsync();}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00215}00215             \textcolor{keywordflow}{return} RedirectToAction(nameof(\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_adcc926efbeb840a91643f5ef05d06dea}{Index}}));}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00216}00216         \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00217}00217 }
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00223}00223         \textcolor{keyword}{private} \textcolor{keywordtype}{bool} ImageExists(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00224}00224         \{}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00225}00225             \textcolor{keywordflow}{return} \_context.Images.Any(e => e.Id == \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00226}00226         \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00227}00227     \}}
+\DoxyCodeLine{\Hypertarget{_images_controller_8cs_source_l00228}00228 \}}
+
+\end{DoxyCode}

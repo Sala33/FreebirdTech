@@ -1,0 +1,258 @@
+\hypertarget{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller}{}\doxysection{Freebird\+Tech.\+Controllers.\+Mailing\+Lists\+Controller Class Reference}
+\label{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller}\index{FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}}
+
+
+This class is responsible for controlling the mailing list. Some of it\textquotesingle{}s responsabilities are\+:  
+
+
+Inheritance diagram for Freebird\+Tech.\+Controllers.\+Mailing\+Lists\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_acbc279a01b09b56f1da98a2a42f912b7}{Mailing\+Lists\+Controller}} (\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}} context)
+\begin{DoxyCompactList}\small\item\em The method defines the context of the controller \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a1dc9628843036fe55dcffd109597c1ab}{Index}} ()
+\begin{DoxyCompactList}\small\item\em The method asynchronously gets the mailing list \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_aa85cb45e63e6994c171ffe536f280dfa}{Details}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method asynchronously gets the details of the mailing list \end{DoxyCompactList}\item 
+IAction\+Result \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_add4410b313e5391ad496f81e8f9fcdc1}{Create}} ()
+\begin{DoxyCompactList}\small\item\em The method creates a view \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a9f0ecfcb3008dd81943f12a494a66609}{Create}} (\mbox{[}Bind(\char`\"{}Id,Email\char`\"{})\mbox{]} Mailing\+List mailing\+List)
+\begin{DoxyCompactList}\small\item\em The method asynchronously save the changes made to the mailing list in the context \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_ab994c1c47141a7fdd888cf92756a1ec1}{Edit}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method asynchronously edits the mailing list \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a12d798502b8701dc79056398550160e0}{Edit}} (int id, \mbox{[}Bind(\char`\"{}Id,Email\char`\"{})\mbox{]} Mailing\+List mailing\+List)
+\begin{DoxyCompactList}\small\item\em The method asynchronously saves the edits in the mailing list if the Modal\+State is valid \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a290625b71aa947f0f9f57dd84f85839e}{Delete}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method asynchronously deletes the mailing list if it\textquotesingle{}s not null \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a491dbf1603b364ae0e9ff9a2efb0d64b}{Delete\+Confirmed}} (int id)
+\begin{DoxyCompactList}\small\item\em The method asynchronously confirms if the deletion of the mailing list \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is responsible for controlling the mailing list. Some of it\textquotesingle{}s responsabilities are\+: 
+
+
+\begin{DoxyItemize}
+\item define a context\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller}{Mailing\+Lists\+Controller}}
+\item show Index \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a1dc9628843036fe55dcffd109597c1ab}{Index()}}
+\item exhibit mailing list Details \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_aa85cb45e63e6994c171ffe536f280dfa}{Details(int?)}}
+\item creating a mailing list \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_add4410b313e5391ad496f81e8f9fcdc1}{Create}}
+\item saving created mailing list \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a9f0ecfcb3008dd81943f12a494a66609}{Create(\+Mailing\+List)}}
+\item edit mailing list\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_ab994c1c47141a7fdd888cf92756a1ec1}{Edit(int?)}}
+\item delete mailing list\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a290625b71aa947f0f9f57dd84f85839e}{Delete(int?)}}
+\item confirming deletion \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a491dbf1603b364ae0e9ff9a2efb0d64b}{Delete\+Confirmed(int)}}.
+\item verify mailing list Mailing\+List\+Exists(int). 
+\end{DoxyItemize}
+
+~\newline
+ 
+
+Definition at line \mbox{\hyperlink{_mailing_lists_controller_8cs_source_l00026}{26}} of file \mbox{\hyperlink{_mailing_lists_controller_8cs_source}{Mailing\+Lists\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_acbc279a01b09b56f1da98a2a42f912b7}\label{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_acbc279a01b09b56f1da98a2a42f912b7}} 
+\index{FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}!MailingListsController@{MailingListsController}}
+\index{MailingListsController@{MailingListsController}!FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}}
+\doxysubsubsection{\texorpdfstring{MailingListsController()}{MailingListsController()}}
+{\footnotesize\ttfamily Freebird\+Tech.\+Controllers.\+Mailing\+Lists\+Controller.\+Mailing\+Lists\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}}}]{context }\end{DoxyParamCaption})}
+
+
+
+The method defines the context of the controller 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The Application\+Db\+Context of the controller\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_mailing_lists_controller_8cs_source_l00035}{35}} of file \mbox{\hyperlink{_mailing_lists_controller_8cs_source}{Mailing\+Lists\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_add4410b313e5391ad496f81e8f9fcdc1}\label{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_add4410b313e5391ad496f81e8f9fcdc1}} 
+\index{FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}!Create@{Create}}
+\index{Create@{Create}!FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily IAction\+Result Freebird\+Tech.\+Controllers.\+Mailing\+Lists\+Controller.\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method creates a view 
+
+\begin{DoxyReturn}{Returns}
+An initialized view
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_mailing_lists_controller_8cs_source_l00078}{78}} of file \mbox{\hyperlink{_mailing_lists_controller_8cs_source}{Mailing\+Lists\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a9f0ecfcb3008dd81943f12a494a66609}\label{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a9f0ecfcb3008dd81943f12a494a66609}} 
+\index{FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}!Create@{Create}}
+\index{Create@{Create}!FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Mailing\+Lists\+Controller.\+Create (\begin{DoxyParamCaption}\item[{\mbox{[}\+Bind(\char`\"{}\+Id,\+Email\char`\"{})\mbox{]} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_mailing_list}{Mailing\+List}}}]{mailing\+List }\end{DoxyParamCaption})}
+
+
+
+The method asynchronously save the changes made to the mailing list in the context 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mailing\+List} & The mailing\+List the be saved in the context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A view with the mailing list or a Redirect\+To\+Action
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_mailing_lists_controller_8cs_source_l00093}{93}} of file \mbox{\hyperlink{_mailing_lists_controller_8cs_source}{Mailing\+Lists\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a290625b71aa947f0f9f57dd84f85839e}\label{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a290625b71aa947f0f9f57dd84f85839e}} 
+\index{FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}!Delete@{Delete}}
+\index{Delete@{Delete}!FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Mailing\+Lists\+Controller.\+Delete (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method asynchronously deletes the mailing list if it\textquotesingle{}s not null 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The mailing\+List id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A view with the mailing list or Not\+Found
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_mailing_lists_controller_8cs_source_l00172}{172}} of file \mbox{\hyperlink{_mailing_lists_controller_8cs_source}{Mailing\+Lists\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a491dbf1603b364ae0e9ff9a2efb0d64b}\label{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a491dbf1603b364ae0e9ff9a2efb0d64b}} 
+\index{FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}!DeleteConfirmed@{DeleteConfirmed}}
+\index{DeleteConfirmed@{DeleteConfirmed}!FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}}
+\doxysubsubsection{\texorpdfstring{DeleteConfirmed()}{DeleteConfirmed()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Mailing\+Lists\+Controller.\+Delete\+Confirmed (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+The method asynchronously confirms if the deletion of the mailing list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The mailing\+List id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Redirect\+To\+Action
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_mailing_lists_controller_8cs_source_l00197}{197}} of file \mbox{\hyperlink{_mailing_lists_controller_8cs_source}{Mailing\+Lists\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_aa85cb45e63e6994c171ffe536f280dfa}\label{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_aa85cb45e63e6994c171ffe536f280dfa}} 
+\index{FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}!Details@{Details}}
+\index{Details@{Details}!FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}}
+\doxysubsubsection{\texorpdfstring{Details()}{Details()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Mailing\+Lists\+Controller.\+Details (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method asynchronously gets the details of the mailing list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id related to the mailing list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Not\+Found or a view with the mailing list
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_mailing_lists_controller_8cs_source_l00056}{56}} of file \mbox{\hyperlink{_mailing_lists_controller_8cs_source}{Mailing\+Lists\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a12d798502b8701dc79056398550160e0}\label{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a12d798502b8701dc79056398550160e0}} 
+\index{FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}!Edit@{Edit}}
+\index{Edit@{Edit}!FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Mailing\+Lists\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{[}\+Bind(\char`\"{}\+Id,\+Email\char`\"{})\mbox{]} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_mailing_list}{Mailing\+List}}}]{mailing\+List }\end{DoxyParamCaption})}
+
+
+
+The method asynchronously saves the edits in the mailing list if the Modal\+State is valid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The mailing\+List id\\
+\hline
+{\em mailing\+List} & The edited mailing\+List to be saved in the context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A view with the mailing list, a Redirect\+To\+Action or Not\+Found
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_mailing_lists_controller_8cs_source_l00136}{136}} of file \mbox{\hyperlink{_mailing_lists_controller_8cs_source}{Mailing\+Lists\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_ab994c1c47141a7fdd888cf92756a1ec1}\label{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_ab994c1c47141a7fdd888cf92756a1ec1}} 
+\index{FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}!Edit@{Edit}}
+\index{Edit@{Edit}!FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Mailing\+Lists\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method asynchronously edits the mailing list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the mailing list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A view with the mailing list or Not\+Found
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_mailing_lists_controller_8cs_source_l00110}{110}} of file \mbox{\hyperlink{_mailing_lists_controller_8cs_source}{Mailing\+Lists\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a1dc9628843036fe55dcffd109597c1ab}\label{class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller_a1dc9628843036fe55dcffd109597c1ab}} 
+\index{FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}!Index@{Index}}
+\index{Index@{Index}!FreebirdTech.Controllers.MailingListsController@{FreebirdTech.Controllers.MailingListsController}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Mailing\+Lists\+Controller.\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method asynchronously gets the mailing list 
+
+\begin{DoxyReturn}{Returns}
+A view with the mailing list
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_mailing_lists_controller_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_mailing_lists_controller_8cs_source}{Mailing\+Lists\+Controller.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Danilo/source/repos/\+Freebird\+Tech/\+Controllers/\mbox{\hyperlink{_mailing_lists_controller_8cs}{Mailing\+Lists\+Controller.\+cs}}\end{DoxyCompactItemize}

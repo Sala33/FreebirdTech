@@ -1,0 +1,62 @@
+\hypertarget{20211108202238__messages_8cs_source}{}\doxysection{20211108202238\+\_\+messages.\+cs}
+\label{20211108202238__messages_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Migrations/20211108202238\_messages.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Migrations/20211108202238\_messages.cs}}
+\mbox{\hyperlink{20211108202238__messages_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00002}00002 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore.Migrations;}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00003}00003 \textcolor{keyword}{using} Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00005}00005 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_migrations}{FreebirdTech.Migrations}}}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00007}\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1messages}{00007}}     \textcolor{keyword}{public} \textcolor{keyword}{partial class }\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1messages}{messages}} : Migration}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00008}00008     \{}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00009}\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1messages_acd02a5979bdfcd2cf00fc30ee0e1f3f1}{00009}}         \textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1messages_acd02a5979bdfcd2cf00fc30ee0e1f3f1}{Up}}(MigrationBuilder migrationBuilder)}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00010}00010         \{}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00011}00011             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00012}00012                 name: \textcolor{stringliteral}{"{}Message"{}},}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00013}00013                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00014}00014                 \{}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00015}00015                     ID = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00016}00016                         .Annotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00017}00017                     Time = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}timestamp without time zone"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00018}00018                     SenderId = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00019}00019                     ReceiverId = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00020}00020                     MessageText = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00021}00021                 \},}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00022}00022                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00023}00023                 \{}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00024}00024                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Message"{}}, x => x.ID);}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00025}00025                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00026}00026                         name: \textcolor{stringliteral}{"{}FK\_Message\_Artists\_ReceiverId"{}},}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00027}00027                         column: x => x.ReceiverId,}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00028}00028                         principalTable: \textcolor{stringliteral}{"{}Artists"{}},}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00029}00029                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00030}00030                         onDelete: ReferentialAction.Restrict);}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00031}00031                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00032}00032                         name: \textcolor{stringliteral}{"{}FK\_Message\_Artists\_SenderId"{}},}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00033}00033                         column: x => x.SenderId,}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00034}00034                         principalTable: \textcolor{stringliteral}{"{}Artists"{}},}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00035}00035                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00036}00036                         onDelete: ReferentialAction.Restrict);}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00037}00037                 \});}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00039}00039             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00040}00040                 name: \textcolor{stringliteral}{"{}IX\_Message\_ReceiverId"{}},}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00041}00041                 table: \textcolor{stringliteral}{"{}Message"{}},}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00042}00042                 column: \textcolor{stringliteral}{"{}ReceiverId"{}});}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00044}00044             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00045}00045                 name: \textcolor{stringliteral}{"{}IX\_Message\_SenderId"{}},}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00046}00046                 table: \textcolor{stringliteral}{"{}Message"{}},}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00047}00047                 column: \textcolor{stringliteral}{"{}SenderId"{}});}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00048}00048         \}}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00050}\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1messages_ab4e6da7778de408588e5ef126c4aff19}{00050}}         \textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1messages_ab4e6da7778de408588e5ef126c4aff19}{Down}}(MigrationBuilder migrationBuilder)}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00051}00051         \{}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00052}00052             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00053}00053                 name: \textcolor{stringliteral}{"{}Message"{}});}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00054}00054         \}}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{20211108202238__messages_8cs_source_l00056}00056 \}}
+
+\end{DoxyCode}

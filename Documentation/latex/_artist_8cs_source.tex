@@ -1,0 +1,40 @@
+\hypertarget{_artist_8cs_source}{}\doxysection{Artist.\+cs}
+\label{_artist_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Models/Artist.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Models/Artist.cs}}
+\mbox{\hyperlink{_artist_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00003}00003 \textcolor{keyword}{using} System.ComponentModel.DataAnnotations;}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00004}00004 \textcolor{keyword}{using} System.ComponentModel.DataAnnotations.Schema;}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00005}00005 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00006}00006 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00008}\mbox{\hyperlink{namespace_freebird_tech_1_1_models}{00008}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_models}{FreebirdTech.Models}}}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00014}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist}{00014}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist}{Artist}}}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00015}00015     \{}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00016}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_ae643d8c257810bd3357f89388b4ca5ba}{00016}}         \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_ae643d8c257810bd3357f89388b4ca5ba}{Id}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00017}00017         [Required]}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00018}00018         [StringLength(100)]}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00019}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_ac4d1f9fb8f8a802bb0eae411d9876105}{00019}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_ac4d1f9fb8f8a802bb0eae411d9876105}{Name}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00020}00020         [Required]}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00021}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_afc104898f9a64aba7cfb9101e8da4945}{00021}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_afc104898f9a64aba7cfb9101e8da4945}{Categoria}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00022}00022         [Required]}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00023}00023         [StringLength(150)]}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00024}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_aa3a0efec23d48053310399d69cb0090b}{00024}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_aa3a0efec23d48053310399d69cb0090b}{BriefDescription}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00025}00025         [Required]}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00026}00026         [EmailAddress]}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00027}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_a139cca45aed8baf8df28756914c13d3f}{00027}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_a139cca45aed8baf8df28756914c13d3f}{Contact}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00028}00028         [Required]}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00029}00029         [StringLength(500)]}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00030}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_ab9d0fe00d1bdc1bd37a3d3d6d9dbd72f}{00030}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_ab9d0fe00d1bdc1bd37a3d3d6d9dbd72f}{Description}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00031}00031         [Required]}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00032}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_aa4c7914a058a45880789e3afe033852a}{00032}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_aa4c7914a058a45880789e3afe033852a}{OwnerId}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00033}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_aa46ba613b041af3a3e24806e965ffe8d}{00033}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image}{Image}} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_aa46ba613b041af3a3e24806e965ffe8d}{AvatarImage}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00034}00034         [Required]}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00035}00035         [NotMapped]}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00036}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_af05f78919beae8b6087eb93f4383c787}{00036}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_af05f78919beae8b6087eb93f4383c787}{AvatarImageURI}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{_artist_8cs_source_l00038}00038 \}}
+
+\end{DoxyCode}

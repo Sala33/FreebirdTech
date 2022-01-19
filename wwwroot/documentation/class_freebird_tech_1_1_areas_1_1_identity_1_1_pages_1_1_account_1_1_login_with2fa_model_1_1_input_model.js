@@ -1,0 +1,5 @@
+var class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with2fa_model_1_1_input_model =
+[
+    [ "RememberMachine", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with2fa_model_1_1_input_model.html#a3f05575e48530897977318f9df0285a4", null ],
+    [ "TwoFactorCode", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with2fa_model_1_1_input_model.html#ab2b8339b6a7324e28ec36f766530e4e4", null ]
+];

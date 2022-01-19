@@ -1,0 +1,232 @@
+\hypertarget{class_freebird_tech_1_1_controllers_1_1_artists_controller}{}\doxysection{Freebird\+Tech.\+Controllers.\+Artists\+Controller Class Reference}
+\label{class_freebird_tech_1_1_controllers_1_1_artists_controller}\index{FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}}
+
+
+This class is responsible for controlling the artist. Some of it\textquotesingle{}s responsabilities are\+:  
+
+
+Inheritance diagram for Freebird\+Tech.\+Controllers.\+Artists\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_freebird_tech_1_1_controllers_1_1_artists_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_a31a57eb320ef1b984af0070330645948}{Artists\+Controller}} (\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}} context, User\+Manager$<$ Identity\+User $>$ user\+Manager)
+\begin{DoxyCompactList}\small\item\em The method defines the context and user manager of the controller \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_a5e3f9602910cde90de97dc6f0970e2fe}{Index}} ()
+\begin{DoxyCompactList}\small\item\em The method is responsible for returning a list. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_a011eb475e4e40482dc8cbb2cceb7c1a9}{Details}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method searches for an existing profile to exhibit it\textquotesingle{}s details \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_a073e02ab71a1224123966242457c5239}{Create\+Async}} ()
+\begin{DoxyCompactList}\small\item\em The method gets the data necessary for creating a profile \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_a26e9fdbb477d37c95d19acfc223fe703}{Create}} (\mbox{[}Bind(\char`\"{}Id,Name,Categoria,Brief\+Description,Contact,Description,Owner\+Id,Avatar\+Image\+URI\char`\"{})\mbox{]} Artist artist)
+\begin{DoxyCompactList}\small\item\em The method sends the data necessary for creating a profile \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_a61e3d24a3c3a63e6f38e6d6f3f41b770}{Edit}} ()
+\begin{DoxyCompactList}\small\item\em The method edits an existing profile. If it does not exists, redirects to Creation. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_a492a4cb745c4cf980bfda4b6a0317eed}{Edit}} (int id, \mbox{[}Bind(\char`\"{}Id,Name,Categoria,Brief\+Description,Contact,Description,Owner\+Id,Avatar\+Image\+URI\char`\"{})\mbox{]} Artist artist)
+\begin{DoxyCompactList}\small\item\em The method posts an edited existing profile. If it does not exists, or if does not belong to the actual user, throw 404 error. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_a2b9f071fadc26e6ff4d9a5a0ece37a71}{Delete}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method gets the data selected for deletion based in the user Id. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_aa61cb9b1f49789e5983b2e5b1def47b4}{Delete\+Confirmed}} (int id)
+\begin{DoxyCompactList}\small\item\em The method posts the data selected for deletion based in the user Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is responsible for controlling the artist. Some of it\textquotesingle{}s responsabilities are\+: 
+
+
+\begin{DoxyItemize}
+\item define context and user \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller}{Artists\+Controller}}
+\item show Index \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_a5e3f9602910cde90de97dc6f0970e2fe}{Index}}
+\item exhibit artist Details (returns Artist View) \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_a011eb475e4e40482dc8cbb2cceb7c1a9}{Details(int?)}}
+\item get artist and redirect to creation \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_a073e02ab71a1224123966242457c5239}{Create\+Async}} \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_a26e9fdbb477d37c95d19acfc223fe703}{Create(\+Artist)}}
+\item edit Artist attributes \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_a492a4cb745c4cf980bfda4b6a0317eed}{Edit(int, Artist)}}
+\item get current Avatar Image Get\+Current\+Avatar\+Image(\+Artist)
+\item delete Artist \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_a2b9f071fadc26e6ff4d9a5a0ece37a71}{Delete(int?)}}
+\item confirming deletion \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller_aa61cb9b1f49789e5983b2e5b1def47b4}{Delete\+Confirmed(int)}}. 
+\end{DoxyItemize}
+
+~\newline
+ 
+
+Definition at line \mbox{\hyperlink{_artists_controller_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_artists_controller_8cs_source}{Artists\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_artists_controller_a31a57eb320ef1b984af0070330645948}\label{class_freebird_tech_1_1_controllers_1_1_artists_controller_a31a57eb320ef1b984af0070330645948}} 
+\index{FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}!ArtistsController@{ArtistsController}}
+\index{ArtistsController@{ArtistsController}!FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}}
+\doxysubsubsection{\texorpdfstring{ArtistsController()}{ArtistsController()}}
+{\footnotesize\ttfamily Freebird\+Tech.\+Controllers.\+Artists\+Controller.\+Artists\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}}}]{context,  }\item[{User\+Manager$<$ Identity\+User $>$}]{user\+Manager }\end{DoxyParamCaption})}
+
+
+
+The method defines the context and user manager of the controller 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The Application\+Db\+Context of the controller\\
+\hline
+{\em user\+Manager} & The User\+Manager of the controller\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_artists_controller_8cs_source_l00038}{38}} of file \mbox{\hyperlink{_artists_controller_8cs_source}{Artists\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_artists_controller_a26e9fdbb477d37c95d19acfc223fe703}\label{class_freebird_tech_1_1_controllers_1_1_artists_controller_a26e9fdbb477d37c95d19acfc223fe703}} 
+\index{FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}!Create@{Create}}
+\index{Create@{Create}!FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Artists\+Controller.\+Create (\begin{DoxyParamCaption}\item[{\mbox{[}\+Bind(\char`\"{}\+Id,\+Name,\+Categoria,\+Brief\+Description,\+Contact,\+Description,\+Owner\+Id,\+Avatar\+Image\+URI\char`\"{})\mbox{]} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist}{Artist}}}]{artist }\end{DoxyParamCaption})}
+
+
+
+The method sends the data necessary for creating a profile 
+
+\begin{DoxyReturn}{Returns}
+A view of the Index
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_artists_controller_8cs_source_l00115}{115}} of file \mbox{\hyperlink{_artists_controller_8cs_source}{Artists\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_artists_controller_a073e02ab71a1224123966242457c5239}\label{class_freebird_tech_1_1_controllers_1_1_artists_controller_a073e02ab71a1224123966242457c5239}} 
+\index{FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}!CreateAsync@{CreateAsync}}
+\index{CreateAsync@{CreateAsync}!FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}}
+\doxysubsubsection{\texorpdfstring{CreateAsync()}{CreateAsync()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Artists\+Controller.\+Create\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method gets the data necessary for creating a profile 
+
+\begin{DoxyReturn}{Returns}
+A view of the Artist
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_artists_controller_8cs_source_l00088}{88}} of file \mbox{\hyperlink{_artists_controller_8cs_source}{Artists\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_artists_controller_a2b9f071fadc26e6ff4d9a5a0ece37a71}\label{class_freebird_tech_1_1_controllers_1_1_artists_controller_a2b9f071fadc26e6ff4d9a5a0ece37a71}} 
+\index{FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}!Delete@{Delete}}
+\index{Delete@{Delete}!FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Artists\+Controller.\+Delete (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method gets the data selected for deletion based in the user Id. 
+
+\begin{DoxyReturn}{Returns}
+Artist view
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_artists_controller_8cs_source_l00233}{233}} of file \mbox{\hyperlink{_artists_controller_8cs_source}{Artists\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_artists_controller_aa61cb9b1f49789e5983b2e5b1def47b4}\label{class_freebird_tech_1_1_controllers_1_1_artists_controller_aa61cb9b1f49789e5983b2e5b1def47b4}} 
+\index{FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}!DeleteConfirmed@{DeleteConfirmed}}
+\index{DeleteConfirmed@{DeleteConfirmed}!FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}}
+\doxysubsubsection{\texorpdfstring{DeleteConfirmed()}{DeleteConfirmed()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Artists\+Controller.\+Delete\+Confirmed (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+The method posts the data selected for deletion based in the user Id. 
+
+\begin{DoxyReturn}{Returns}
+Index view
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_artists_controller_8cs_source_l00259}{259}} of file \mbox{\hyperlink{_artists_controller_8cs_source}{Artists\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_artists_controller_a011eb475e4e40482dc8cbb2cceb7c1a9}\label{class_freebird_tech_1_1_controllers_1_1_artists_controller_a011eb475e4e40482dc8cbb2cceb7c1a9}} 
+\index{FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}!Details@{Details}}
+\index{Details@{Details}!FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}}
+\doxysubsubsection{\texorpdfstring{Details()}{Details()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Artists\+Controller.\+Details (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method searches for an existing profile to exhibit it\textquotesingle{}s details 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The Id of the Artist \begin{DoxyReturn}{Returns}
+A new view of the Artist selected
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_artists_controller_8cs_source_l00064}{64}} of file \mbox{\hyperlink{_artists_controller_8cs_source}{Artists\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_artists_controller_a61e3d24a3c3a63e6f38e6d6f3f41b770}\label{class_freebird_tech_1_1_controllers_1_1_artists_controller_a61e3d24a3c3a63e6f38e6d6f3f41b770}} 
+\index{FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}!Edit@{Edit}}
+\index{Edit@{Edit}!FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Artists\+Controller.\+Edit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method edits an existing profile. If it does not exists, redirects to Creation. 
+
+\begin{DoxyReturn}{Returns}
+A new view of the Artist edited
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_artists_controller_8cs_source_l00142}{142}} of file \mbox{\hyperlink{_artists_controller_8cs_source}{Artists\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_artists_controller_a492a4cb745c4cf980bfda4b6a0317eed}\label{class_freebird_tech_1_1_controllers_1_1_artists_controller_a492a4cb745c4cf980bfda4b6a0317eed}} 
+\index{FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}!Edit@{Edit}}
+\index{Edit@{Edit}!FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Artists\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{[}\+Bind(\char`\"{}\+Id,\+Name,\+Categoria,\+Brief\+Description,\+Contact,\+Description,\+Owner\+Id,\+Avatar\+Image\+URI\char`\"{})\mbox{]} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist}{Artist}}}]{artist }\end{DoxyParamCaption})}
+
+
+
+The method posts an edited existing profile. If it does not exists, or if does not belong to the actual user, throw 404 error. 
+
+\begin{DoxyReturn}{Returns}
+The edit area with the Artist view
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_artists_controller_8cs_source_l00167}{167}} of file \mbox{\hyperlink{_artists_controller_8cs_source}{Artists\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_artists_controller_a5e3f9602910cde90de97dc6f0970e2fe}\label{class_freebird_tech_1_1_controllers_1_1_artists_controller_a5e3f9602910cde90de97dc6f0970e2fe}} 
+\index{FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}!Index@{Index}}
+\index{Index@{Index}!FreebirdTech.Controllers.ArtistsController@{FreebirdTech.Controllers.ArtistsController}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Artists\+Controller.\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method is responsible for returning a list. 
+
+\begin{DoxyReturn}{Returns}
+A new view with a list of Artists
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_artists_controller_8cs_source_l00050}{50}} of file \mbox{\hyperlink{_artists_controller_8cs_source}{Artists\+Controller.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Danilo/source/repos/\+Freebird\+Tech/\+Controllers/\mbox{\hyperlink{_artists_controller_8cs}{Artists\+Controller.\+cs}}\end{DoxyCompactItemize}

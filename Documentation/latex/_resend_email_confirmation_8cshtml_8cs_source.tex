@@ -1,0 +1,79 @@
+\hypertarget{_resend_email_confirmation_8cshtml_8cs_source}{}\doxysection{Resend\+Email\+Confirmation.\+cshtml.\+cs}
+\label{_resend_email_confirmation_8cshtml_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml.cs}}
+\mbox{\hyperlink{_resend_email_confirmation_8cshtml_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00002}00002 \textcolor{keyword}{using} System.ComponentModel.DataAnnotations;}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Text;}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Text.Encodings.Web;}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00005}00005 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.AspNetCore.Authorization;}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00008}00008 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00009}00009 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity.UI.Services;}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00010}00010 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00011}00011 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.RazorPages;}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00012}00012 \textcolor{keyword}{using} Microsoft.AspNetCore.WebUtilities;}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00014}00014 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account}{FreebirdTech.Areas.Identity.Pages.Account}}}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00015}00015 \{}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00016}00016     [AllowAnonymous]}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00017}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model}{00017}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model}{ResendEmailConfirmationModel}} : PageModel}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00018}00018     \{}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00019}00019         \textcolor{keyword}{private} readonly UserManager<IdentityUser> \_userManager;}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00020}00020         \textcolor{keyword}{private} readonly IEmailSender \_emailSender;}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00022}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_a5bb6703d48aa9d8f8f3af51c86cd6de8}{00022}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_a5bb6703d48aa9d8f8f3af51c86cd6de8}{ResendEmailConfirmationModel}}(UserManager<IdentityUser> userManager, IEmailSender emailSender)}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00023}00023         \{}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00024}00024             \_userManager = userManager;}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00025}00025             \_emailSender = emailSender;}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00026}00026         \}}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00028}00028         [BindProperty]}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00029}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_ad647b58b6b7bc77ae36ec218512ce51b}{00029}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_1_1_input_model}{InputModel}} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_ad647b58b6b7bc77ae36ec218512ce51b}{Input}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00031}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_1_1_input_model}{00031}}         \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_1_1_input_model}{InputModel}}}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00032}00032         \{}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00033}00033             [Required]}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00034}00034             [EmailAddress]}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00035}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_1_1_input_model_a859ac90af4e7f1ed01cbfa48f2c3385c}{00035}}             \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_1_1_input_model_a859ac90af4e7f1ed01cbfa48f2c3385c}{Email}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00036}00036         \}}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00038}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_a09ec424d43f5714aea53052d5d817531}{00038}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_a09ec424d43f5714aea53052d5d817531}{OnGet}}()}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00039}00039         \{}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00040}00040         \}}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00042}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_a642b80f0e8b91b23d4af2a5f1a46a2e8}{00042}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_a642b80f0e8b91b23d4af2a5f1a46a2e8}{OnPostAsync}}()}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00043}00043         \{}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00044}00044             \textcolor{keywordflow}{if} (!ModelState.IsValid)}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00045}00045             \{}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00046}00046                 \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00047}00047             \}}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00049}00049             var user = await \_userManager.FindByEmailAsync(\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_ad647b58b6b7bc77ae36ec218512ce51b}{Input}}.\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_1_1_input_model_a859ac90af4e7f1ed01cbfa48f2c3385c}{Email}});}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00050}00050             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00051}00051             \{}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00052}00052                 ModelState.AddModelError(\textcolor{keywordtype}{string}.Empty, \textcolor{stringliteral}{"{}Verification email sent. Please check your email."{}});}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00053}00053                 \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00054}00054             \}}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00056}00056             var userId = await \_userManager.GetUserIdAsync(user);}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00057}00057             var code = await \_userManager.GenerateEmailConfirmationTokenAsync(user);}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00058}00058             code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00059}00059             var callbackUrl = Url.Page(}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00060}00060                 \textcolor{stringliteral}{"{}/Account/ConfirmEmail"{}},}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00061}00061                 pageHandler: \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00062}00062                 values: \textcolor{keyword}{new} \{ userId = userId, code = code \},}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00063}00063                 protocol: Request.Scheme);}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00064}00064             await \_emailSender.SendEmailAsync(}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00065}00065                 \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_ad647b58b6b7bc77ae36ec218512ce51b}{Input}}.\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_1_1_input_model_a859ac90af4e7f1ed01cbfa48f2c3385c}{Email}},}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00066}00066                 \textcolor{stringliteral}{"{}Confirm your email"{}},}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00067}00067                 \$\textcolor{stringliteral}{"{}Please confirm your account by <a href='\{HtmlEncoder.Default.Encode(callbackUrl)\}'>clicking here</a>."{}});}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00069}00069             ModelState.AddModelError(\textcolor{keywordtype}{string}.Empty, \textcolor{stringliteral}{"{}Verification email sent. Please check your email."{}});}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00070}00070             \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00071}00071         \}}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00072}00072     \}}
+\DoxyCodeLine{\Hypertarget{_resend_email_confirmation_8cshtml_8cs_source_l00073}00073 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,128 @@
+\hypertarget{class_freebird_tech_1_1_controllers_1_1_home_controller}{}\doxysection{Freebird\+Tech.\+Controllers.\+Home\+Controller Class Reference}
+\label{class_freebird_tech_1_1_controllers_1_1_home_controller}\index{FreebirdTech.Controllers.HomeController@{FreebirdTech.Controllers.HomeController}}
+
+
+This class is responsible for controlling the Home attributes. Some of it\textquotesingle{}s responsabilities are\+:  
+
+
+Inheritance diagram for Freebird\+Tech.\+Controllers.\+Home\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_freebird_tech_1_1_controllers_1_1_home_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_home_controller_aed3f2a6478bd83575f26e7ec54e8a7ed}{Home\+Controller}} (ILogger$<$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_home_controller}{Home\+Controller}} $>$ logger, \mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}} context)
+\begin{DoxyCompactList}\small\item\em The method defines logger and context of Home Controller. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_home_controller_a051483c70f59b1c04776ad39ffa691bb}{Index\+Async}} ()
+\begin{DoxyCompactList}\small\item\em The method is responsible for getting a list of services \end{DoxyCompactList}\item 
+IAction\+Result \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_home_controller_ab6bf778a4d8ce132c32c2d0eb9923a0d}{Privacy}} ()
+\begin{DoxyCompactList}\small\item\em The method is responsible for getting a list of services \end{DoxyCompactList}\item 
+IAction\+Result \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_home_controller_ace81cf3d68d5b659b3826846bfb94e02}{Error}} ()
+\begin{DoxyCompactList}\small\item\em The method is responsible for showing a error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is responsible for controlling the Home attributes. Some of it\textquotesingle{}s responsabilities are\+: 
+
+
+\begin{DoxyItemize}
+\item verify login \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_home_controller}{Home\+Controller}}
+\item show Index \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_home_controller_a051483c70f59b1c04776ad39ffa691bb}{Index\+Async}}
+\item \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_home_controller_ab6bf778a4d8ce132c32c2d0eb9923a0d}{Privacy}}
+\item throw error \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_home_controller_ace81cf3d68d5b659b3826846bfb94e02}{Error}} 
+\end{DoxyItemize}
+
+~\newline
+ 
+
+Definition at line \mbox{\hyperlink{_home_controller_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_home_controller_8cs_source}{Home\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_home_controller_aed3f2a6478bd83575f26e7ec54e8a7ed}\label{class_freebird_tech_1_1_controllers_1_1_home_controller_aed3f2a6478bd83575f26e7ec54e8a7ed}} 
+\index{FreebirdTech.Controllers.HomeController@{FreebirdTech.Controllers.HomeController}!HomeController@{HomeController}}
+\index{HomeController@{HomeController}!FreebirdTech.Controllers.HomeController@{FreebirdTech.Controllers.HomeController}}
+\doxysubsubsection{\texorpdfstring{HomeController()}{HomeController()}}
+{\footnotesize\ttfamily Freebird\+Tech.\+Controllers.\+Home\+Controller.\+Home\+Controller (\begin{DoxyParamCaption}\item[{ILogger$<$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_home_controller}{Home\+Controller}} $>$}]{logger,  }\item[{\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}}}]{context }\end{DoxyParamCaption})}
+
+
+
+The method defines logger and context of Home Controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The Application\+Db\+Context of the controller\\
+\hline
+{\em logger} & The ILogger of the controller\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_home_controller_8cs_source_l00034}{34}} of file \mbox{\hyperlink{_home_controller_8cs_source}{Home\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_home_controller_ace81cf3d68d5b659b3826846bfb94e02}\label{class_freebird_tech_1_1_controllers_1_1_home_controller_ace81cf3d68d5b659b3826846bfb94e02}} 
+\index{FreebirdTech.Controllers.HomeController@{FreebirdTech.Controllers.HomeController}!Error@{Error}}
+\index{Error@{Error}!FreebirdTech.Controllers.HomeController@{FreebirdTech.Controllers.HomeController}}
+\doxysubsubsection{\texorpdfstring{Error()}{Error()}}
+{\footnotesize\ttfamily IAction\+Result Freebird\+Tech.\+Controllers.\+Home\+Controller.\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method is responsible for showing a error. 
+
+\begin{DoxyReturn}{Returns}
+Error view
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_home_controller_8cs_source_l00070}{70}} of file \mbox{\hyperlink{_home_controller_8cs_source}{Home\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_home_controller_a051483c70f59b1c04776ad39ffa691bb}\label{class_freebird_tech_1_1_controllers_1_1_home_controller_a051483c70f59b1c04776ad39ffa691bb}} 
+\index{FreebirdTech.Controllers.HomeController@{FreebirdTech.Controllers.HomeController}!IndexAsync@{IndexAsync}}
+\index{IndexAsync@{IndexAsync}!FreebirdTech.Controllers.HomeController@{FreebirdTech.Controllers.HomeController}}
+\doxysubsubsection{\texorpdfstring{IndexAsync()}{IndexAsync()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Home\+Controller.\+Index\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method is responsible for getting a list of services 
+
+\begin{DoxyReturn}{Returns}
+Index view
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_home_controller_8cs_source_l00044}{44}} of file \mbox{\hyperlink{_home_controller_8cs_source}{Home\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_home_controller_ab6bf778a4d8ce132c32c2d0eb9923a0d}\label{class_freebird_tech_1_1_controllers_1_1_home_controller_ab6bf778a4d8ce132c32c2d0eb9923a0d}} 
+\index{FreebirdTech.Controllers.HomeController@{FreebirdTech.Controllers.HomeController}!Privacy@{Privacy}}
+\index{Privacy@{Privacy}!FreebirdTech.Controllers.HomeController@{FreebirdTech.Controllers.HomeController}}
+\doxysubsubsection{\texorpdfstring{Privacy()}{Privacy()}}
+{\footnotesize\ttfamily IAction\+Result Freebird\+Tech.\+Controllers.\+Home\+Controller.\+Privacy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method is responsible for getting a list of services 
+
+\begin{DoxyReturn}{Returns}
+Index view
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_home_controller_8cs_source_l00059}{59}} of file \mbox{\hyperlink{_home_controller_8cs_source}{Home\+Controller.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Danilo/source/repos/\+Freebird\+Tech/\+Controllers/\mbox{\hyperlink{_home_controller_8cs}{Home\+Controller.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,101 @@
+\hypertarget{_index_8cshtml_8cs_source}{}\doxysection{Index.\+cshtml.\+cs}
+\label{_index_8cshtml_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/Index.cshtml.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/Index.cshtml.cs}}
+\mbox{\hyperlink{_index_8cshtml_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00003}00003 \textcolor{keyword}{using} System.ComponentModel.DataAnnotations;}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00005}00005 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00007}00007 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00008}00008 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.RazorPages;}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00010}00010 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage}{FreebirdTech.Areas.Identity.Pages.Account.Manage}}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00012}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model}{00012}}     \textcolor{keyword}{public} \textcolor{keyword}{partial class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model}{IndexModel}} : PageModel}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00014}00014         \textcolor{keyword}{private} readonly UserManager<IdentityUser> \_userManager;}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00015}00015         \textcolor{keyword}{private} readonly SignInManager<IdentityUser> \_signInManager;}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00017}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_af14c06bc4ae5c5aa1a4729354fe8d91c}{00017}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_af14c06bc4ae5c5aa1a4729354fe8d91c}{IndexModel}}(}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00018}00018             UserManager<IdentityUser> userManager,}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00019}00019             SignInManager<IdentityUser> signInManager)}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00020}00020         \{}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00021}00021             \_userManager = userManager;}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00022}00022             \_signInManager = signInManager;}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00023}00023         \}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00025}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_ae9f86a0050ce56414c8544aef096f796}{00025}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_ae9f86a0050ce56414c8544aef096f796}{Username}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00027}00027         [TempData]}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00028}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_a4ec43808d0e84a1c3d351362d51ac34c}{00028}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_a4ec43808d0e84a1c3d351362d51ac34c}{StatusMessage}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00030}00030         [BindProperty]}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00031}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_acb246b139686bb58b3ecfc46148692e2}{00031}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_1_1_input_model}{InputModel}} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_acb246b139686bb58b3ecfc46148692e2}{Input}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00033}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_1_1_input_model}{00033}}         \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_1_1_input_model}{InputModel}}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00034}00034         \{}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00035}00035             [Phone]}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00036}00036             [Display(Name = \textcolor{stringliteral}{"{}Phone number"{}})]}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00037}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_1_1_input_model_a2679b223fbb0e725460de4ae952b0430}{00037}}             \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_1_1_input_model_a2679b223fbb0e725460de4ae952b0430}{PhoneNumber}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00038}00038         \}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00040}00040         \textcolor{keyword}{private} async Task LoadAsync(IdentityUser user)}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00041}00041         \{}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00042}00042             var userName = await \_userManager.GetUserNameAsync(user);}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00043}00043             var phoneNumber = await \_userManager.GetPhoneNumberAsync(user);}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00045}00045             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_ae9f86a0050ce56414c8544aef096f796}{Username}} = userName;}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00047}00047             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_acb246b139686bb58b3ecfc46148692e2}{Input}} = \textcolor{keyword}{new} InputModel}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00048}00048             \{}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00049}00049                 PhoneNumber = phoneNumber}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00050}00050             \};}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00051}00051         \}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00053}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_a8fc114d2a920d237a9eee56c03f73d07}{00053}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_a8fc114d2a920d237a9eee56c03f73d07}{OnGetAsync}}()}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00054}00054         \{}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00055}00055             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00056}00056             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00057}00057             \{}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00058}00058                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID '\{\_userManager.GetUserId(User)\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00059}00059             \}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00061}00061             await LoadAsync(user);}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00062}00062             \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00063}00063         \}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00065}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_a0e1884cf0206a154a57ffe3ba0f071dc}{00065}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_a0e1884cf0206a154a57ffe3ba0f071dc}{OnPostAsync}}()}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00066}00066         \{}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00067}00067             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00068}00068             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00069}00069             \{}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00070}00070                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID '\{\_userManager.GetUserId(User)\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00071}00071             \}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00073}00073             \textcolor{keywordflow}{if} (!ModelState.IsValid)}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00074}00074             \{}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00075}00075                 await LoadAsync(user);}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00076}00076                 \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00077}00077             \}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00079}00079             var phoneNumber = await \_userManager.GetPhoneNumberAsync(user);}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00080}00080             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_acb246b139686bb58b3ecfc46148692e2}{Input}}.\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_1_1_input_model_a2679b223fbb0e725460de4ae952b0430}{PhoneNumber}} != phoneNumber)}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00081}00081             \{}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00082}00082                 var setPhoneResult = await \_userManager.SetPhoneNumberAsync(user, \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_acb246b139686bb58b3ecfc46148692e2}{Input}}.\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_1_1_input_model_a2679b223fbb0e725460de4ae952b0430}{PhoneNumber}});}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00083}00083                 \textcolor{keywordflow}{if} (!setPhoneResult.Succeeded)}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00084}00084                 \{}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00085}00085                     \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_a4ec43808d0e84a1c3d351362d51ac34c}{StatusMessage}} = \textcolor{stringliteral}{"{}Unexpected error when trying to set phone number."{}};}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00086}00086                     \textcolor{keywordflow}{return} RedirectToPage();}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00087}00087                 \}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00088}00088             \}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00090}00090             await \_signInManager.RefreshSignInAsync(user);}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00091}00091             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model_a4ec43808d0e84a1c3d351362d51ac34c}{StatusMessage}} = \textcolor{stringliteral}{"{}Your profile has been updated"{}};}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00092}00092             \textcolor{keywordflow}{return} RedirectToPage();}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00093}00093         \}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00094}00094     \}}
+\DoxyCodeLine{\Hypertarget{_index_8cshtml_8cs_source_l00095}00095 \}}
+
+\end{DoxyCode}

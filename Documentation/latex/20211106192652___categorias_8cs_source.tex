@@ -1,0 +1,62 @@
+\hypertarget{20211106192652___categorias_8cs_source}{}\doxysection{20211106192652\+\_\+\+Categorias.\+cs}
+\label{20211106192652___categorias_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Migrations/20211106192652\_Categorias.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Migrations/20211106192652\_Categorias.cs}}
+\mbox{\hyperlink{20211106192652___categorias_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00001}00001 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore.Migrations;}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00002}00002 \textcolor{keyword}{using} Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00004}00004 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_migrations}{FreebirdTech.Migrations}}}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00005}00005 \{}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00006}\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_categorias}{00006}}     \textcolor{keyword}{public} \textcolor{keyword}{partial class }\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_categorias}{Categorias}} : Migration}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00007}00007     \{}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00008}\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_categorias_a0037b2fcf7d58afabf46c004424e38b3}{00008}}         \textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_categorias_a0037b2fcf7d58afabf46c004424e38b3}{Up}}(MigrationBuilder migrationBuilder)}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00009}00009         \{}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00010}00010             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00011}00011                 name: \textcolor{stringliteral}{"{}Categorias"{}},}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00012}00012                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00013}00013                 \{}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00014}00014                     Categoria = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00015}00015                     ParentCategoria = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00016}00016                 \},}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00017}00017                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00018}00018                 \{}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00019}00019                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Categorias"{}}, x => x.Categoria);}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00020}00020                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00021}00021                         name: \textcolor{stringliteral}{"{}FK\_Categorias\_Categorias\_ParentCategoria"{}},}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00022}00022                         column: x => x.ParentCategoria,}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00023}00023                         principalTable: \textcolor{stringliteral}{"{}Categorias"{}},}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00024}00024                         principalColumn: \textcolor{stringliteral}{"{}Categoria"{}},}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00025}00025                         onDelete: ReferentialAction.Restrict);}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00026}00026                 \});}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00028}00028             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00029}00029                 name: \textcolor{stringliteral}{"{}MailingList"{}},}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00030}00030                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00031}00031                 \{}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00032}00032                     Id = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00033}00033                         .Annotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00034}00034                     Email = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00035}00035                 \},}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00036}00036                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00037}00037                 \{}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00038}00038                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_MailingList"{}}, x => x.Id);}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00039}00039                 \});}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00041}00041             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00042}00042                 name: \textcolor{stringliteral}{"{}IX\_Categorias\_ParentCategoria"{}},}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00043}00043                 table: \textcolor{stringliteral}{"{}Categorias"{}},}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00044}00044                 column: \textcolor{stringliteral}{"{}ParentCategoria"{}});}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00045}00045         \}}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00047}\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_categorias_af4b5c978a045b8b542a151c7f3bb8467}{00047}}         \textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_categorias_af4b5c978a045b8b542a151c7f3bb8467}{Down}}(MigrationBuilder migrationBuilder)}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00048}00048         \{}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00049}00049             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00050}00050                 name: \textcolor{stringliteral}{"{}Categorias"{}});}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00052}00052             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00053}00053                 name: \textcolor{stringliteral}{"{}MailingList"{}});}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00054}00054         \}}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{20211106192652___categorias_8cs_source_l00056}00056 \}}
+
+\end{DoxyCode}

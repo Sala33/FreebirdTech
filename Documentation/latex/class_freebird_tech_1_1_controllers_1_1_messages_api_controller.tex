@@ -1,0 +1,179 @@
+\hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_api_controller}{}\doxysection{Freebird\+Tech.\+Controllers.\+Messages\+Api\+Controller Class Reference}
+\label{class_freebird_tech_1_1_controllers_1_1_messages_api_controller}\index{FreebirdTech.Controllers.MessagesApiController@{FreebirdTech.Controllers.MessagesApiController}}
+
+
+This class is responsible for controlling the messages api. Some of it\textquotesingle{}s responsabilities are\+:  
+
+
+Inheritance diagram for Freebird\+Tech.\+Controllers.\+Messages\+Api\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_freebird_tech_1_1_controllers_1_1_messages_api_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_ac82d320c826640e60ca5b7040119dbc2}{Messages\+Api\+Controller}} (\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}} context, User\+Manager$<$ Identity\+User $>$ user\+Manager)
+\begin{DoxyCompactList}\small\item\em The method defines the context and user manager of the controller \end{DoxyCompactList}\item 
+IEnumerable$<$ \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_message}{Message}} $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_a5b32e6ca56e5e58399584c45d55c254e}{Get}} (string sender\+ID, string receiver\+ID)
+\begin{DoxyCompactList}\small\item\em The method gets the messages of the sender and receiver artists \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_ad0f3ac4fc69603a3df786be6b8a3eb63}{Post}} (string message, string receiver\+ID)
+\begin{DoxyCompactList}\small\item\em The method sends a message from the sender to the receiver \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_a0fd0e4ca6d32bdaec847615810fc57a1}{Put}} (int id, \mbox{[}From\+Body\mbox{]} string value)
+\begin{DoxyCompactList}\small\item\em The method is empty \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_ae193c0aaf515e74ab3f4b80154e74e3f}{Delete}} (int id)
+\begin{DoxyCompactList}\small\item\em The method is empty \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is responsible for controlling the messages api. Some of it\textquotesingle{}s responsabilities are\+: 
+
+
+\begin{DoxyItemize}
+\item define a context and user manager\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_api_controller}{Messages\+Api\+Controller}}
+\item get the messages \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_a5b32e6ca56e5e58399584c45d55c254e}{Get(string, string)}}
+\item get a value Get(int)
+\item post a message Post(string, string, string)
+\item put a message \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_a0fd0e4ca6d32bdaec847615810fc57a1}{Put(int, string)}}
+\item delete the message \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_ae193c0aaf515e74ab3f4b80154e74e3f}{Delete(int)}}
+\item get the artist Get\+Artist(string) 
+\end{DoxyItemize}
+
+~\newline
+ 
+
+Definition at line \mbox{\hyperlink{_messages_api_controller_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_messages_api_controller_8cs_source}{Messages\+Api\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_ac82d320c826640e60ca5b7040119dbc2}\label{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_ac82d320c826640e60ca5b7040119dbc2}} 
+\index{FreebirdTech.Controllers.MessagesApiController@{FreebirdTech.Controllers.MessagesApiController}!MessagesApiController@{MessagesApiController}}
+\index{MessagesApiController@{MessagesApiController}!FreebirdTech.Controllers.MessagesApiController@{FreebirdTech.Controllers.MessagesApiController}}
+\doxysubsubsection{\texorpdfstring{MessagesApiController()}{MessagesApiController()}}
+{\footnotesize\ttfamily Freebird\+Tech.\+Controllers.\+Messages\+Api\+Controller.\+Messages\+Api\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}}}]{context,  }\item[{User\+Manager$<$ Identity\+User $>$}]{user\+Manager }\end{DoxyParamCaption})}
+
+
+
+The method defines the context and user manager of the controller 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The Application\+Db\+Context of the controller\\
+\hline
+{\em user\+Manager} & The User\+Manager of the controller\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_messages_api_controller_8cs_source_l00040}{40}} of file \mbox{\hyperlink{_messages_api_controller_8cs_source}{Messages\+Api\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_ae193c0aaf515e74ab3f4b80154e74e3f}\label{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_ae193c0aaf515e74ab3f4b80154e74e3f}} 
+\index{FreebirdTech.Controllers.MessagesApiController@{FreebirdTech.Controllers.MessagesApiController}!Delete@{Delete}}
+\index{Delete@{Delete}!FreebirdTech.Controllers.MessagesApiController@{FreebirdTech.Controllers.MessagesApiController}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily void Freebird\+Tech.\+Controllers.\+Messages\+Api\+Controller.\+Delete (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+The method is empty 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & An int \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_messages_api_controller_8cs_source_l00108}{108}} of file \mbox{\hyperlink{_messages_api_controller_8cs_source}{Messages\+Api\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_a5b32e6ca56e5e58399584c45d55c254e}\label{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_a5b32e6ca56e5e58399584c45d55c254e}} 
+\index{FreebirdTech.Controllers.MessagesApiController@{FreebirdTech.Controllers.MessagesApiController}!Get@{Get}}
+\index{Get@{Get}!FreebirdTech.Controllers.MessagesApiController@{FreebirdTech.Controllers.MessagesApiController}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily IEnumerable$<$ \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_message}{Message}} $>$ Freebird\+Tech.\+Controllers.\+Messages\+Api\+Controller.\+Get (\begin{DoxyParamCaption}\item[{string}]{sender\+ID,  }\item[{string}]{receiver\+ID }\end{DoxyParamCaption})}
+
+
+
+The method gets the messages of the sender and receiver artists 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender\+ID} & The Id of the sender 
+\begin{DoxyParams}{Parameters}
+{\em receiver\+ID} & The Id of the receiver \begin{DoxyReturn}{Returns}
+The messages of the sender and receiver artists
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_messages_api_controller_8cs_source_l00054}{54}} of file \mbox{\hyperlink{_messages_api_controller_8cs_source}{Messages\+Api\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_ad0f3ac4fc69603a3df786be6b8a3eb63}\label{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_ad0f3ac4fc69603a3df786be6b8a3eb63}} 
+\index{FreebirdTech.Controllers.MessagesApiController@{FreebirdTech.Controllers.MessagesApiController}!Post@{Post}}
+\index{Post@{Post}!FreebirdTech.Controllers.MessagesApiController@{FreebirdTech.Controllers.MessagesApiController}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Messages\+Api\+Controller.\+Post (\begin{DoxyParamCaption}\item[{string}]{message,  }\item[{string}]{receiver\+ID }\end{DoxyParamCaption})}
+
+
+
+The method sends a message from the sender to the receiver 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & A message to be sent 
+\begin{DoxyParams}{Parameters}
+{\em receiver\+ID} & The id of the receiver \begin{DoxyReturn}{Returns}
+No\+Content()
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_messages_api_controller_8cs_source_l00072}{72}} of file \mbox{\hyperlink{_messages_api_controller_8cs_source}{Messages\+Api\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_a0fd0e4ca6d32bdaec847615810fc57a1}\label{class_freebird_tech_1_1_controllers_1_1_messages_api_controller_a0fd0e4ca6d32bdaec847615810fc57a1}} 
+\index{FreebirdTech.Controllers.MessagesApiController@{FreebirdTech.Controllers.MessagesApiController}!Put@{Put}}
+\index{Put@{Put}!FreebirdTech.Controllers.MessagesApiController@{FreebirdTech.Controllers.MessagesApiController}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily void Freebird\+Tech.\+Controllers.\+Messages\+Api\+Controller.\+Put (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{[}\+From\+Body\mbox{]} string}]{value }\end{DoxyParamCaption})}
+
+
+
+The method is empty 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & A string 
+\begin{DoxyParams}{Parameters}
+{\em id} & An int \\
+\hline
+\end{DoxyParams}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_messages_api_controller_8cs_source_l00098}{98}} of file \mbox{\hyperlink{_messages_api_controller_8cs_source}{Messages\+Api\+Controller.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Danilo/source/repos/\+Freebird\+Tech/\+Controllers/\mbox{\hyperlink{_messages_api_controller_8cs}{Messages\+Api\+Controller.\+cs}}\end{DoxyCompactItemize}

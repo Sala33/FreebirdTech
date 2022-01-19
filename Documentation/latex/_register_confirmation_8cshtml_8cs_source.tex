@@ -1,0 +1,67 @@
+\hypertarget{_register_confirmation_8cshtml_8cs_source}{}\doxysection{Register\+Confirmation.\+cshtml.\+cs}
+\label{_register_confirmation_8cshtml_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml.cs}}
+\mbox{\hyperlink{_register_confirmation_8cshtml_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00001}00001 \textcolor{keyword}{using} Microsoft.AspNetCore.Authorization;}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Text;}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00004}00004 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00005}00005 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity.UI.Services;}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00007}00007 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.RazorPages;}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00008}00008 \textcolor{keyword}{using} Microsoft.AspNetCore.WebUtilities;}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00010}00010 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account}{FreebirdTech.Areas.Identity.Pages.Account}}}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00012}00012     [AllowAnonymous]}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00013}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model}{00013}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model}{RegisterConfirmationModel}} : PageModel}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00014}00014     \{}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00015}00015         \textcolor{keyword}{private} readonly UserManager<IdentityUser> \_userManager;}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00016}00016         \textcolor{keyword}{private} readonly IEmailSender \_sender;}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00018}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model_a216e019d8441deb6ce394470b54f63b1}{00018}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model_a216e019d8441deb6ce394470b54f63b1}{RegisterConfirmationModel}}(UserManager<IdentityUser> userManager, IEmailSender sender)}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00019}00019         \{}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00020}00020             \_userManager = userManager;}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00021}00021             \_sender = sender;}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00022}00022         \}}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00024}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model_af077b3187818d7ae39d02ad2b1afff96}{00024}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model_af077b3187818d7ae39d02ad2b1afff96}{Email}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00026}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model_aecde49acf0c05e71fcef7055d7958fbb}{00026}}         \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model_aecde49acf0c05e71fcef7055d7958fbb}{DisplayConfirmAccountLink}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00028}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model_aa348002bd879b2d51c7615d1233d3cba}{00028}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model_aa348002bd879b2d51c7615d1233d3cba}{EmailConfirmationUrl}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00030}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model_aae4fd9e3e68d4232fff5e2a8b940c56a}{00030}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model_aae4fd9e3e68d4232fff5e2a8b940c56a}{OnGetAsync}}(\textcolor{keywordtype}{string} email, \textcolor{keywordtype}{string} returnUrl = \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00031}00031         \{}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00032}00032             \textcolor{keywordflow}{if} (email == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00033}00033             \{}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00034}00034                 \textcolor{keywordflow}{return} RedirectToPage(\textcolor{stringliteral}{"{}/Index"{}});}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00035}00035             \}}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00037}00037             var user = await \_userManager.FindByEmailAsync(email);}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00038}00038             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00039}00039             \{}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00040}00040                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with email '\{email\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00041}00041             \}}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00043}00043             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model_af077b3187818d7ae39d02ad2b1afff96}{Email}} = email;}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00044}00044             \textcolor{comment}{// Once you add a real email sender, you should remove this code that lets you confirm the account}}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00045}00045             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model_aecde49acf0c05e71fcef7055d7958fbb}{DisplayConfirmAccountLink}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00046}00046             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model_aecde49acf0c05e71fcef7055d7958fbb}{DisplayConfirmAccountLink}})}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00047}00047             \{}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00048}00048                 var userId = await \_userManager.GetUserIdAsync(user);}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00049}00049                 var code = await \_userManager.GenerateEmailConfirmationTokenAsync(user);}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00050}00050                 code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00051}00051                 \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model_aa348002bd879b2d51c7615d1233d3cba}{EmailConfirmationUrl}} = Url.Page(}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00052}00052                     \textcolor{stringliteral}{"{}/Account/ConfirmEmail"{}},}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00053}00053                     pageHandler: \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00054}00054                     values: \textcolor{keyword}{new} \{ area = \textcolor{stringliteral}{"{}Identity"{}}, userId = userId, code = code, returnUrl = returnUrl \},}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00055}00055                     protocol: Request.Scheme);}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00056}00056             \}}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00058}00058             \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00059}00059         \}}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00060}00060     \}}
+\DoxyCodeLine{\Hypertarget{_register_confirmation_8cshtml_8cs_source_l00061}00061 \}}
+
+\end{DoxyCode}

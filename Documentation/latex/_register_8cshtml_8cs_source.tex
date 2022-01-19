@@ -1,0 +1,120 @@
+\hypertarget{_register_8cshtml_8cs_source}{}\doxysection{Register.\+cshtml.\+cs}
+\label{_register_8cshtml_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Register.cshtml.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Register.cshtml.cs}}
+\mbox{\hyperlink{_register_8cshtml_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00003}00003 \textcolor{keyword}{using} System.ComponentModel.DataAnnotations;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00005}00005 \textcolor{keyword}{using} System.Text;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00006}00006 \textcolor{keyword}{using} System.Text.Encodings.Web;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00007}00007 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00008}00008 \textcolor{keyword}{using} Microsoft.AspNetCore.Authentication;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00009}00009 \textcolor{keyword}{using} Microsoft.AspNetCore.Authorization;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00010}00010 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00011}00011 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity.UI.Services;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00012}00012 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00013}00013 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.RazorPages;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00014}00014 \textcolor{keyword}{using} Microsoft.AspNetCore.WebUtilities;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00015}00015 \textcolor{keyword}{using} Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00017}00017 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account}{FreebirdTech.Areas.Identity.Pages.Account}}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00018}00018 \{}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00019}00019     [AllowAnonymous]}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00020}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model}{00020}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model}{RegisterModel}} : PageModel}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00021}00021     \{}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00022}00022         \textcolor{keyword}{private} readonly SignInManager<IdentityUser> \_signInManager;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00023}00023         \textcolor{keyword}{private} readonly UserManager<IdentityUser> \_userManager;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00024}00024         \textcolor{keyword}{private} readonly ILogger<RegisterModel> \_logger;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00025}00025         \textcolor{keyword}{private} readonly IEmailSender \_emailSender;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00027}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a3a837d71c0fa5043bf2c60f87a237194}{00027}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a3a837d71c0fa5043bf2c60f87a237194}{RegisterModel}}(}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00028}00028             UserManager<IdentityUser> userManager,}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00029}00029             SignInManager<IdentityUser> signInManager,}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00030}00030             ILogger<RegisterModel> logger,}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00031}00031             IEmailSender emailSender)}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00032}00032         \{}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00033}00033             \_userManager = userManager;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00034}00034             \_signInManager = signInManager;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00035}00035             \_logger = logger;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00036}00036             \_emailSender = emailSender;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00037}00037         \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00039}00039         [BindProperty]}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00040}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a8b40b8468821778d4d22e37d652c6b2b}{00040}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_1_1_input_model}{InputModel}} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a8b40b8468821778d4d22e37d652c6b2b}{Input}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00042}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a96d59386f9981463eea4bc558249dd96}{00042}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a96d59386f9981463eea4bc558249dd96}{ReturnUrl}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00044}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a4d14ac83c3b04fc0139729c964dc62fd}{00044}}         \textcolor{keyword}{public} IList<AuthenticationScheme> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a4d14ac83c3b04fc0139729c964dc62fd}{ExternalLogins}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00046}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_1_1_input_model}{00046}}         \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_1_1_input_model}{InputModel}}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00047}00047         \{}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00048}00048             [Required]}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00049}00049             [EmailAddress]}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00050}00050             [Display(Name = \textcolor{stringliteral}{"{}Email"{}})]}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00051}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_1_1_input_model_a4d1c6a0558df9a7857036d29d17ced7b}{00051}}             \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_1_1_input_model_a4d1c6a0558df9a7857036d29d17ced7b}{Email}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00053}00053             [Required]}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00054}00054             [StringLength(100, ErrorMessage = \textcolor{stringliteral}{"{}The \{0\} must be at least \{2\} and at max \{1\} characters long."{}}, MinimumLength = 6)]}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00055}00055             [DataType(DataType.Password)]}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00056}00056             [Display(Name = \textcolor{stringliteral}{"{}Password"{}})]}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00057}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_1_1_input_model_a1c2617eaec53d71293b7dc272c1982ee}{00057}}             \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_1_1_input_model_a1c2617eaec53d71293b7dc272c1982ee}{Password}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00059}00059             [DataType(DataType.Password)]}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00060}00060             [Display(Name = \textcolor{stringliteral}{"{}Confirm password"{}})]}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00061}00061             [Compare(\textcolor{stringliteral}{"{}Password"{}}, ErrorMessage = \textcolor{stringliteral}{"{}The password and confirmation password do not match."{}})]}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00062}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_1_1_input_model_aa6bdbb422d0c19c952cc31b216f04d0e}{00062}}             \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_1_1_input_model_aa6bdbb422d0c19c952cc31b216f04d0e}{ConfirmPassword}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00063}00063         \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00065}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a481ec4f2cfa78bbad5c9cda944166079}{00065}}         \textcolor{keyword}{public} async Task \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a481ec4f2cfa78bbad5c9cda944166079}{OnGetAsync}}(\textcolor{keywordtype}{string} returnUrl = \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00066}00066         \{}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00067}00067             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a96d59386f9981463eea4bc558249dd96}{ReturnUrl}} = returnUrl;}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00068}00068             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a4d14ac83c3b04fc0139729c964dc62fd}{ExternalLogins}} = (await \_signInManager.GetExternalAuthenticationSchemesAsync()).ToList();}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00069}00069         \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00071}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a478ec51456a5abdd26907257f44e41e4}{00071}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a478ec51456a5abdd26907257f44e41e4}{OnPostAsync}}(\textcolor{keywordtype}{string} returnUrl = \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00072}00072         \{}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00073}00073             returnUrl ??= Url.Content(\textcolor{stringliteral}{"{}\string~/"{}});}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00074}00074             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a4d14ac83c3b04fc0139729c964dc62fd}{ExternalLogins}} = (await \_signInManager.GetExternalAuthenticationSchemesAsync()).ToList();}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00075}00075             \textcolor{keywordflow}{if} (ModelState.IsValid)}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00076}00076             \{}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00077}00077                 var user = \textcolor{keyword}{new} IdentityUser \{ UserName = \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a8b40b8468821778d4d22e37d652c6b2b}{Input}}.\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_1_1_input_model_a4d1c6a0558df9a7857036d29d17ced7b}{Email}}, Email = \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a8b40b8468821778d4d22e37d652c6b2b}{Input}}.\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_1_1_input_model_a4d1c6a0558df9a7857036d29d17ced7b}{Email}} \};}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00078}00078                 var result = await \_userManager.CreateAsync(user, \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a8b40b8468821778d4d22e37d652c6b2b}{Input}}.\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_1_1_input_model_a1c2617eaec53d71293b7dc272c1982ee}{Password}});}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00079}00079                 \textcolor{keywordflow}{if} (result.Succeeded)}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00080}00080                 \{}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00081}00081                     \_logger.LogInformation(\textcolor{stringliteral}{"{}User created a new account with password."{}});}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00083}00083                     var code = await \_userManager.GenerateEmailConfirmationTokenAsync(user);}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00084}00084                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00085}00085                     var callbackUrl = Url.Page(}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00086}00086                         \textcolor{stringliteral}{"{}/Account/ConfirmEmail"{}},}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00087}00087                         pageHandler: \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00088}00088                         values: \textcolor{keyword}{new} \{ area = \textcolor{stringliteral}{"{}Identity"{}}, userId = user.Id, code = code, returnUrl = returnUrl \},}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00089}00089                         protocol: Request.Scheme);}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00091}00091                     await \_emailSender.SendEmailAsync(\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a8b40b8468821778d4d22e37d652c6b2b}{Input}}.\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_1_1_input_model_a4d1c6a0558df9a7857036d29d17ced7b}{Email}}, \textcolor{stringliteral}{"{}Confirm your email"{}},}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00092}00092                         \$\textcolor{stringliteral}{"{}Please confirm your account by <a href='\{HtmlEncoder.Default.Encode(callbackUrl)\}'>clicking here</a>."{}});}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00094}00094                     \textcolor{keywordflow}{if} (\_userManager.Options.SignIn.RequireConfirmedAccount)}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00095}00095                     \{}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00096}00096                         \textcolor{keywordflow}{return} RedirectToPage(\textcolor{stringliteral}{"{}RegisterConfirmation"{}}, \textcolor{keyword}{new} \{ email = \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_a8b40b8468821778d4d22e37d652c6b2b}{Input}}.\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model_1_1_input_model_a4d1c6a0558df9a7857036d29d17ced7b}{Email}}, returnUrl = returnUrl \});}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00097}00097                     \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00098}00098                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00099}00099                     \{}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00100}00100                         await \_signInManager.SignInAsync(user, isPersistent: \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00101}00101                         \textcolor{keywordflow}{return} LocalRedirect(returnUrl);}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00102}00102                     \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00103}00103                 \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00104}00104                 \textcolor{keywordflow}{foreach} (var error \textcolor{keywordflow}{in} result.Errors)}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00105}00105                 \{}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00106}00106                     ModelState.AddModelError(\textcolor{keywordtype}{string}.Empty, error.Description);}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00107}00107                 \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00108}00108             \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00110}00110             \textcolor{comment}{// If we got this far, something failed, redisplay form}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00111}00111             \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00112}00112         \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00113}00113     \}}
+\DoxyCodeLine{\Hypertarget{_register_8cshtml_8cs_source_l00114}00114 \}}
+
+\end{DoxyCode}

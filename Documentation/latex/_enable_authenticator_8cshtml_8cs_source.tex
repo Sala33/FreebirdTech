@@ -1,0 +1,162 @@
+\hypertarget{_enable_authenticator_8cshtml_8cs_source}{}\doxysection{Enable\+Authenticator.\+cshtml.\+cs}
+\label{_enable_authenticator_8cshtml_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml.cs}}
+\mbox{\hyperlink{_enable_authenticator_8cshtml_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00002}00002 \textcolor{keyword}{using} System.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00003}00003 \textcolor{keyword}{using} System.ComponentModel.DataAnnotations;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00005}00005 \textcolor{keyword}{using} System.Text;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00006}00006 \textcolor{keyword}{using} System.Text.Encodings.Web;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00007}00007 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00008}00008 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00009}00009 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00010}00010 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00011}00011 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.RazorPages;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00012}00012 \textcolor{keyword}{using} Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00014}00014 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage}{FreebirdTech.Areas.Identity.Pages.Account.Manage}}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00015}00015 \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00016}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model}{00016}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model}{EnableAuthenticatorModel}} : PageModel}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00017}00017     \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00018}00018         \textcolor{keyword}{private} readonly UserManager<IdentityUser> \_userManager;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00019}00019         \textcolor{keyword}{private} readonly ILogger<EnableAuthenticatorModel> \_logger;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00020}00020         \textcolor{keyword}{private} readonly UrlEncoder \_urlEncoder;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00022}00022         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{string} AuthenticatorUriFormat = \textcolor{stringliteral}{"{}otpauth://totp/\{0\}:\{1\}?secret=\{2\}\&issuer=\{0\}\&digits=6"{}};}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00024}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_a82bdef83100201547b530fb25d06e4c7}{00024}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_a82bdef83100201547b530fb25d06e4c7}{EnableAuthenticatorModel}}(}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00025}00025             UserManager<IdentityUser> userManager,}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00026}00026             ILogger<EnableAuthenticatorModel> logger,}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00027}00027             UrlEncoder urlEncoder)}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00028}00028         \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00029}00029             \_userManager = userManager;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00030}00030             \_logger = logger;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00031}00031             \_urlEncoder = urlEncoder;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00032}00032         \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00034}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_a4f3f986dbf6d8ce059b0e1d33fd7d425}{00034}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_a4f3f986dbf6d8ce059b0e1d33fd7d425}{SharedKey}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00036}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_ab92bc437412571c34ec1e4cf1aba4ce1}{00036}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_ab92bc437412571c34ec1e4cf1aba4ce1}{AuthenticatorUri}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00038}00038         [TempData]}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00039}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_aca35cdd4b8d245d42a41b82ea1ddb1c6}{00039}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string}[] \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_aca35cdd4b8d245d42a41b82ea1ddb1c6}{RecoveryCodes}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00041}00041         [TempData]}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00042}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_a7a63e475419c0e8f9aac68bd61380238}{00042}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_a7a63e475419c0e8f9aac68bd61380238}{StatusMessage}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00044}00044         [BindProperty]}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00045}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_a988cf409e375fb17a51955216571dfee}{00045}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_1_1_input_model}{InputModel}} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_a988cf409e375fb17a51955216571dfee}{Input}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00047}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_1_1_input_model}{00047}}         \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_1_1_input_model}{InputModel}}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00048}00048         \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00049}00049             [Required]}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00050}00050             [StringLength(7, ErrorMessage = \textcolor{stringliteral}{"{}The \{0\} must be at least \{2\} and at max \{1\} characters long."{}}, MinimumLength = 6)]}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00051}00051             [DataType(DataType.Text)]}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00052}00052             [Display(Name = \textcolor{stringliteral}{"{}Verification Code"{}})]}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00053}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_1_1_input_model_adfd6a97a3de0acbe90235ab7a15fc196}{00053}}             \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_1_1_input_model_adfd6a97a3de0acbe90235ab7a15fc196}{Code}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00054}00054         \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00056}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_afa10368ca72daa4606f6d6d80fd2621a}{00056}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_afa10368ca72daa4606f6d6d80fd2621a}{OnGetAsync}}()}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00057}00057         \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00058}00058             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00059}00059             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00060}00060             \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00061}00061                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID '\{\_userManager.GetUserId(User)\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00062}00062             \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00064}00064             await LoadSharedKeyAndQrCodeUriAsync(user);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00066}00066             \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00067}00067         \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00069}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_a4eac916a16690b386eee4a559912f0b8}{00069}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_a4eac916a16690b386eee4a559912f0b8}{OnPostAsync}}()}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00070}00070         \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00071}00071             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00072}00072             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00073}00073             \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00074}00074                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID '\{\_userManager.GetUserId(User)\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00075}00075             \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00077}00077             \textcolor{keywordflow}{if} (!ModelState.IsValid)}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00078}00078             \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00079}00079                 await LoadSharedKeyAndQrCodeUriAsync(user);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00080}00080                 \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00081}00081             \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00083}00083             \textcolor{comment}{// Strip spaces and hypens}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00084}00084             var verificationCode = \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_a988cf409e375fb17a51955216571dfee}{Input}}.\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_1_1_input_model_adfd6a97a3de0acbe90235ab7a15fc196}{Code}}.Replace(\textcolor{stringliteral}{"{} "{}}, \textcolor{keywordtype}{string}.Empty).Replace(\textcolor{stringliteral}{"{}-\/"{}}, \textcolor{keywordtype}{string}.Empty);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00086}00086             var is2faTokenValid = await \_userManager.VerifyTwoFactorTokenAsync(}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00087}00087                 user, \_userManager.Options.Tokens.AuthenticatorTokenProvider, verificationCode);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00089}00089             \textcolor{keywordflow}{if} (!is2faTokenValid)}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00090}00090             \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00091}00091                 ModelState.AddModelError(\textcolor{stringliteral}{"{}Input.Code"{}}, \textcolor{stringliteral}{"{}Verification code is invalid."{}});}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00092}00092                 await LoadSharedKeyAndQrCodeUriAsync(user);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00093}00093                 \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00094}00094             \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00096}00096             await \_userManager.SetTwoFactorEnabledAsync(user, \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00097}00097             var userId = await \_userManager.GetUserIdAsync(user);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00098}00098             \_logger.LogInformation(\textcolor{stringliteral}{"{}User with ID '\{UserId\}' has enabled 2FA with an authenticator app."{}}, userId);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00100}00100             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_a7a63e475419c0e8f9aac68bd61380238}{StatusMessage}} = \textcolor{stringliteral}{"{}Your authenticator app has been verified."{}};}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00102}00102             \textcolor{keywordflow}{if} (await \_userManager.CountRecoveryCodesAsync(user) == 0)}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00103}00103             \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00104}00104                 var recoveryCodes = await \_userManager.GenerateNewTwoFactorRecoveryCodesAsync(user, 10);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00105}00105                 \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_aca35cdd4b8d245d42a41b82ea1ddb1c6}{RecoveryCodes}} = recoveryCodes.ToArray();}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00106}00106                 \textcolor{keywordflow}{return} RedirectToPage(\textcolor{stringliteral}{"{}./ShowRecoveryCodes"{}});}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00107}00107             \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00108}00108             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00109}00109             \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00110}00110                 \textcolor{keywordflow}{return} RedirectToPage(\textcolor{stringliteral}{"{}./TwoFactorAuthentication"{}});}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00111}00111             \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00112}00112         \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00114}00114         \textcolor{keyword}{private} async Task LoadSharedKeyAndQrCodeUriAsync(IdentityUser user)}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00115}00115         \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00116}00116             \textcolor{comment}{// Load the authenticator key \& QR code URI to display on the form}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00117}00117             var unformattedKey = await \_userManager.GetAuthenticatorKeyAsync(user);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00118}00118             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{string}.IsNullOrEmpty(unformattedKey))}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00119}00119             \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00120}00120                 await \_userManager.ResetAuthenticatorKeyAsync(user);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00121}00121                 unformattedKey = await \_userManager.GetAuthenticatorKeyAsync(user);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00122}00122             \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00124}00124             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_a4f3f986dbf6d8ce059b0e1d33fd7d425}{SharedKey}} = FormatKey(unformattedKey);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00126}00126             var email = await \_userManager.GetEmailAsync(user);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00127}00127             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model_ab92bc437412571c34ec1e4cf1aba4ce1}{AuthenticatorUri}} = GenerateQrCodeUri(email, unformattedKey);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00128}00128         \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00130}00130         \textcolor{keyword}{private} \textcolor{keywordtype}{string} FormatKey(\textcolor{keywordtype}{string} unformattedKey)}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00131}00131         \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00132}00132             var result = \textcolor{keyword}{new} StringBuilder();}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00133}00133             \textcolor{keywordtype}{int} currentPosition = 0;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00134}00134             \textcolor{keywordflow}{while} (currentPosition + 4 < unformattedKey.Length)}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00135}00135             \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00136}00136                 result.Append(unformattedKey.Substring(currentPosition, 4)).Append(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00137}00137                 currentPosition += 4;}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00138}00138             \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00139}00139             \textcolor{keywordflow}{if} (currentPosition < unformattedKey.Length)}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00140}00140             \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00141}00141                 result.Append(unformattedKey.Substring(currentPosition));}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00142}00142             \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00143}00143 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00144}00144             \textcolor{keywordflow}{return} result.ToString().ToLowerInvariant();}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00145}00145         \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00147}00147         \textcolor{keyword}{private} \textcolor{keywordtype}{string} GenerateQrCodeUri(\textcolor{keywordtype}{string} email, \textcolor{keywordtype}{string} unformattedKey)}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00148}00148         \{}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00149}00149             \textcolor{keywordflow}{return} \textcolor{keywordtype}{string}.Format(}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00150}00150                 AuthenticatorUriFormat,}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00151}00151                 \_urlEncoder.Encode(\textcolor{stringliteral}{"{}FreebirdTech"{}}),}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00152}00152                 \_urlEncoder.Encode(email),}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00153}00153                 unformattedKey);}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00154}00154         \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00155}00155     \}}
+\DoxyCodeLine{\Hypertarget{_enable_authenticator_8cshtml_8cs_source_l00156}00156 \}}
+
+\end{DoxyCode}

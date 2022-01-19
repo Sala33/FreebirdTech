@@ -1,0 +1,141 @@
+﻿@model FreebirdTech.ViewModels.BlogsViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="container">
+
+    <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+            @foreach (var item in Model.TagList)
+            {
+                <a class="p-2 link-secondary" href="#">@item</a>
+            }
+        </nav>
+    </div>
+</div>
+
+<main class="container">
+    @if (Model.PostList.Count > 0)
+    {
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 fst-italic">@Model.PostList[0].Title</h1>
+                <p class="lead my-3">@Model.PostList[0].Abstract</p>
+                <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continuar lendo...</a></p>
+            </div>
+        </div>
+    }
+
+    @if (Model.PostList.Count > 1)
+    {
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">@Model.PostList[1].Tag</strong>
+                    <h3 class="mb-0">@Model.PostList[1].Title</h3>
+                    <div class="mb-1 text-muted">@Model.PostList[1].Date.Month @Model.PostList[1].Date.Day</div>
+                    <p class="card-text mb-auto">@Model.PostList[1].Abstract</p>
+                    <a href="#" class="stretched-link">Continue lendo</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+                </div>
+            </div>
+        </div>
+            @if (Model.PostList.Count > 2)
+            {
+                <div class="col-md-6">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary">@Model.PostList[1].Tag</strong>
+                            <h3 class="mb-0">@Model.PostList[1].Title</h3>
+                            <div class="mb-1 text-muted">@Model.PostList[1].Date.Month @Model.PostList[1].Date.Day</div>
+                            <p class="card-text mb-auto">@Model.PostList[1].Abstract</p>
+                            <a href="#" class="stretched-link">Continue lendo</a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+                        </div>
+                    </div>
+                </div>
+        }
+    </div>
+    }
+
+    <div class="row g-5">
+        <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                Freebird
+            </h3>
+            @foreach (var item in Model.PostList)
+            {
+                <article class="blog-post">
+                    <h2 class="blog-post-title">@item.Title</h2>
+                    <p class="blog-post-meta">@item.Date.Month @item.Date.Day, @item.Date.Year por <a href="#">@item.Author</a></p>
+
+                    @Html.Raw(item.Body)
+                  
+                </article>
+            }
+
+            <nav class="blog-pagination" aria-label="Pagination">
+                <a class="btn btn-outline-primary" href="#">Antigas</a>
+                <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+            </nav>
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-light rounded">
+                    <h4 class="fst-italic">Sobre</h4>
+                    <p class="mb-0">Frase de explicação sobre Freebird.</p>
+                </div>
+
+                <div class="p-4">
+                    <h4 class="fst-italic">Archives</h4>
+                    <ol class="list-unstyled mb-0">
+                        <li><a href="#">Janeiro 2022</a></li>
+                        <li><a href="#">Dezembro 2021</a></li>
+                    </ol>
+                </div>
+
+                <div class="p-4">
+                    <h4 class="fst-italic">Outros Links</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+@section Head
+{
+        <link href="/css/blog.css" rel="stylesheet">
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
+        </style>
+
+
+        <!-- Custom styles for this template -->
+        <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+        <!-- Custom styles for this template -->
+    }
+

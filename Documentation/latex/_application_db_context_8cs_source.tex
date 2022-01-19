@@ -1,0 +1,36 @@
+\hypertarget{_application_db_context_8cs_source}{}\doxysection{Application\+Db\+Context.\+cs}
+\label{_application_db_context_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Data/ApplicationDbContext.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Data/ApplicationDbContext.cs}}
+\mbox{\hyperlink{_application_db_context_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00001}00001 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_models}{Models}};}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00002}00002 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00003}00003 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00004}00004 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00005}00005 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00006}00006 \textcolor{keyword}{using} System.Text;}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00008}\mbox{\hyperlink{namespace_freebird_tech_1_1_data}{00008}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_data}{FreebirdTech.Data}}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00010}\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{00010}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}} : IdentityDbContext}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00011}00011     \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00012}\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_add6d1f2e70a259fa31b428fc21beabfd}{00012}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_add6d1f2e70a259fa31b428fc21beabfd}{ApplicationDbContext}}(DbContextOptions<ApplicationDbContext> options)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00013}00013             : base(options)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00014}00014         \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00015}00015         \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00017}\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_aabb6d7c9bdf1b597966f9f8244b577d5}{00017}}         \textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_aabb6d7c9bdf1b597966f9f8244b577d5}{OnConfiguring}}(DbContextOptionsBuilder optionsBuilder)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00018}00018         \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00019}00019             optionsBuilder.EnableSensitiveDataLogging();}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00020}00020         \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00021}\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_aa68326f170778db7665e7db2454b9d0c}{00021}}         \textcolor{keyword}{public} DbSet<Artist> \mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_aa68326f170778db7665e7db2454b9d0c}{Artists}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00022}\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_a28c86ead6652bb34afdbbf002dc870a3}{00022}}         \textcolor{keyword}{public} DbSet<Servico> \mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_a28c86ead6652bb34afdbbf002dc870a3}{Servicos}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00023}\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_a3bc0238fae8cdc2277085f103953c4b6}{00023}}         \textcolor{keyword}{public} DbSet<Image> \mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_a3bc0238fae8cdc2277085f103953c4b6}{Images}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00024}\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_a4a0bd7643a783b5eda02549c00a06d47}{00024}}         \textcolor{keyword}{public} DbSet<Portfolio> \mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_a4a0bd7643a783b5eda02549c00a06d47}{Portfolios}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00025}\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_a8955bd8300efca8d5a55e4d91d95757d}{00025}}         \textcolor{keyword}{public} DbSet<MailingList> \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_mailing_list}{MailingList}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00026}\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_a4ae9b25dea1978c4b55589b915ad79b9}{00026}}         \textcolor{keyword}{public} DbSet<Categorias> \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_categorias}{Categorias}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00027}\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_a428f743412bf265a514e8365fb53d40d}{00027}}         \textcolor{keyword}{public} DbSet<CalendarEvent> \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_calendar_event}{CalendarEvent}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00028}\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_a78d99a7894a60ce3e070f7651e22e08a}{00028}}         \textcolor{keyword}{public} DbSet<Message> \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_message}{Message}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00029}00029     \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00030}00030 \}}
+
+\end{DoxyCode}

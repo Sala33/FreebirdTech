@@ -1,0 +1,115 @@
+\hypertarget{_external_logins_8cshtml_8cs_source}{}\doxysection{External\+Logins.\+cshtml.\+cs}
+\label{_external_logins_8cshtml_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml.cs}}
+\mbox{\hyperlink{_external_logins_8cshtml_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00005}00005 \textcolor{keyword}{using} Microsoft.AspNetCore.Authentication;}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00007}00007 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00008}00008 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.RazorPages;}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00010}00010 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage}{FreebirdTech.Areas.Identity.Pages.Account.Manage}}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00012}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model}{00012}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model}{ExternalLoginsModel}} : PageModel}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00014}00014         \textcolor{keyword}{private} readonly UserManager<IdentityUser> \_userManager;}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00015}00015         \textcolor{keyword}{private} readonly SignInManager<IdentityUser> \_signInManager;}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00017}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_af80daf2ae7220ade1b1dd5d8c3abf121}{00017}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_af80daf2ae7220ade1b1dd5d8c3abf121}{ExternalLoginsModel}}(}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00018}00018             UserManager<IdentityUser> userManager,}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00019}00019             SignInManager<IdentityUser> signInManager)}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00020}00020         \{}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00021}00021             \_userManager = userManager;}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00022}00022             \_signInManager = signInManager;}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00023}00023         \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00025}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_ac29d505ec340976e4ee3f835693f8084}{00025}}         \textcolor{keyword}{public} IList<UserLoginInfo> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_ac29d505ec340976e4ee3f835693f8084}{CurrentLogins}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00027}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a24dbb6fb4c1e5a272c5c01617338c945}{00027}}         \textcolor{keyword}{public} IList<AuthenticationScheme> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a24dbb6fb4c1e5a272c5c01617338c945}{OtherLogins}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00029}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a26c15814f84d390bddd1d9a9b0a94e39}{00029}}         \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a26c15814f84d390bddd1d9a9b0a94e39}{ShowRemoveButton}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00031}00031         [TempData]}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00032}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a1f6714152c08b50974160228d41545f4}{00032}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a1f6714152c08b50974160228d41545f4}{StatusMessage}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00034}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a4bca0f2c1624a7e85b73c96102ba0b88}{00034}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a4bca0f2c1624a7e85b73c96102ba0b88}{OnGetAsync}}()}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00035}00035         \{}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00036}00036             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00037}00037             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00038}00038             \{}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00039}00039                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID 'user.Id'."{}});}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00040}00040             \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00042}00042             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_ac29d505ec340976e4ee3f835693f8084}{CurrentLogins}} = await \_userManager.GetLoginsAsync(user);}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00043}00043             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a24dbb6fb4c1e5a272c5c01617338c945}{OtherLogins}} = (await \_signInManager.GetExternalAuthenticationSchemesAsync())}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00044}00044                 .Where(auth => \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_ac29d505ec340976e4ee3f835693f8084}{CurrentLogins}}.All(ul => auth.Name != ul.LoginProvider))}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00045}00045                 .ToList();}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00046}00046             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a26c15814f84d390bddd1d9a9b0a94e39}{ShowRemoveButton}} = user.PasswordHash != \textcolor{keyword}{null} || \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_ac29d505ec340976e4ee3f835693f8084}{CurrentLogins}}.Count > 1;}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00047}00047             \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00048}00048         \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00050}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a07628bca15b828001f510ac0ea93069c}{00050}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a07628bca15b828001f510ac0ea93069c}{OnPostRemoveLoginAsync}}(\textcolor{keywordtype}{string} loginProvider, \textcolor{keywordtype}{string} providerKey)}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00051}00051         \{}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00052}00052             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00053}00053             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00054}00054             \{}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00055}00055                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID 'user.Id'."{}});}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00056}00056             \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00058}00058             var result = await \_userManager.RemoveLoginAsync(user, loginProvider, providerKey);}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00059}00059             \textcolor{keywordflow}{if} (!result.Succeeded)}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00060}00060             \{}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00061}00061                 \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a1f6714152c08b50974160228d41545f4}{StatusMessage}} = \textcolor{stringliteral}{"{}The external login was not removed."{}};}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00062}00062                 \textcolor{keywordflow}{return} RedirectToPage();}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00063}00063             \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00065}00065             await \_signInManager.RefreshSignInAsync(user);}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00066}00066             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a1f6714152c08b50974160228d41545f4}{StatusMessage}} = \textcolor{stringliteral}{"{}The external login was removed."{}};}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00067}00067             \textcolor{keywordflow}{return} RedirectToPage();}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00068}00068         \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00070}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_ae03303293a426938b0cf6e195bd3178f}{00070}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_ae03303293a426938b0cf6e195bd3178f}{OnPostLinkLoginAsync}}(\textcolor{keywordtype}{string} provider)}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00071}00071         \{}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00072}00072             \textcolor{comment}{// Clear the existing external cookie to ensure a clean login process}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00073}00073             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00075}00075             \textcolor{comment}{// Request a redirect to the external login provider to link a login for the current user}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00076}00076             var redirectUrl = Url.Page(\textcolor{stringliteral}{"{}./ExternalLogins"{}}, pageHandler: \textcolor{stringliteral}{"{}LinkLoginCallback"{}});}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00077}00077             var properties = \_signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl, \_userManager.GetUserId(User));}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00078}00078             \textcolor{keywordflow}{return} \textcolor{keyword}{new} ChallengeResult(provider, properties);}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00079}00079         \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00081}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a84b69ed5f137091087b88450f08d7981}{00081}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a84b69ed5f137091087b88450f08d7981}{OnGetLinkLoginCallbackAsync}}()}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00082}00082         \{}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00083}00083             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00084}00084             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00085}00085             \{}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00086}00086                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID 'user.Id'."{}});}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00087}00087             \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00089}00089             var info = await \_signInManager.GetExternalLoginInfoAsync(user.Id);}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00090}00090             \textcolor{keywordflow}{if} (info == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00091}00091             \{}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00092}00092                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} InvalidOperationException(\$\textcolor{stringliteral}{"{}Unexpected error occurred loading external login info for user with ID '\{user.Id\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00093}00093             \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00095}00095             var result = await \_userManager.AddLoginAsync(user, info);}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00096}00096             \textcolor{keywordflow}{if} (!result.Succeeded)}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00097}00097             \{}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00098}00098                 \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a1f6714152c08b50974160228d41545f4}{StatusMessage}} = \textcolor{stringliteral}{"{}The external login was not added. External logins can only be associated with one account."{}};}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00099}00099                 \textcolor{keywordflow}{return} RedirectToPage();}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00100}00100             \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00102}00102             \textcolor{comment}{// Clear the existing external cookie to ensure a clean login process}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00103}00103             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00105}00105             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model_a1f6714152c08b50974160228d41545f4}{StatusMessage}} = \textcolor{stringliteral}{"{}The external login was added."{}};}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00106}00106             \textcolor{keywordflow}{return} RedirectToPage();}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00107}00107         \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00108}00108     \}}
+\DoxyCodeLine{\Hypertarget{_external_logins_8cshtml_8cs_source_l00109}00109 \}}
+
+\end{DoxyCode}

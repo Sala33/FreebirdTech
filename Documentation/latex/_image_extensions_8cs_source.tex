@@ -1,0 +1,51 @@
+\hypertarget{_image_extensions_8cs_source}{}\doxysection{Image\+Extensions.\+cs}
+\label{_image_extensions_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Extensions/ImageExtensions.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Extensions/ImageExtensions.cs}}
+\mbox{\hyperlink{_image_extensions_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00001}00001 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_models}{Models}};}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00002}00002 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_utility}{Utility}};}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00003}00003 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00005}00005 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00006}00006 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00008}00008 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_extensions}{FreebirdTech.Extensions}}}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00010}\mbox{\hyperlink{namespace_freebird_tech_1_1_extensions_ab451e9ae1721506caf8a306c8c7f4bd4}{00010}}     \textcolor{keyword}{public} \textcolor{keyword}{enum} \mbox{\hyperlink{namespace_freebird_tech_1_1_extensions_ab451e9ae1721506caf8a306c8c7f4bd4}{EImageType}} \{ \mbox{\hyperlink{namespace_freebird_tech_1_1_extensions_ab451e9ae1721506caf8a306c8c7f4bd4a83b021f650ea1a8124315ba45de41052}{PORTFOLIO}}, \mbox{\hyperlink{namespace_freebird_tech_1_1_extensions_ab451e9ae1721506caf8a306c8c7f4bd4a4aca1e1b04d4278630b19cf3faff4b29}{AVATAR}} \};}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00011}00011     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{class }ImageExtensions}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00012}00012     \{}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00014}00014         \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{string} DecodeImage(\textcolor{keyword}{this} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image}{Image}} image)}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00015}00015         \{}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00016}00016             \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image}{Image}} img = image;}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00017}00017             \textcolor{keywordtype}{string} imageBase64Data = Convert.ToBase64String(img.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image_a92152ae5e32b675445b63e94afc613a7}{ImageData}});}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00018}00018             \textcolor{keywordtype}{string} imageDataURL = \textcolor{keywordtype}{string}.Format(\textcolor{stringliteral}{"{}data:image/jpg;base64,\{0\}"{}}, imageBase64Data);}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00020}00020             \textcolor{keywordflow}{return} imageDataURL;}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00021}00021         \}}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00023}00023         \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image}{Image}} EncodeImage(\textcolor{keyword}{this} \textcolor{keywordtype}{string} URI, \textcolor{keywordtype}{string} name, \mbox{\hyperlink{namespace_freebird_tech_1_1_extensions_ab451e9ae1721506caf8a306c8c7f4bd4}{EImageType}} imageType, \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image}{Image}} image = \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00024}00024         \{}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00025}00025             \textcolor{keywordflow}{if} (!\textcolor{keywordtype}{string}.IsNullOrEmpty(URI))}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00026}00026             \{}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00027}00027                 var imgByteArr = \mbox{\hyperlink{class_freebird_tech_1_1_utility_1_1_image_encoding_util}{ImageEncodingUtil}}.\mbox{\hyperlink{class_freebird_tech_1_1_utility_1_1_image_encoding_util_a66cd67c035a890e5ae021f25b9a8f1fd}{FromDataURL}}(URI);}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00028}00028                 \textcolor{keywordflow}{if} (imgByteArr.Length < 2097152)}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00029}00029                 \{}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00030}00030                     \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image}{Image}} artistIMG;}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00031}00031                     \textcolor{keywordflow}{if} (image == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00032}00032                         artistIMG = \textcolor{keyword}{new} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image}{Image}}();}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00033}00033                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00034}00034                         artistIMG = image;}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00036}00036                     artistIMG.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image_a92152ae5e32b675445b63e94afc613a7}{ImageData}} = imgByteArr;}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00037}00037                     artistIMG.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image_a8c5f631a21a1bf417a07bb0edf6fa8b7}{ImageTitle}} = name + \textcolor{stringliteral}{"{}-\/"{}} + imageType.ToString()+\textcolor{stringliteral}{"{}.jpg"{}};}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00038}00038                     \textcolor{keywordflow}{return} artistIMG;}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00039}00039                 \}}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00040}00040             \}}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00042}00042             \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00043}00043         \}}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00044}00044     \}}
+\DoxyCodeLine{\Hypertarget{_image_extensions_8cs_source_l00045}00045 \}}
+
+\end{DoxyCode}

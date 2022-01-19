@@ -1,0 +1,258 @@
+\hypertarget{class_freebird_tech_1_1_controllers_1_1_images_controller}{}\doxysection{Freebird\+Tech.\+Controllers.\+Images\+Controller Class Reference}
+\label{class_freebird_tech_1_1_controllers_1_1_images_controller}\index{FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}}
+
+
+This class is responsible for controlling the Images. Some of it\textquotesingle{}s responsabilities are\+:  
+
+
+Inheritance diagram for Freebird\+Tech.\+Controllers.\+Images\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_freebird_tech_1_1_controllers_1_1_images_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a83788cc69ec855a21157a4d0a44d4f64}{Images\+Controller}} (\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}} context)
+\begin{DoxyCompactList}\small\item\em The method defines the context of the controller \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_adcc926efbeb840a91643f5ef05d06dea}{Index}} ()
+\begin{DoxyCompactList}\small\item\em The method defines the Index of the controller \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a05e28e71440c397212454e246f83da91}{Details}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method returns Not\+Found if the id is null otherwise it retrieves an image related to the parameter id and returns null if the retrieved image is null or returns a view view with the image if it´s not null \end{DoxyCompactList}\item 
+IAction\+Result \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a76811bb464f1f436b9f5fb6590bb699a}{Create}} ()
+\begin{DoxyCompactList}\small\item\em The method initializes and returns a view \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a421b9a13b9ee34faa483598f72870dc7}{Create}} (\mbox{[}Bind(\char`\"{}Id,Image\+Title,Image\+Data\char`\"{})\mbox{]} Image image)
+\begin{DoxyCompactList}\small\item\em The method returns a view with an image which is an argument if the Modal\+State is invalid otherwise the image is added to the context and an async task to save the changes is called then the method returns a Redirect\+Toaction with the name of the index as argument \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a1c16d8aba32f8fb6bf85978e1d100e60}{Edit}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method checks if the id passed as argument is null, if so it returns a Not\+Found If the id isn\textquotesingle{}t null an async task tries to retrieve an image related to the id If the retrieved image is null the method returns a Not\+Found If the image isn\textquotesingle{}t null then the method returns a view with the retrieved image The method retrieves an image to be edited. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_ae31e70fb76f7f364462e0ddf25996ed3}{Edit}} (int id, \mbox{[}Bind(\char`\"{}Id,Image\+Title,Image\+Data\char`\"{})\mbox{]} Image image)
+\begin{DoxyCompactList}\small\item\em The method verifies if the image id is the same as the id and then saves it in the database, otherwise it returns a Not\+Found \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a766352a83ff3b7f4103a9d24c69ab616}{Delete}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method is responsible for finding and image to be deleted based on it\textquotesingle{}s id \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a69266394aa1a954ae6ee1118765b1403}{Delete\+Confirmed}} (int id)
+\begin{DoxyCompactList}\small\item\em The method confirms the deletion of the image related to the id \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is responsible for controlling the Images. Some of it\textquotesingle{}s responsabilities are\+: 
+
+
+\begin{DoxyItemize}
+\item define a context\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller}{Images\+Controller}}
+\item show Index \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_adcc926efbeb840a91643f5ef05d06dea}{Index}}
+\item exhibit image Details \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a05e28e71440c397212454e246f83da91}{Details(int?)}}
+\item creating an image \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a76811bb464f1f436b9f5fb6590bb699a}{Create}}
+\item saving created image \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a421b9a13b9ee34faa483598f72870dc7}{Create(\+Image)}}
+\item edit image\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a1c16d8aba32f8fb6bf85978e1d100e60}{Edit(int?)}}
+\item delete image\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a766352a83ff3b7f4103a9d24c69ab616}{Delete(int?)}}
+\item confirming deletion \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_images_controller_a69266394aa1a954ae6ee1118765b1403}{Delete\+Confirmed(int)}}.
+\item verify image Image\+Exists(int). 
+\end{DoxyItemize}
+
+~\newline
+ 
+
+Definition at line \mbox{\hyperlink{_images_controller_8cs_source_l00026}{26}} of file \mbox{\hyperlink{_images_controller_8cs_source}{Images\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_images_controller_a83788cc69ec855a21157a4d0a44d4f64}\label{class_freebird_tech_1_1_controllers_1_1_images_controller_a83788cc69ec855a21157a4d0a44d4f64}} 
+\index{FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}!ImagesController@{ImagesController}}
+\index{ImagesController@{ImagesController}!FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}}
+\doxysubsubsection{\texorpdfstring{ImagesController()}{ImagesController()}}
+{\footnotesize\ttfamily Freebird\+Tech.\+Controllers.\+Images\+Controller.\+Images\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}}}]{context }\end{DoxyParamCaption})}
+
+
+
+The method defines the context of the controller 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The Application\+Db\+Context of the controller\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_images_controller_8cs_source_l00035}{35}} of file \mbox{\hyperlink{_images_controller_8cs_source}{Images\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_images_controller_a76811bb464f1f436b9f5fb6590bb699a}\label{class_freebird_tech_1_1_controllers_1_1_images_controller_a76811bb464f1f436b9f5fb6590bb699a}} 
+\index{FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}!Create@{Create}}
+\index{Create@{Create}!FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily IAction\+Result Freebird\+Tech.\+Controllers.\+Images\+Controller.\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method initializes and returns a view 
+
+\begin{DoxyReturn}{Returns}
+A initialized view
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_images_controller_8cs_source_l00081}{81}} of file \mbox{\hyperlink{_images_controller_8cs_source}{Images\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_images_controller_a421b9a13b9ee34faa483598f72870dc7}\label{class_freebird_tech_1_1_controllers_1_1_images_controller_a421b9a13b9ee34faa483598f72870dc7}} 
+\index{FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}!Create@{Create}}
+\index{Create@{Create}!FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Images\+Controller.\+Create (\begin{DoxyParamCaption}\item[{\mbox{[}\+Bind(\char`\"{}\+Id,\+Image\+Title,\+Image\+Data\char`\"{})\mbox{]} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image}{Image}}}]{image }\end{DoxyParamCaption})}
+
+
+
+The method returns a view with an image which is an argument if the Modal\+State is invalid otherwise the image is added to the context and an async task to save the changes is called then the method returns a Redirect\+Toaction with the name of the index as argument 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & The image to be added to the context or return in the view\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A view with an image if the Modal\+State is invalid, otherwise a Redirect\+Toaction to the index 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_images_controller_8cs_source_l00101}{101}} of file \mbox{\hyperlink{_images_controller_8cs_source}{Images\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_images_controller_a766352a83ff3b7f4103a9d24c69ab616}\label{class_freebird_tech_1_1_controllers_1_1_images_controller_a766352a83ff3b7f4103a9d24c69ab616}} 
+\index{FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}!Delete@{Delete}}
+\index{Delete@{Delete}!FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Images\+Controller.\+Delete (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method is responsible for finding and image to be deleted based on it\textquotesingle{}s id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the image\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a view with the image or Not\+Found
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_images_controller_8cs_source_l00185}{185}} of file \mbox{\hyperlink{_images_controller_8cs_source}{Images\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_images_controller_a69266394aa1a954ae6ee1118765b1403}\label{class_freebird_tech_1_1_controllers_1_1_images_controller_a69266394aa1a954ae6ee1118765b1403}} 
+\index{FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}!DeleteConfirmed@{DeleteConfirmed}}
+\index{DeleteConfirmed@{DeleteConfirmed}!FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}}
+\doxysubsubsection{\texorpdfstring{DeleteConfirmed()}{DeleteConfirmed()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Images\+Controller.\+Delete\+Confirmed (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+The method confirms the deletion of the image related to the id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the image\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a Redirect\+To\+Action
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_images_controller_8cs_source_l00210}{210}} of file \mbox{\hyperlink{_images_controller_8cs_source}{Images\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_images_controller_a05e28e71440c397212454e246f83da91}\label{class_freebird_tech_1_1_controllers_1_1_images_controller_a05e28e71440c397212454e246f83da91}} 
+\index{FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}!Details@{Details}}
+\index{Details@{Details}!FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}}
+\doxysubsubsection{\texorpdfstring{Details()}{Details()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Images\+Controller.\+Details (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method returns Not\+Found if the id is null otherwise it retrieves an image related to the parameter id and returns null if the retrieved image is null or returns a view view with the image if it´s not null 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & An int wich represents the image related to the id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Not\+Found if id or image is null, otherwise a view with an image
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_images_controller_8cs_source_l00059}{59}} of file \mbox{\hyperlink{_images_controller_8cs_source}{Images\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_images_controller_ae31e70fb76f7f364462e0ddf25996ed3}\label{class_freebird_tech_1_1_controllers_1_1_images_controller_ae31e70fb76f7f364462e0ddf25996ed3}} 
+\index{FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}!Edit@{Edit}}
+\index{Edit@{Edit}!FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Images\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{[}\+Bind(\char`\"{}\+Id,\+Image\+Title,\+Image\+Data\char`\"{})\mbox{]} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image}{Image}}}]{image }\end{DoxyParamCaption})}
+
+
+
+The method verifies if the image id is the same as the id and then saves it in the database, otherwise it returns a Not\+Found 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & The image to be saved to the database\\
+\hline
+{\em id} & An int wich represents the image related to the id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A view with the image, Notfound or a Redirect\+To\+Atcion
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_images_controller_8cs_source_l00149}{149}} of file \mbox{\hyperlink{_images_controller_8cs_source}{Images\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_images_controller_a1c16d8aba32f8fb6bf85978e1d100e60}\label{class_freebird_tech_1_1_controllers_1_1_images_controller_a1c16d8aba32f8fb6bf85978e1d100e60}} 
+\index{FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}!Edit@{Edit}}
+\index{Edit@{Edit}!FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Images\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method checks if the id passed as argument is null, if so it returns a Not\+Found If the id isn\textquotesingle{}t null an async task tries to retrieve an image related to the id If the retrieved image is null the method returns a Not\+Found If the image isn\textquotesingle{}t null then the method returns a view with the retrieved image The method retrieves an image to be edited. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & An int wich represents the image related to the id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a view with the image or Not\+Found
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_images_controller_8cs_source_l00122}{122}} of file \mbox{\hyperlink{_images_controller_8cs_source}{Images\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_images_controller_adcc926efbeb840a91643f5ef05d06dea}\label{class_freebird_tech_1_1_controllers_1_1_images_controller_adcc926efbeb840a91643f5ef05d06dea}} 
+\index{FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}!Index@{Index}}
+\index{Index@{Index}!FreebirdTech.Controllers.ImagesController@{FreebirdTech.Controllers.ImagesController}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Images\+Controller.\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method defines the Index of the controller 
+
+\begin{DoxyReturn}{Returns}
+View with listed images
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_images_controller_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_images_controller_8cs_source}{Images\+Controller.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Danilo/source/repos/\+Freebird\+Tech/\+Controllers/\mbox{\hyperlink{_images_controller_8cs}{Images\+Controller.\+cs}}\end{DoxyCompactItemize}

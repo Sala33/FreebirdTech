@@ -1,0 +1,4 @@
+var class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_1_1_input_model =
+[
+    [ "RecoveryCode", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_1_1_input_model.html#a80d2f60aa01247f8a8b79f38362a53e5", null ]
+];

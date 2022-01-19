@@ -1,0 +1,437 @@
+﻿@using FreebirdTech.Utility
+@using FreebirdTech.Extensions
+@model FreebirdTech.Models.Servico
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Head{
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="~/css/chatbox.css" />
+}
+<div class="container px-0 pt-5">
+    <!-- HERO -->
+    <div class="row row-cols-12 row-cols-md-1 mb-2 mt-2">
+        <hr style="margin-left: auto; margin-right: auto; height:2px; width:100%; border-width:0; color:rgb(219, 216, 214);">
+        <!-- TITLE -->
+        <div>
+            <h3 class="text_orange mt-4 mb-4">
+                @Model.Title
+            </h3>
+        </div>
+
+        <!-- CARD -->
+        <div class="col-sm-6 col-md-8 d-flex mb-2 ">
+            <div class="card  card-body border-light  justify-content-between text-white shadow">
+
+                <!-- SPACE -->
+                <div class=" text-dark mb-0 ">
+                </div>
+                <!-- BANNER -->
+                <div class="d-flex align-items-left mb-4">
+                    <div class="meta-author">
+                        <img class="d-block img-fluid rounded-circle shadow" src="@PageRenderHelper.ValidateProfilePicture(Model.OwnerID.AvatarImageURI)"
+                             alt="author avatar" style="max-height:100px; width:auto;">
+
+                    </div>
+                    <div class="m-2">
+                        <h5 class="text-dark justify-content-left">@Model.OwnerID.Name</h5>
+
+                        <ul class="list-unstyled d-flex j text-warning mb-0">
+                            <p class="text-muted">@Model.OwnerID.BriefDescription</p>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- GOHAN??? -->
+                <div class="container-fluid">
+                    <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
+
+                        <div class="carousel-inner">
+                            @foreach (var item in Model.PortfolioData)
+                            {
+                                if (item.PortfolioType.ConvertToPortfolioType() == EPortfolioType.IMAGEM_CAPA)
+                                {
+                                    <div class="item carousel-item active">
+                                        <img class="d-block w-100" src="@PageRenderHelper.ValidateCoverImage(item.EmbedLink)" alt="First slide" style="object-fit: contain; margin: auto">
+                                    </div>
+                                }
+                                else if (item.PortfolioType.ConvertToPortfolioType() == EPortfolioType.IMAGEM)
+                                {
+                                    <div class="item carousel-item">
+                                        <img class="d-block w-100" src="@PageRenderHelper.ValidateCoverImage(item.EmbedLink)" alt="First slide" style="object-fit: contain; margin: auto">
+                                    </div>
+                                }
+                                else if (item.PortfolioType.ConvertToPortfolioType() == EPortfolioType.EMBED)
+                                {
+                                    <div class="item carousel-item">
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            @Html.Raw(item.EmbedLink)
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+
+                        <div class="col-12 justify-content-center text-center mt-5">
+                            <a class="btn btn-primary mb-5 mr-1" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <i class="fa fa-arrow-left"></i>
+                            </a>
+                            <a class="btn btn-primary mb-5 " href="#carouselExampleControls" role="button" data-slide="next">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- PRICING CARD -->
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+
+                <div class="card-body">
+                    <!-- PRICE -->
+                    <h2 class="card-title text_orange pricing-card-title">R$@Model.Preco</h2><small class="text-muted fw-light"> /hora</small>
+
+                    <!-- QUICK DESCRIPTION -->
+                    <p>
+                        @Model.BriefDescription
+                    </p>
+
+                    <hr style="margin-left: auto; margin-right: auto; height:2px; width:80%; border-width:0; color:rgb(194, 189, 188);">
+
+                    <!-- BULLET POINTS -->
+                    <ul class="list-unstyled mt-3 mb-4">
+                        @foreach (var topic in Model.Topics)
+                        {
+                            @if (!string.IsNullOrEmpty(topic))
+                            {
+                                <p><i class="fas fa-check"></i><small> @topic</small> </p>
+                            }
+                        }
+                    </ul>
+
+                    <!-- HIRE -->
+                    <div class="row align-items-center ">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <button id="btnShowModal" type="button"
+                                    class="btn btn-primary rounded-pill pull-left col-lg-11 btn-sm">
+                                Contratar
+                            </button>
+                        }
+                        else
+                        {
+                            <button type="button"
+                                    class="btn btn-primary rounded-pill pull-left col-lg-11 btn-sm"
+                                    disabled>
+                                Crie uma conta para entrar em contato!
+                            </button>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='container-fluid text_orange px-0 py-0'></div>
+
+
+        <hr style="margin-left: auto; margin-right: auto; height:2px; width:100%; border-width:0; color:rgb(194, 189, 188);">
+
+        <style type="text/css">
+            #map {
+                height: 400px;
+                /* The height is 400 pixels */
+                width: 100%;
+                /* The width is the width of the web page */
+            }
+        </style>
+        <script>
+            // This example requires the Places library. Include the libraries=places
+            // parameter when you first load the API. For example:
+            // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+            let map;
+            let service;
+            let infowindow;
+
+            function initMap() {
+                const sydney = new google.maps.LatLng(-33.867, 151.195);
+
+                infowindow = new google.maps.InfoWindow();
+                map = new google.maps.Map(document.getElementById("map"), {
+                    center: sydney,
+                    zoom: 15,
+                });
+
+                const request = {
+                    query:  "@PageRenderHelper.GetLiteralString(Model.Address)",
+                    fields: ["name", "geometry"],
+                };
+
+                service = new google.maps.places.PlacesService(map);
+                service.findPlaceFromQuery(request, (results, status) => {
+                    if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+                        for (let i = 0; i < results.length; i++) {
+                            createMarker(results[i]);
+                        }
+
+                        map.setCenter(results[0].geometry.location);
+                    }
+                });
+            }
+
+            function createMarker(place) {
+                if (!place.geometry || !place.geometry.location) return;
+
+                const marker = new google.maps.Marker({
+                    map,
+                    position: place.geometry.location,
+                });
+
+                google.maps.event.addListener(marker, "click", () => {
+                    infowindow.setContent(place.name || "");
+                    infowindow.open(map);
+                });
+            }
+        </script>
+
+
+
+        <div id="map"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key={YOUR_API_KEY_HERE}&callback=initMap&libraries=places&v=weekly"
+                async></script>
+
+        <!--ABOUT THE GIG-->
+        <div class='row justify-content-left align-items-left mt-5'>
+            <div class='col-sm-6'>
+                <h3 class="text-left text_orange">Sobre esse serviço</h3>
+                <p class="text-left text-dark">
+                    <small>
+                        @Model.LongDescription
+                    </small>
+                </p>
+
+            </div>
+        </div>
+
+        <!-- PREVIOUS EXPERIENCE AND WORK SAMPLES -->
+        <div class='row justify-content-left align-items-left mt-5'>
+            <div class='col-sm-6'>
+
+                <p class="text-dark">EM SUMA:</p>
+                <p class="text-left text-dark">
+                    <small>
+                        @Model.BriefDescription
+
+                    </small>
+                </p>
+            </div>
+        </div>
+
+        <hr style="margin-left: auto; margin-right: auto; height:2px; width:100%; border-width:0; color:rgb(219, 216, 214);">
+
+        <!--ARTIST CARD-->
+        <div class='row  align-items-left'>
+            <div class='col-12 col-md-2'>
+
+                <figure class="figure mt-2">
+                    <img src='@PageRenderHelper.ValidateProfilePicture(Model.OwnerID.AvatarImageURI)' class='figure-img rounded-circle img-fluid w-85'>
+                </figure>
+            </div>
+            <div class="m-2">
+                <a asp-action="Details" asp-controller="Artists" asp-route-id="@Model.OwnerID.Id"><h5 class="text-dark justify-content-left">@Model.OwnerID.Name</h5></a>
+
+                <ul class="list-unstyled d-flex j text-warning mb-0">
+                    <p class="text-muted">@Model.OwnerID.BriefDescription</p>
+                </ul>
+
+            </div>
+        </div>
+
+        <!--ARTIST DESCRIPTION-->
+        <div class='row justify-content-left align-items-left mt-2'>
+            <div class='col-sm-6'>
+
+                <p class="text-left mb-4 text-dark">
+                    <small>
+                        @Model.OwnerID.Description
+                    </small>
+                </p>
+                <i class="text_orange far fa-comment-alt"></i>
+                <a class="mt-5 text_orange" href="mailto:@Model.OwnerID.Contact">fale comigo</a>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="modal fade" tabindex="-1" id="loginModal"
+         data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="h4 lead">Contatar Artista</h4>
+                    <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                Messaging System
+            </div>
+        </div>
+    </div>
+}
+
+@if (Model.HasProfile)
+{
+    <div class="floating-chat">
+        <i class="fa fa-comments" aria-hidden="true"></i>
+        <div class="chat">
+            <div class="header">
+                <span class="title">
+                    Converse com o profissional:
+                </span>
+                <button>
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+
+            </div>
+            <ul class="messages">
+                @foreach (var item in Model.Messages)
+                {
+                    if (item.Sender.Equals(Model.OwnerID))
+                    {
+                        <li class="self">@item.MessageText</li>
+                    }
+                    else
+                    {
+                        <li class="other">@item.MessageText</li>
+                    }
+                }
+            </ul>
+            <div class="footer">
+                <textarea class="text-box" contenteditable="true"></textarea>
+                <button id="sendMessage">send</button>
+            </div>
+        </div>
+    </div>
+}
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#btnShowModal").click(function () {
+            $("#loginModal").modal('show');
+        });
+
+        $("#btnHideModal").click(function () {
+            $("#loginModal").modal('hide');
+        });
+
+    });
+
+    var element = $('.floating-chat');
+    var myStorage = localStorage;
+
+    if (!myStorage.getItem('chatID')) {
+        myStorage.setItem('chatID', createUUID());
+    }
+
+    setTimeout(function () {
+        element.addClass('enter');
+    }, 1000);
+
+    element.click(openElement);
+
+    function openElement() {
+        var messages = element.find('.messages');
+        var textInput = element.find('.text-box');
+        element.find('>i').hide();
+        element.addClass('expand');
+        element.find('.chat').addClass('enter');
+        var strLength = textInput.val().length * 2;
+        textInput.keydown(onMetaAndEnter).prop("disabled", false).focus();
+        element.off('click', openElement);
+        element.find('.header button').click(closeElement);
+        element.find('#sendMessage').click(sendNewMessage);
+        messages.scrollTop(messages.prop("scrollHeight"));
+    }
+
+    function closeElement() {
+        element.find('.chat').removeClass('enter').hide();
+        element.find('>i').show();
+        element.removeClass('expand');
+        element.find('.header button').off('click', closeElement);
+        element.find('#sendMessage').off('click', sendNewMessage);
+        element.find('.text-box').off('keydown', onMetaAndEnter).prop("disabled", true).blur();
+        setTimeout(function () {
+            element.find('.chat').removeClass('enter').show()
+            element.click(openElement);
+        }, 500);
+    }
+
+    function createUUID() {
+        // http://www.ietf.org/rfc/rfc4122.txt
+        var s = [];
+        var hexDigits = "0123456789abcdef";
+        for (var i = 0; i < 36; i++) {
+            s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+        }
+        s[14] = "4"; // bits 12-15 of the time_hi_and_version field to 0010
+        s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1); // bits 6-7 of the clock_seq_hi_and_reserved to 01
+        s[8] = s[13] = s[18] = s[23] = "-";
+
+        var uuid = s.join("");
+        return uuid;
+    }
+
+    function sendNewMessage() {
+        var userInput = $('.text-box');
+        var newMessage = userInput.val();
+
+        if (!newMessage) return;
+
+        userInput.prop('disabled', true);
+
+        var messagesContainer = $('.messages');
+
+        // Assign handlers immediately after making the request,
+        // and remember the jqxhr object for this request
+        var jqxhr = $.post('/api/Messagesapi?message=' + newMessage + '&receiverID=@Model.OwnerID.OwnerId', function () {
+            userInput.prop('disabled', false);
+
+            var jqxhr_messages = $.post('/servicos/UpdateMessageBoard?receiver=@Model.OwnerID.OwnerId', function (data) {
+                $('.messages').replaceWith($('.messages', data));
+
+                messagesContainer.finish().animate({
+                    scrollTop: messagesContainer.prop("scrollHeight")
+                }, 250);
+
+                // focus on input
+                userInput.focus();
+
+            });
+        })
+            .fail(function () {
+                alert("error");
+                userInput.prop('disabled', false);
+            });
+
+        userInput.val('');
+
+    }
+
+    function onMetaAndEnter(event) {
+        if ((event.metaKey || event.ctrlKey) && event.keyCode == 13) {
+            sendNewMessage();
+        }
+    }
+
+</script>

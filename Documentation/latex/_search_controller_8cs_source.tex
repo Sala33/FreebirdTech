@@ -1,0 +1,64 @@
+\hypertarget{_search_controller_8cs_source}{}\doxysection{Search\+Controller.\+cs}
+\label{_search_controller_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Controllers/SearchController.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Controllers/SearchController.cs}}
+\mbox{\hyperlink{_search_controller_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00001}00001 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_data}{Data}};}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00002}00002 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00003}00003 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00004}00004 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00005}00005 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00006}00006 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00007}00007 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00008}00008 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_extensions}{Extensions}};}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00009}00009 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_view_components}{ViewComponents}};}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00010}00010 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_models}{Models}};}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00012}00012 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_controllers}{FreebirdTech.Controllers}}}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00020}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_search_controller}{00020}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_search_controller}{SearchController}} : Controller}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00021}00021     \{}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00022}00022         \textcolor{keyword}{private} readonly \mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}} \_context;}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00029}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_search_controller_a7d0ebafb0610b96f0b12aeef68497f23}{00029}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_search_controller_a7d0ebafb0610b96f0b12aeef68497f23}{SearchController}}(\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}} context)}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00030}00030         \{}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00031}00031             \_context = context;}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00032}00032         \}}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00039}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_search_controller_ae89166937f6b910a8008012544c64bed}{00039}}         \textcolor{keyword}{public} IActionResult \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_search_controller_ae89166937f6b910a8008012544c64bed}{Index}}(\textcolor{keywordtype}{string} search)}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00040}00040         \{}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00041}00041             \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico}{Servico}}[] servicos = \_context.Servicos.Include(m => m.OwnerID).AsNoTracking().ToArray();}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00043}00043             \textcolor{keywordflow}{if} (!\textcolor{keywordtype}{string}.IsNullOrEmpty(search))             }
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00044}00044                 servicos = servicos.Where(s => s.Title.Contains(search, StringComparison.InvariantCultureIgnoreCase) || s.OwnerID.Name.Contains(search, StringComparison.InvariantCultureIgnoreCase)).ToArray();}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00046}00046             var cardInfo = \textcolor{keyword}{new} \mbox{\hyperlink{class_freebird_tech_1_1_view_components_1_1_card_info}{CardInfo}}[servicos.Length];}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00048}00048             var \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_categorias}{Categorias}} = \_context.Categorias.AsNoTracking().ToArray();}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00050}00050             var catArray = \textcolor{keyword}{new} \textcolor{keywordtype}{string}[\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_categorias}{Categorias}}.Length];}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00052}00052             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < servicos.Length; i++)}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00053}00053             \{}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00054}00054                 \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico}{Servico}} item = servicos[i];}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00056}00056                 cardInfo[i] = item.CreateCardInfo(\_context);}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00057}00057             \}}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00059}00059             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_categorias}{Categorias}}.Length; i++)}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00060}00060             \{}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00061}00061                 \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_categorias}{Categorias}} item = \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_categorias}{Categorias}}[i];}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00062}00062                 catArray[i] = item.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_categorias_abfc8e1c29475dff5c0558259309b3c6f}{Categoria}};}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00063}00063             \}}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00065}00065             var vm = \textcolor{keyword}{new} \mbox{\hyperlink{class_freebird_tech_1_1_view_components_1_1_search_view_model}{SearchViewModel}}()}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00066}00066             \{}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00067}00067                 Cards = cardInfo,}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00068}00068                 \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_categorias}{Categorias}} = catArray}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00069}00069             \};}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00071}00071             \textcolor{keywordflow}{return} View(vm);}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00072}00072         \}}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00073}00073     \}}
+\DoxyCodeLine{\Hypertarget{_search_controller_8cs_source_l00074}00074 \}}
+
+\end{DoxyCode}

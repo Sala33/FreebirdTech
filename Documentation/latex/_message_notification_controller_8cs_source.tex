@@ -1,0 +1,56 @@
+\hypertarget{_message_notification_controller_8cs_source}{}\doxysection{Message\+Notification\+Controller.\+cs}
+\label{_message_notification_controller_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Controllers/MessageNotificationController.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Controllers/MessageNotificationController.cs}}
+\mbox{\hyperlink{_message_notification_controller_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00001}00001 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_data}{Data}};}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00002}00002 \textcolor{keyword}{using} Microsoft.AspNetCore.Http;}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00003}00003 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00004}00004 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00005}00005 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00006}00006 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00007}00007 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00008}00008 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00009}00009 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00011}00011 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_controllers}{FreebirdTech.Controllers}}}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00012}00012 \{}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00013}00013     [Route(\textcolor{stringliteral}{"{}api/[controller]"{}})]}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00014}00014     [ApiController]}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00015}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_message_notification_controller}{00015}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_message_notification_controller}{MessageNotificationController}} : ControllerBase}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00016}00016     \{}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00017}00017         \textcolor{keyword}{private} readonly \mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}} \_context;}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00018}00018         \textcolor{keyword}{private} readonly UserManager<IdentityUser> \_userManager;}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00020}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_message_notification_controller_ade630f98b1768c098d979f169038dfb9}{00020}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_message_notification_controller_ade630f98b1768c098d979f169038dfb9}{MessageNotificationController}}(\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}} context, UserManager<IdentityUser> userManager)}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00021}00021         \{}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00022}00022             \_context = context;}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00023}00023             \_userManager = userManager;}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00024}00024         \}}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00026}00026         [HttpGet]}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00027}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_message_notification_controller_a2d26d0ba73d53869b47c7652e3c0665c}{00027}}         \textcolor{keyword}{public} async Task<bool> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_message_notification_controller_a2d26d0ba73d53869b47c7652e3c0665c}{Get}}()}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00028}00028         \{}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00029}00029             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00031}00031             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null}) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00033}00033             \textcolor{keywordflow}{return} await \_context.Message.AsNoTracking().Include(m => m.Receiver).Where(m => m.Receiver.OwnerId == user.Id).AnyAsync();}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00034}00034         \}}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00036}00036         [HttpPost]}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00037}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_message_notification_controller_ad230471c492af74db1382d27e760cf10}{00037}}         \textcolor{keyword}{public} async Task \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_message_notification_controller_ad230471c492af74db1382d27e760cf10}{PostAsync}}(\textcolor{keywordtype}{string} senderID, \textcolor{keywordtype}{string} receiverID)}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00038}00038         \{}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00039}00039             var messages = \_context.Message.Where(m => m.Receiver.OwnerId == receiverID \&\& m.Sender.OwnerId == senderID).ToArray();}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00041}00041             \textcolor{keywordflow}{foreach} (var item \textcolor{keywordflow}{in} messages)}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00042}00042             \{}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00043}00043                 item.IsRead = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00044}00044             \}}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00046}00046             \_context.Message.UpdateRange(messages);}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00047}00047             await \_context.SaveChangesAsync();}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00048}00048         \}}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00049}00049     \}}
+\DoxyCodeLine{\Hypertarget{_message_notification_controller_8cs_source_l00050}00050 \}}
+
+\end{DoxyCode}

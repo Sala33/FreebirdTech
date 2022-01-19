@@ -1,0 +1,66 @@
+\hypertarget{_reset_authenticator_8cshtml_8cs_source}{}\doxysection{Reset\+Authenticator.\+cshtml.\+cs}
+\label{_reset_authenticator_8cshtml_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml.cs}}
+\mbox{\hyperlink{_reset_authenticator_8cshtml_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00005}00005 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00007}00007 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.RazorPages;}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00008}00008 \textcolor{keyword}{using} Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00010}00010 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage}{FreebirdTech.Areas.Identity.Pages.Account.Manage}}}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00012}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_reset_authenticator_model}{00012}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_reset_authenticator_model}{ResetAuthenticatorModel}} : PageModel}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00014}00014         UserManager<IdentityUser> \_userManager;}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00015}00015         \textcolor{keyword}{private} readonly SignInManager<IdentityUser> \_signInManager;}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00016}00016         ILogger<ResetAuthenticatorModel> \_logger;}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00018}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_reset_authenticator_model_a5b41b1b71d8411f8af78261d06aa2727}{00018}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_reset_authenticator_model_a5b41b1b71d8411f8af78261d06aa2727}{ResetAuthenticatorModel}}(}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00019}00019             UserManager<IdentityUser> userManager,}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00020}00020             SignInManager<IdentityUser> signInManager,}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00021}00021             ILogger<ResetAuthenticatorModel> logger)}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00022}00022         \{}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00023}00023             \_userManager = userManager;}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00024}00024             \_signInManager = signInManager;}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00025}00025             \_logger = logger;}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00026}00026         \}}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00028}00028         [TempData]}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00029}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_reset_authenticator_model_a4b27022a943671401404e6c040ce8347}{00029}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_reset_authenticator_model_a4b27022a943671401404e6c040ce8347}{StatusMessage}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00031}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_reset_authenticator_model_a7e643bef56b8eebabf6c1c32507035f6}{00031}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_reset_authenticator_model_a7e643bef56b8eebabf6c1c32507035f6}{OnGet}}()}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00032}00032         \{}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00033}00033             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00034}00034             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00035}00035             \{}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00036}00036                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID '\{\_userManager.GetUserId(User)\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00037}00037             \}}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00039}00039             \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00040}00040         \}}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00042}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_reset_authenticator_model_abf8997b33b1cc8c538daae23b306aa40}{00042}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_reset_authenticator_model_abf8997b33b1cc8c538daae23b306aa40}{OnPostAsync}}()}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00043}00043         \{}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00044}00044             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00045}00045             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00046}00046             \{}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00047}00047                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID '\{\_userManager.GetUserId(User)\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00048}00048             \}}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00050}00050             await \_userManager.SetTwoFactorEnabledAsync(user, \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00051}00051             await \_userManager.ResetAuthenticatorKeyAsync(user);}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00052}00052             \_logger.LogInformation(\textcolor{stringliteral}{"{}User with ID '\{UserId\}' has reset their authentication app key."{}}, user.Id);}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00053}00053             }
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00054}00054             await \_signInManager.RefreshSignInAsync(user);}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00055}00055             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_reset_authenticator_model_a4b27022a943671401404e6c040ce8347}{StatusMessage}} = \textcolor{stringliteral}{"{}Your authenticator app key has been reset, you will need to configure your authenticator app using the new key."{}};}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00057}00057             \textcolor{keywordflow}{return} RedirectToPage(\textcolor{stringliteral}{"{}./EnableAuthenticator"{}});}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00058}00058         \}}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00059}00059     \}}
+\DoxyCodeLine{\Hypertarget{_reset_authenticator_8cshtml_8cs_source_l00060}00060 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,115 @@
+﻿@using FreebirdTech.Utility
+@model FreebirdTech.ViewModels.ChatViewModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Head{
+    <link type="text/css" rel="stylesheet" href="~/css/chat.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+}
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-lg-12">
+            <div class="card chat-app">
+                <div id="plist" class="people-list">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </div>
+                    <ul class="list-unstyled chat-list mt-2 mb-0">
+                        @foreach (var item in Model.MessageLog)
+                        {
+                            <li class="clearfix">
+                                <img src="@item.AvatarImageURI" alt="avatar">
+                                <div class="about">
+                                    <div class="name"><a asp-controller="Messages" asp-action="Create" asp-route-userid="@item.OwnerId">@item.Name</a></div>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <div class="chat">
+                    <div class="chat-header clearfix">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                                    <img src="@Model.Reciever.AvatarImageURI" alt="avatar">
+                                </a>
+                                <div class="chat-about">
+                                    <h6 class="m-b-0">@Model.Reciever.Name</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mydiv" class="chat-history overflow-auto">
+                        <ul class="m-b-0">
+                            @foreach (var item in Model.Messages)
+                            {
+                                if (item.Sender == Model.Reciever)
+                                {
+                                    <li class="clearfix">
+                                        <div class="message-data text-right">
+                                            <span class="message-data-time">@item.Time.Hour:@item.Time.Minute, @PageRenderHelper.GetDay(item.Time)</span>
+                                            <img src="@item.Sender.AvatarImageURI" alt="avatar">
+                                        </div>
+                                        <div class="message other-message float-right"> @item.MessageText </div>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="clearfix">
+                                        <div class="message-data">
+                                            <span class="message-data-time">@item.Time.Hour:@item.Time.Minute, @PageRenderHelper.GetDay(item.Time)</span>
+                                        </div>
+                                        <div class="message my-message">@item.MessageText</div>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                    <div class="chat-message clearfix">
+                        <form name="SendMessage" asp-action="Create">
+                            <div class="input-group mb-0">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" onclick="SendMessage.submit()"><i class="fa fa-send"></i></span>
+                                </div>
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input asp-for="MessageToSend.MessageText" type="text" class="form-control" placeholder="Envie sua Mensagem" />
+                                <span asp-validation-for="MessageToSend.MessageText" class="text-danger"></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#mydiv").scrollTop($("#mydiv")[0].scrollHeight);
+
+    $(document).ready(function () {
+        var jqxhr_read = $.post('/api/MessageNotification?senderID=@Model.SenderID&receiverID=@Model.ReceiverID', function (data) {
+            console.log("Success");            
+        })
+    });
+
+    function sendNewMessage() {
+        var jqxhr = $.post('/messages/GetMessageData?sender=@Model.SenderID', function (data) {
+
+            $('.messages').replaceWith($('.messages', data));
+
+            $("#mydiv").scrollTop($("#mydiv")[0].scrollHeight);
+        })
+    }
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

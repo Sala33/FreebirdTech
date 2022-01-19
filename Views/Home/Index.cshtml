@@ -1,0 +1,401 @@
+﻿@using FreebirdTech.ViewModels
+@model IndexViewModel
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<!-- Hero Frame -->
+<div class='container-fluid bg_capa text_orange px-4 py-5'>
+	<div class='container'>
+		<div class='row justify-content-left align-items-left mt-5'>
+			<div class='col-sm-6'>
+				@*<p class="text-warning">// Vem voar com a Gente</p>*@
+				<h5 class="text-left display-5 fw-bold text_orange">
+					Junte-se agora a um time incrível de
+					artistas e
+					criativos
+					do mundo todo
+				</h5>
+
+				<form asp-controller="MailingLists" asp-action="Create" method="post">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<div class='row justify-content-left align-items-center mt-5'>
+						<div class="input-group col-12 col-md-12 flex-nowrap">
+							@*<label asp-for="Email" class="control-label"></label>*@
+							<input asp-for="Email" class=" col-xs-12
+									form-control input-lg" placeholder="Seu melhor e-mail" aria-label="Recipient's username"
+								   aria-describedby="basic-addon2">
+							<span asp-validation-for="Email" class="text-danger"></span>
+							<div class="form-group">
+								<input type="submit" value="Create" class="ml-4 btn btn-primary rounded-pill btn-left px-3" />
+							</div>
+						</div>
+					</div>
+				</form>
+
+			</div>
+
+			<div class="col-6">
+				<img class="img-fluid feature_image d-none d-md-block" src="img/team1_ct@2x.png">
+			</div>
+		</div>
+		<div class="col-lg-6 mx-auto">
+
+		</div>
+	</div>
+</div>
+
++<!-- Carousell 1st part WIREFRAME -->
+<div class="container my-5">
+	<div class="row">
+
+
+		<div class="col-12">
+			<div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<div class="row">
+
+							<div class="col-md-4 mb-3">
+								<div class="card shadow">
+									<img class="img-fluid" src="img/Image_bu.png">
+									<div class="card-body">
+										<h5 class="text_orange card-title">Fotografia</h5>
+										<p class="card-text">Breve descrição da categoria de serviço oferecido.</p>
+										<p class="card-text text_orange">Profissionais</p>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-md-4 mb-3">
+								<div class="card shadow">
+									<img class="img-fluid" src="img/Image_bf.png">
+									<div class="card-body">
+										<h5 class="text_orange card-title">Design</h5>
+										<p class="card-text">Breve descrição da categoria de serviço oferecido</p>
+										<p class="card-text text_orange">Profissionais</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 mb-3">
+								<div class="card shadow">
+									<img class="img-fluid" src="img/Image.png">
+									<div class="card-body">
+										<h5 class=" text_orange card-title">Música</h5>
+										<p class="card-text">Breve descrição da categoria de serviço oferecido.</p>
+										<p class="card-text text_orange">Profissionais</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="row">
+
+							<div class="col-md-4 mb-3">
+								<div class="card shadow">
+									<img class="img-fluid" src="img/Image_bu.png">
+									<div class="card-body">
+										<h5 class="text_orange card-title">Fotografia</h5>
+										<p class="card-text">Breve descrição da categoria de serviço oferecido.</p>
+										<p class="card-text text_orange">Profissionais</p>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-md-4 mb-3">
+								<div class="card shadow">
+									<img class="img-fluid" src="img/Image_bf.png">
+									<div class="card-body">
+										<h5 class="text_orange card-title">Design</h5>
+										<p class="card-text">Breve descrição da categoria de serviço oferecido</p>
+										<p class="card-text text_orange">Profissionais</p>
+
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 mb-3">
+								<div class="card shadow">
+									<img class="img-fluid" src="img/Image.png">
+									<div class="card-body">
+										<h5 class=" text_orange card-title">Música</h5>
+										<p class="card-text">Breve descrição da categoria de serviço oferecido.</p>
+										<p class="card-text text_orange">Profissionais</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 justify-content-center text-center mt-3">
+			<a class="btn btn-primary mb-5 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+				<i class="fa fa-arrow-left"></i>
+			</a>
+			<a class="btn btn-primary mb-5 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+				<i class="fa fa-arrow-right"></i>
+			</a>
+		</div>
+	</div>
+</div>
+
+<!-- END OF THE CAROUSEL 1ST PART -->
+<!-- END OF THE CAROUSEL 1ST PART -->
+<div class="container-fluid">
+	<div class='container'>
+		<hr class="featurette-divider-small">
+
+	</div>
+</div>
+
+<!-- SECOND PART WIREFRAME -->
+<div class="container-fluid-lg ">
+	<div class="row">
+		<div class="bg-image" style="
+			  background-image: url('img/Grupo_2661.png');
+			height: 400px;
+			margin-top: 58px;
+		  ">
+			<p class="mt-2 text-warning text-center">Dê asas à criatividade</p>
+			<h2 class="mb-2 text-center">Conheça todos os serviços disponíveis no Freebird</h2>
+			<div class="col-md-12 text-center">
+				<button class="mt-4 btn btn-primary rounded-pill btn-md px-3" type="button" onclick="location.href='/search'">Categorias</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ORANGE BLOCK -->
+<div class="row align-center ">
+
+	<div class="p-5 bg-image" style="background-color:rgb(250, 72, 2)">
+		<div class="container-fluid align-center mb-3 py-5">
+			<div class="row">
+				<div class='col-sm mb-2'>
+					<h2 class="mb-2  text-center text-white">Centenas de artistas ao alcance de um clique!</h2>
+					<a href="/search" class="link-warning mb-2 text-center">Contrate Agora</a>
+				</div>
+
+				<div class="col-sm mt-2">
+					<div class="card" style="width: 16rem; height:17rem; border-radius: 10px;">
+						<div class="card-body">
+
+							<h5 class="card-subtitle text-center text_orange mb-2">
+								Perfeitos para
+								o seu orçamento
+							</h5>
+							<hr style="margin-left: auto; margin-right: auto; height:2px; width:50%; border-width:0; color:rgb(250, 72, 2);">
+							<p class="card-text text-center text-muted">
+								Encontre serviços de alta qualidade em
+								cada faixa de
+								preço. Sem taxas horárias, apenas preços baseados em projeto.
+							</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-sm mt-2">
+					<div class="card" style="width: 16rem; height:17rem;
+					border-radius: 10px;">
+						<div class="card-body">
+
+							<h5 class="card-subtitle text-center text_orange mb-2">
+								Encontre aqui
+								o talento ideal
+							</h5>
+							<hr style="margin-left: auto; margin-right: auto; height:2px; width:50%; border-width:0; color:rgb(250, 72, 2);">
+							<p class="card-text text-center text-muted">
+								Conecte-se a freelancers com experiência
+								comprovada e avalie o portfólio ideal para a sua necessidade.
+							</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-sm mt-2">
+					<div class="card" style="width: 16rem; height:17rem; border-radius: 10px;">
+						<div class="card-body">
+
+							<h5 class="card-subtitle text-center text_orange mb-2">
+								Monte o time criativo
+								para seu projeto
+							</h5>
+							<hr style="margin-left: auto; margin-right: auto; height:2px; width:50%; border-width:0; color:rgb(250, 72, 2);">
+							<p class="card-text text-center text-muted">
+								Encontre o freelancer certo para começar
+								a trabalhar em seu projeto em minutos.
+								Aqui você encontra artistas de todos os estilos.
+							</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- Price cards SECOND SLIDE WIREFRAME -->
+<div class="container">
+	<div class="row m-5">
+		<div class="card-deck">
+			@foreach (var servico in Model.ExemplosServicos)
+			{
+
+				<div class="card shadow-lg">
+					<img class="card-img-top" src=@servico.PreviewImageURI alt="Card image cap">
+					<div class="card-body">
+						<a class="text_orange" href="gig/view/@servico.Id">
+							<h5 class="card-title">@servico.Title</h5>
+						</a>
+						<p class="card-text">@servico.BriefDescription</p>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</div>
+
+<!-- CAROUSEL FRIEND CIAS -->
+<div class="container-fluid mt-3">
+	<div class="row mt-5 mb-5">
+		<div class="slider">
+			<div class="slide-track">
+				<div class="slide">
+					<img src="https://i.ibb.co/y8R5qrp/brand-number-one-1.png" alt="brand-number-one-1"
+						 height="100" width="250" />
+				</div>
+				<div class="slide">
+					<img src="https://i.ibb.co/3WgLMfR/brand-number-two-1.png" width="250" alt="" />
+				</div>
+				<div class="slide">
+					<img src="https://i.ibb.co/Vp5Q57N/brand-number-three.png" height="100" width="250"
+						 alt="" />
+				</div>
+				<div class="slide">
+					<img src="https://i.ibb.co/LYhVKBy/brand-number-four-1.png" height="100" width="250"
+						 alt="" />
+				</div>
+				<div class="slide">
+					<img src="https://i.ibb.co/6gsyP1h/brand-number-five-1.png" height="100" width="250"
+						 alt="" />
+				</div>
+				<div class="slide">
+					<img src="https://i.ibb.co/Yt15RLr/brand-number-six-1.png" height="100" width="250"
+						 alt="" />
+				</div>
+				<div class="slide">
+					<img src="https://i.ibb.co/6WTZ118/brand-number-seven-1.png" height="100" width="250"
+						 alt="" />
+				</div>
+				<div class="slide">
+					<img src="https://i.ibb.co/QPLgPL0/brand-number-eight.png" height="100" width="250"
+						 alt="" />
+				</div>
+				<div class="slide">
+					<img src="https://i.ibb.co/FKj2H3X/svkcrypto-podcast-500x200.png" height="100"
+						 width="250" alt="" />
+				</div>
+				<div class="slide">
+					<img src="https://i.ibb.co/wd7FSnZ/brand-number-ten-1.png" height="100" width="250"
+						 alt="" />
+				</div>
+				<div class="slide">
+					<img src="https://i.ibb.co/fDL9QLz/brand-number-eleven.png" height="100" width="250"
+						 alt="" />
+				</div>
+				<div class="slide">
+					<img src="https://i.ibb.co/z5YCnWD/brand-number-twelve.png" height="100" width="250"
+						 alt="" />
+				</div>
+				<div class="slide">
+					<img src="" height="100" width="250" alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END OF CAROUSEL -->
+<!-- TESTIMONIAL 1 -->
+<div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center mt-5 mb-5"
+	 data-mdb-ride="carousel">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<div class="container bg-light">
+				<p class="text-muted">
+					<i class="fas fa-quote-left pe-2"></i>
+					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+					suscipit laboriosam, nisi ut aliquid commodi.
+				</p>
+
+				<img class="rounded-circle shadow-1-strong mb-4" src="img/Oval_d@2x.png" alt="avatar"
+					 style="width: 100px;" />
+			</div>
+			<h6 class="mb-3 text_orange">Rhaniel Valle</h6>
+			<p>CEO</p>
+
+		</div>
+
+		<div class="p-5 rounded-3" style="
+								background-image: url('img/Background_.png');
+								height: 230px;
+								margin-top: 58px;
+								padding: 0				">
+			<div class='row justify-content-center align-items-center'>
+
+				<div class='col-12 text-center'>
+					<h2 class='text-center text_orange'>
+						O que estão falando da Freebird na mídia
+					</h2>
+					<a href="Blogs" class='text-center text-warning link'>ir para o blog</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- PORQUE TRABALHAR NA FREEBIRD WIREFRAME SLIDE -->
+<section>
+	<div class="container-fluid" style="
+							background-image: url('img/Background__jy.png');
+							/* background-size: cover; */
+							height: 600px;
+							margin-top: 58px;
+
+							">
+		<div class="blur">
+
+			<div class="row">
+				<div class=" p-3 p-md-5 text-center">
+					<div class=" col-md-12 col-sm-6 p-lg-5 mx-3 my-5 justify-content-center text-white">
+						<h1 class="display-4 text-center justify-content-center fw-normal">
+							Fique por
+							dentro <br>de todas
+							a nossas novidades
+						</h1>
+					</div>
+					<div class='row justify-content-center align-items-center mt-5'>
+						<div class="input-group col-6 col-md-6 flex-nowrap">
+							<input type="text" class=" col-xs-12
+										 form-control input-lg " placeholder="Seu melhor e-mail" aria-label="Recipient's username"
+								   aria-describedby="basic-addon2">
+							<button type="button"
+									class="ml-4 btn btn-primary rounded-pill btn-left px-3">
+								Ver
+								Anuncio
+							</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

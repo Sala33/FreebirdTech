@@ -1,0 +1,95 @@
+\hypertarget{_login_with_recovery_code_8cshtml_8cs_source}{}\doxysection{Login\+With\+Recovery\+Code.\+cshtml.\+cs}
+\label{_login_with_recovery_code_8cshtml_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml.cs}}
+\mbox{\hyperlink{_login_with_recovery_code_8cshtml_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00003}00003 \textcolor{keyword}{using} System.ComponentModel.DataAnnotations;}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00005}00005 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.AspNetCore.Authorization;}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00007}00007 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00008}00008 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00009}00009 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.RazorPages;}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00010}00010 \textcolor{keyword}{using} Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00012}00012 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account}{FreebirdTech.Areas.Identity.Pages.Account}}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00014}00014     [AllowAnonymous]}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00015}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model}{00015}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model}{LoginWithRecoveryCodeModel}} : PageModel}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00016}00016     \{}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00017}00017         \textcolor{keyword}{private} readonly SignInManager<IdentityUser> \_signInManager;}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00018}00018         \textcolor{keyword}{private} readonly ILogger<LoginWithRecoveryCodeModel> \_logger;}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00020}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_ac9a9da1be2e39adeaf000237b48b0c04}{00020}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_ac9a9da1be2e39adeaf000237b48b0c04}{LoginWithRecoveryCodeModel}}(SignInManager<IdentityUser> signInManager, ILogger<LoginWithRecoveryCodeModel> logger)}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00021}00021         \{}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00022}00022             \_signInManager = signInManager;}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00023}00023             \_logger = logger;}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00024}00024         \}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00026}00026         [BindProperty]}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00027}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_a4ffe42242a707f2c08991cff368fcc94}{00027}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_1_1_input_model}{InputModel}} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_a4ffe42242a707f2c08991cff368fcc94}{Input}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00029}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_a7c76188bd1f86aac1ef28a161dc120b3}{00029}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_a7c76188bd1f86aac1ef28a161dc120b3}{ReturnUrl}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00031}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_1_1_input_model}{00031}}         \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_1_1_input_model}{InputModel}}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00032}00032         \{}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00033}00033             [BindProperty]}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00034}00034             [Required]}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00035}00035             [DataType(DataType.Text)]}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00036}00036             [Display(Name = \textcolor{stringliteral}{"{}Recovery Code"{}})]}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00037}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_1_1_input_model_a80d2f60aa01247f8a8b79f38362a53e5}{00037}}             \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_1_1_input_model_a80d2f60aa01247f8a8b79f38362a53e5}{RecoveryCode}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00038}00038         \}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00040}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_a7b7bffab13432bd2faa36734f3b3f206}{00040}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_a7b7bffab13432bd2faa36734f3b3f206}{OnGetAsync}}(\textcolor{keywordtype}{string} returnUrl = \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00041}00041         \{}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00042}00042             \textcolor{comment}{// Ensure the user has gone through the username \& password screen first}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00043}00043             var user = await \_signInManager.GetTwoFactorAuthenticationUserAsync();}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00044}00044             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00045}00045             \{}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00046}00046                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} InvalidOperationException(\$\textcolor{stringliteral}{"{}Unable to load two-\/factor authentication user."{}});}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00047}00047             \}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00049}00049             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_a7c76188bd1f86aac1ef28a161dc120b3}{ReturnUrl}} = returnUrl;}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00051}00051             \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00052}00052         \}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00054}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_abc28ff6d9f288b677cddb1a696283c20}{00054}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_abc28ff6d9f288b677cddb1a696283c20}{OnPostAsync}}(\textcolor{keywordtype}{string} returnUrl = \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00055}00055         \{}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00056}00056             \textcolor{keywordflow}{if} (!ModelState.IsValid)}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00057}00057             \{}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00058}00058                 \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00059}00059             \}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00061}00061             var user = await \_signInManager.GetTwoFactorAuthenticationUserAsync();}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00062}00062             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00063}00063             \{}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00064}00064                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} InvalidOperationException(\$\textcolor{stringliteral}{"{}Unable to load two-\/factor authentication user."{}});}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00065}00065             \}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00067}00067             var recoveryCode = \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_a4ffe42242a707f2c08991cff368fcc94}{Input}}.\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model_1_1_input_model_a80d2f60aa01247f8a8b79f38362a53e5}{RecoveryCode}}.Replace(\textcolor{stringliteral}{"{} "{}}, \textcolor{keywordtype}{string}.Empty);}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00069}00069             var result = await \_signInManager.TwoFactorRecoveryCodeSignInAsync(recoveryCode);}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00071}00071             \textcolor{keywordflow}{if} (result.Succeeded)}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00072}00072             \{}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00073}00073                 \_logger.LogInformation(\textcolor{stringliteral}{"{}User with ID '\{UserId\}' logged in with a recovery code."{}}, user.Id);}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00074}00074                 \textcolor{keywordflow}{return} LocalRedirect(returnUrl ?? Url.Content(\textcolor{stringliteral}{"{}\string~/"{}}));}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00075}00075             \}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00076}00076             \textcolor{keywordflow}{if} (result.IsLockedOut)}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00077}00077             \{}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00078}00078                 \_logger.LogWarning(\textcolor{stringliteral}{"{}User with ID '\{UserId\}' account locked out."{}}, user.Id);}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00079}00079                 \textcolor{keywordflow}{return} RedirectToPage(\textcolor{stringliteral}{"{}./Lockout"{}});}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00080}00080             \}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00081}00081             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00082}00082             \{}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00083}00083                 \_logger.LogWarning(\textcolor{stringliteral}{"{}Invalid recovery code entered for user with ID '\{UserId\}' "{}}, user.Id);}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00084}00084                 ModelState.AddModelError(\textcolor{keywordtype}{string}.Empty, \textcolor{stringliteral}{"{}Invalid recovery code entered."{}});}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00085}00085                 \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00086}00086             \}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00087}00087         \}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00088}00088     \}}
+\DoxyCodeLine{\Hypertarget{_login_with_recovery_code_8cshtml_8cs_source_l00089}00089 \}}
+
+\end{DoxyCode}

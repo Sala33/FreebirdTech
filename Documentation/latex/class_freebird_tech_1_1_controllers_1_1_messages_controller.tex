@@ -1,0 +1,282 @@
+\hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_controller}{}\doxysection{Freebird\+Tech.\+Controllers.\+Messages\+Controller Class Reference}
+\label{class_freebird_tech_1_1_controllers_1_1_messages_controller}\index{FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}}
+
+
+This class is responsible for controlling the Messages. Some of it\textquotesingle{}s responsabilities are\+:  
+
+
+Inheritance diagram for Freebird\+Tech.\+Controllers.\+Messages\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_freebird_tech_1_1_controllers_1_1_messages_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_abf99247e937380604b43f11eabd8e3d3}{Messages\+Controller}} (\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}} context, User\+Manager$<$ Identity\+User $>$ user\+Manager)
+\begin{DoxyCompactList}\small\item\em The method defines the context and user manager of the controller \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a1d461096e94c14b09d7e9ff268229168}{Index}} ()
+\begin{DoxyCompactList}\small\item\em The method is responsible for returning a view with list of messages \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a2e976bd8b188441aea39b3f10a2fdb1d}{Details}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method searches for an existing message to exhibit it\textquotesingle{}s details \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a4efb60aff0e21fe452c0f43743dad3f0}{Create\+Async}} (string userid)
+\begin{DoxyCompactList}\small\item\em The method gets the data necessary for creating a Chat\+View\+Model \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a6abdcb6998cbd2fb57571b89b488917e}{Create}} (\mbox{[}Bind(\char`\"{}Message\+To\+Send\char`\"{})\mbox{]} Chat\+View\+Model message\+View\+Model)
+\begin{DoxyCompactList}\small\item\em The method sends the data necessary for creating message \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a7d08e2e5335984a60f70f38a55b6db8c}{Edit}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method finds a message related to the id \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a4ef58ff9d0f1b90110ff6cd3de3f5c66}{Edit}} (int id, \mbox{[}Bind(\char`\"{}ID,Time,Message\+Text\char`\"{})\mbox{]} Message message)
+\begin{DoxyCompactList}\small\item\em The method edits a message and saves the changes in the database \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a14a9b83f7324667f10223d616c1c43b4}{Delete}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method deletes a message from the database \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_aad0abfb87e47d43985e2967bfe7b6f4a}{Delete\+Confirmed}} (int id)
+\begin{DoxyCompactList}\small\item\em The method confirms if a message was deleted \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a69b357153d29d288c3dc4bc6661ee401}{Get\+Message\+Data\+Async}} (string sender)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is responsible for controlling the Messages. Some of it\textquotesingle{}s responsabilities are\+: 
+
+
+\begin{DoxyItemize}
+\item define context and user \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_artists_controller}{Artists\+Controller}}
+\item show Index \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a1d461096e94c14b09d7e9ff268229168}{Index}}
+\item exhibit message Details \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a2e976bd8b188441aea39b3f10a2fdb1d}{Details(int?)}}
+\item Create a Chat\+View\+Model \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a6abdcb6998cbd2fb57571b89b488917e}{Create(\+Chat\+View\+Model)}}
+\item Retrieves the message to be edited \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a7d08e2e5335984a60f70f38a55b6db8c}{Edit(int?)}}
+\item Edits a message in the database \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a4ef58ff9d0f1b90110ff6cd3de3f5c66}{Edit(int, Message)}}
+\item Deletes a message \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a14a9b83f7324667f10223d616c1c43b4}{Delete(int?)}}
+\item Checks the deletion of a message \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_aad0abfb87e47d43985e2967bfe7b6f4a}{Delete\+Confirmed(int)}}
+\item Check if a message exists Message\+Exists(int)
+\item Get the artist Get\+Artist(string)
+\item Get the artist asynchronously Get\+Artist\+Async(). 
+\end{DoxyItemize}
+
+~\newline
+ 
+
+Definition at line \mbox{\hyperlink{_messages_controller_8cs_source_l00031}{31}} of file \mbox{\hyperlink{_messages_controller_8cs_source}{Messages\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_controller_abf99247e937380604b43f11eabd8e3d3}\label{class_freebird_tech_1_1_controllers_1_1_messages_controller_abf99247e937380604b43f11eabd8e3d3}} 
+\index{FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}!MessagesController@{MessagesController}}
+\index{MessagesController@{MessagesController}!FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}}
+\doxysubsubsection{\texorpdfstring{MessagesController()}{MessagesController()}}
+{\footnotesize\ttfamily Freebird\+Tech.\+Controllers.\+Messages\+Controller.\+Messages\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}}}]{context,  }\item[{User\+Manager$<$ Identity\+User $>$}]{user\+Manager }\end{DoxyParamCaption})}
+
+
+
+The method defines the context and user manager of the controller 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The Application\+Db\+Context of the controller\\
+\hline
+{\em user\+Manager} & The User\+Manager of the controller\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_messages_controller_8cs_source_l00042}{42}} of file \mbox{\hyperlink{_messages_controller_8cs_source}{Messages\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_controller_a6abdcb6998cbd2fb57571b89b488917e}\label{class_freebird_tech_1_1_controllers_1_1_messages_controller_a6abdcb6998cbd2fb57571b89b488917e}} 
+\index{FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}!Create@{Create}}
+\index{Create@{Create}!FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Messages\+Controller.\+Create (\begin{DoxyParamCaption}\item[{\mbox{[}\+Bind(\char`\"{}\+Message\+To\+Send\char`\"{})\mbox{]} \mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model}{Chat\+View\+Model}}}]{message\+View\+Model }\end{DoxyParamCaption})}
+
+
+
+The method sends the data necessary for creating message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message\+View\+Model} & The view model of the message \begin{DoxyReturn}{Returns}
+A view with the message\+View\+Model or a Redirect\+To\+Action
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_messages_controller_8cs_source_l00139}{139}} of file \mbox{\hyperlink{_messages_controller_8cs_source}{Messages\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_controller_a4efb60aff0e21fe452c0f43743dad3f0}\label{class_freebird_tech_1_1_controllers_1_1_messages_controller_a4efb60aff0e21fe452c0f43743dad3f0}} 
+\index{FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}!CreateAsync@{CreateAsync}}
+\index{CreateAsync@{CreateAsync}!FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}}
+\doxysubsubsection{\texorpdfstring{CreateAsync()}{CreateAsync()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Messages\+Controller.\+Create\+Async (\begin{DoxyParamCaption}\item[{string}]{userid }\end{DoxyParamCaption})}
+
+
+
+The method gets the data necessary for creating a Chat\+View\+Model 
+
+
+\begin{DoxyParams}{Parameters}
+{\em userid} & The Id of the user \begin{DoxyReturn}{Returns}
+A view with a Chat\+View\+Model
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_messages_controller_8cs_source_l00087}{87}} of file \mbox{\hyperlink{_messages_controller_8cs_source}{Messages\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_controller_a14a9b83f7324667f10223d616c1c43b4}\label{class_freebird_tech_1_1_controllers_1_1_messages_controller_a14a9b83f7324667f10223d616c1c43b4}} 
+\index{FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}!Delete@{Delete}}
+\index{Delete@{Delete}!FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Messages\+Controller.\+Delete (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method deletes a message from the database 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The message id \begin{DoxyReturn}{Returns}
+A view with the message or Not\+Foun
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_messages_controller_8cs_source_l00223}{223}} of file \mbox{\hyperlink{_messages_controller_8cs_source}{Messages\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_controller_aad0abfb87e47d43985e2967bfe7b6f4a}\label{class_freebird_tech_1_1_controllers_1_1_messages_controller_aad0abfb87e47d43985e2967bfe7b6f4a}} 
+\index{FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}!DeleteConfirmed@{DeleteConfirmed}}
+\index{DeleteConfirmed@{DeleteConfirmed}!FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}}
+\doxysubsubsection{\texorpdfstring{DeleteConfirmed()}{DeleteConfirmed()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Messages\+Controller.\+Delete\+Confirmed (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+The method confirms if a message was deleted 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The message id \begin{DoxyReturn}{Returns}
+A Redirect\+To\+Action
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_messages_controller_8cs_source_l00248}{248}} of file \mbox{\hyperlink{_messages_controller_8cs_source}{Messages\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_controller_a2e976bd8b188441aea39b3f10a2fdb1d}\label{class_freebird_tech_1_1_controllers_1_1_messages_controller_a2e976bd8b188441aea39b3f10a2fdb1d}} 
+\index{FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}!Details@{Details}}
+\index{Details@{Details}!FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}}
+\doxysubsubsection{\texorpdfstring{Details()}{Details()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Messages\+Controller.\+Details (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method searches for an existing message to exhibit it\textquotesingle{}s details 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The Id of the message \begin{DoxyReturn}{Returns}
+A new view of the message selected
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_messages_controller_8cs_source_l00064}{64}} of file \mbox{\hyperlink{_messages_controller_8cs_source}{Messages\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_controller_a4ef58ff9d0f1b90110ff6cd3de3f5c66}\label{class_freebird_tech_1_1_controllers_1_1_messages_controller_a4ef58ff9d0f1b90110ff6cd3de3f5c66}} 
+\index{FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}!Edit@{Edit}}
+\index{Edit@{Edit}!FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Messages\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{[}\+Bind(\char`\"{}\+ID,\+Time,\+Message\+Text\char`\"{})\mbox{]} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_message}{Message}}}]{message }\end{DoxyParamCaption})}
+
+
+
+The method edits a message and saves the changes in the database 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The message id 
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to be sent \begin{DoxyReturn}{Returns}
+A view with the message, Not\+Found or a Redirect\+To\+Action
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_messages_controller_8cs_source_l00187}{187}} of file \mbox{\hyperlink{_messages_controller_8cs_source}{Messages\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_controller_a7d08e2e5335984a60f70f38a55b6db8c}\label{class_freebird_tech_1_1_controllers_1_1_messages_controller_a7d08e2e5335984a60f70f38a55b6db8c}} 
+\index{FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}!Edit@{Edit}}
+\index{Edit@{Edit}!FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Messages\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method finds a message related to the id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The message id \begin{DoxyReturn}{Returns}
+A view with the message or a Not\+Found
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_messages_controller_8cs_source_l00161}{161}} of file \mbox{\hyperlink{_messages_controller_8cs_source}{Messages\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_controller_a69b357153d29d288c3dc4bc6661ee401}\label{class_freebird_tech_1_1_controllers_1_1_messages_controller_a69b357153d29d288c3dc4bc6661ee401}} 
+\index{FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}!GetMessageDataAsync@{GetMessageDataAsync}}
+\index{GetMessageDataAsync@{GetMessageDataAsync}!FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}}
+\doxysubsubsection{\texorpdfstring{GetMessageDataAsync()}{GetMessageDataAsync()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Messages\+Controller.\+Get\+Message\+Data\+Async (\begin{DoxyParamCaption}\item[{string}]{sender }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_messages_controller_8cs_source_l00256}{256}} of file \mbox{\hyperlink{_messages_controller_8cs_source}{Messages\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_messages_controller_a1d461096e94c14b09d7e9ff268229168}\label{class_freebird_tech_1_1_controllers_1_1_messages_controller_a1d461096e94c14b09d7e9ff268229168}} 
+\index{FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}!Index@{Index}}
+\index{Index@{Index}!FreebirdTech.Controllers.MessagesController@{FreebirdTech.Controllers.MessagesController}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Messages\+Controller.\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method is responsible for returning a view with list of messages 
+
+\begin{DoxyReturn}{Returns}
+A new view with a list of messages
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_messages_controller_8cs_source_l00053}{53}} of file \mbox{\hyperlink{_messages_controller_8cs_source}{Messages\+Controller.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Danilo/source/repos/\+Freebird\+Tech/\+Controllers/\mbox{\hyperlink{_messages_controller_8cs}{Messages\+Controller.\+cs}}\end{DoxyCompactItemize}

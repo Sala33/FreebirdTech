@@ -1,0 +1,99 @@
+﻿@using FreebirdTech.Utility
+@model FreebirdTech.Models.Artist
+
+@{
+	ViewData["Title"] = "Details";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--HOMEPAGE ARTIST -->
+<div class='bg_servico text-center px-0 pt-5'>
+	<div class='container mt-5'>
+		<div class='row justify-content-center align-items-center'>
+			<div class='col-12 col-md-2 text-center'>
+
+				<figure class="figure mt-4">
+					<img src="@PageRenderHelper.ValidateProfilePicture(Model.AvatarImageURI)" class='figure-img rounded-circle img-fluid w-85'>
+				</figure>
+			</div>
+			<div class='col-12 col-md-10 mt-4 text-md-left text-white'>
+				<h1 class="text-white"><strong>@Model.Name</strong></h1>
+				<p class="text_orange">@Model.Categoria</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Fim texto simples -->
+<div class='container-fluid py-5 '>
+	<div class='container'>
+		<div class='row justify-content-center'>
+			<div class='col-12 col-md-3
+				 text-justify text-md-left'>
+				<h3 class="mb-3 text_orange"><strong>@Model.Name</strong></h3>
+				<p style="font-size: 0.8rem;">
+					@Model.BriefDescription
+				</p>
+				<p style="font-size: 0.8rem;">Se você precisa de algum suporte, vamos conversar. </p>
+				<i class="text_orange far fa-comment-alt"></i>
+				<a class="mt-5 text_orange" href=@Model.Contact>fale comigo</a>
+
+			</div>
+			<div class='col-12 col-md-9 text-center mb-8 text-md-left'>
+				<p>
+					@Model.Description
+				</p>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+@*<h1>Details</h1>
+
+<div>
+		<h4>Artist</h4>
+		<hr />
+		<dl class="row">
+			<dt class="col-sm-2">
+				@Html.DisplayNameFor(model => model.Name)
+			</dt>
+			<dd class="col-sm-10">
+				@Html.DisplayFor(model => model.Name)
+			</dd>
+			<dt class="col-sm-2">
+				@Html.DisplayNameFor(model => model.Categoria)
+			</dt>
+			<dd class="col-sm-10">
+				@Html.DisplayFor(model => model.Categoria)
+			</dd>
+			<dt class="col-sm-2">
+				@Html.DisplayNameFor(model => model.BriefDescription)
+			</dt>
+			<dd class="col-sm-10">
+				@Html.DisplayFor(model => model.BriefDescription)
+			</dd>
+			<dt class="col-sm-2">
+				@Html.DisplayNameFor(model => model.Contact)
+			</dt>
+			<dd class="col-sm-10">
+				@Html.DisplayFor(model => model.Contact)
+			</dd>
+			<dt class="col-sm-2">
+				@Html.DisplayNameFor(model => model.Description)
+			</dt>
+			<dd class="col-sm-10">
+				@Html.DisplayFor(model => model.Description)
+			</dd>
+			<dt class="col-sm-2">
+				@Html.DisplayNameFor(model => model.OwnerId)
+			</dt>
+			<dd class="col-sm-10">
+				@Html.DisplayFor(model => model.OwnerId)
+			</dd>
+		</dl>
+	</div>*@
+<div>
+	<a asp-action="Edit">Edit</a> |
+	<a asp-action="Index">Back to List</a>
+</div>

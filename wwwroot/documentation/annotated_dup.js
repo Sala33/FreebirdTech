@@ -1,0 +1,188 @@
+var annotated_dup =
+[
+    [ "AspNetCore", "namespace_asp_net_core.html", [
+      [ "Areas_Identity_Pages__ValidationScriptsPartial", "class_asp_net_core_1_1_areas___identity___pages_____validation_scripts_partial.html", "class_asp_net_core_1_1_areas___identity___pages_____validation_scripts_partial" ],
+      [ "Areas_Identity_Pages__ViewImports", "class_asp_net_core_1_1_areas___identity___pages_____view_imports.html", "class_asp_net_core_1_1_areas___identity___pages_____view_imports" ],
+      [ "Areas_Identity_Pages__ViewStart", "class_asp_net_core_1_1_areas___identity___pages_____view_start.html", "class_asp_net_core_1_1_areas___identity___pages_____view_start" ],
+      [ "Areas_Identity_Pages_Account__StatusMessage", "class_asp_net_core_1_1_areas___identity___pages___account_____status_message.html", "class_asp_net_core_1_1_areas___identity___pages___account_____status_message" ],
+      [ "Areas_Identity_Pages_Account__ViewImports", "class_asp_net_core_1_1_areas___identity___pages___account_____view_imports.html", "class_asp_net_core_1_1_areas___identity___pages___account_____view_imports" ],
+      [ "Areas_Identity_Pages_Account_AccessDenied", "class_asp_net_core_1_1_areas___identity___pages___account___access_denied.html", "class_asp_net_core_1_1_areas___identity___pages___account___access_denied" ],
+      [ "Areas_Identity_Pages_Account_ConfirmEmail", "class_asp_net_core_1_1_areas___identity___pages___account___confirm_email.html", "class_asp_net_core_1_1_areas___identity___pages___account___confirm_email" ],
+      [ "Areas_Identity_Pages_Account_ConfirmEmailChange", "class_asp_net_core_1_1_areas___identity___pages___account___confirm_email_change.html", "class_asp_net_core_1_1_areas___identity___pages___account___confirm_email_change" ],
+      [ "Areas_Identity_Pages_Account_ExternalLogin", "class_asp_net_core_1_1_areas___identity___pages___account___external_login.html", "class_asp_net_core_1_1_areas___identity___pages___account___external_login" ],
+      [ "Areas_Identity_Pages_Account_ForgotPassword", "class_asp_net_core_1_1_areas___identity___pages___account___forgot_password.html", "class_asp_net_core_1_1_areas___identity___pages___account___forgot_password" ],
+      [ "Areas_Identity_Pages_Account_ForgotPasswordConfirmation", "class_asp_net_core_1_1_areas___identity___pages___account___forgot_password_confirmation.html", "class_asp_net_core_1_1_areas___identity___pages___account___forgot_password_confirmation" ],
+      [ "Areas_Identity_Pages_Account_Lockout", "class_asp_net_core_1_1_areas___identity___pages___account___lockout.html", "class_asp_net_core_1_1_areas___identity___pages___account___lockout" ],
+      [ "Areas_Identity_Pages_Account_Login", "class_asp_net_core_1_1_areas___identity___pages___account___login.html", "class_asp_net_core_1_1_areas___identity___pages___account___login" ],
+      [ "Areas_Identity_Pages_Account_LoginWith2fa", "class_asp_net_core_1_1_areas___identity___pages___account___login_with2fa.html", "class_asp_net_core_1_1_areas___identity___pages___account___login_with2fa" ],
+      [ "Areas_Identity_Pages_Account_LoginWithRecoveryCode", "class_asp_net_core_1_1_areas___identity___pages___account___login_with_recovery_code.html", "class_asp_net_core_1_1_areas___identity___pages___account___login_with_recovery_code" ],
+      [ "Areas_Identity_Pages_Account_Logout", "class_asp_net_core_1_1_areas___identity___pages___account___logout.html", "class_asp_net_core_1_1_areas___identity___pages___account___logout" ],
+      [ "Areas_Identity_Pages_Account_Manage__Layout", "class_asp_net_core_1_1_areas___identity___pages___account___manage_____layout.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage_____layout" ],
+      [ "Areas_Identity_Pages_Account_Manage__ManageNav", "class_asp_net_core_1_1_areas___identity___pages___account___manage_____manage_nav.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage_____manage_nav" ],
+      [ "Areas_Identity_Pages_Account_Manage__StatusMessage", "class_asp_net_core_1_1_areas___identity___pages___account___manage_____status_message.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage_____status_message" ],
+      [ "Areas_Identity_Pages_Account_Manage__ViewImports", "class_asp_net_core_1_1_areas___identity___pages___account___manage_____view_imports.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage_____view_imports" ],
+      [ "Areas_Identity_Pages_Account_Manage_ChangePassword", "class_asp_net_core_1_1_areas___identity___pages___account___manage___change_password.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage___change_password" ],
+      [ "Areas_Identity_Pages_Account_Manage_DeletePersonalData", "class_asp_net_core_1_1_areas___identity___pages___account___manage___delete_personal_data.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage___delete_personal_data" ],
+      [ "Areas_Identity_Pages_Account_Manage_Disable2fa", "class_asp_net_core_1_1_areas___identity___pages___account___manage___disable2fa.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage___disable2fa" ],
+      [ "Areas_Identity_Pages_Account_Manage_DownloadPersonalData", "class_asp_net_core_1_1_areas___identity___pages___account___manage___download_personal_data.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage___download_personal_data" ],
+      [ "Areas_Identity_Pages_Account_Manage_Email", "class_asp_net_core_1_1_areas___identity___pages___account___manage___email.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage___email" ],
+      [ "Areas_Identity_Pages_Account_Manage_EnableAuthenticator", "class_asp_net_core_1_1_areas___identity___pages___account___manage___enable_authenticator.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage___enable_authenticator" ],
+      [ "Areas_Identity_Pages_Account_Manage_ExternalLogins", "class_asp_net_core_1_1_areas___identity___pages___account___manage___external_logins.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage___external_logins" ],
+      [ "Areas_Identity_Pages_Account_Manage_GenerateRecoveryCodes", "class_asp_net_core_1_1_areas___identity___pages___account___manage___generate_recovery_codes.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage___generate_recovery_codes" ],
+      [ "Areas_Identity_Pages_Account_Manage_Index", "class_asp_net_core_1_1_areas___identity___pages___account___manage___index.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage___index" ],
+      [ "Areas_Identity_Pages_Account_Manage_PersonalData", "class_asp_net_core_1_1_areas___identity___pages___account___manage___personal_data.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage___personal_data" ],
+      [ "Areas_Identity_Pages_Account_Manage_ResetAuthenticator", "class_asp_net_core_1_1_areas___identity___pages___account___manage___reset_authenticator.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage___reset_authenticator" ],
+      [ "Areas_Identity_Pages_Account_Manage_SetPassword", "class_asp_net_core_1_1_areas___identity___pages___account___manage___set_password.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage___set_password" ],
+      [ "Areas_Identity_Pages_Account_Manage_ShowRecoveryCodes", "class_asp_net_core_1_1_areas___identity___pages___account___manage___show_recovery_codes.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage___show_recovery_codes" ],
+      [ "Areas_Identity_Pages_Account_Manage_TwoFactorAuthentication", "class_asp_net_core_1_1_areas___identity___pages___account___manage___two_factor_authentication.html", "class_asp_net_core_1_1_areas___identity___pages___account___manage___two_factor_authentication" ],
+      [ "Areas_Identity_Pages_Account_Register", "class_asp_net_core_1_1_areas___identity___pages___account___register.html", "class_asp_net_core_1_1_areas___identity___pages___account___register" ],
+      [ "Areas_Identity_Pages_Account_RegisterConfirmation", "class_asp_net_core_1_1_areas___identity___pages___account___register_confirmation.html", "class_asp_net_core_1_1_areas___identity___pages___account___register_confirmation" ],
+      [ "Areas_Identity_Pages_Account_ResendEmailConfirmation", "class_asp_net_core_1_1_areas___identity___pages___account___resend_email_confirmation.html", "class_asp_net_core_1_1_areas___identity___pages___account___resend_email_confirmation" ],
+      [ "Areas_Identity_Pages_Account_ResetPassword", "class_asp_net_core_1_1_areas___identity___pages___account___reset_password.html", "class_asp_net_core_1_1_areas___identity___pages___account___reset_password" ],
+      [ "Areas_Identity_Pages_Account_ResetPasswordConfirmation", "class_asp_net_core_1_1_areas___identity___pages___account___reset_password_confirmation.html", "class_asp_net_core_1_1_areas___identity___pages___account___reset_password_confirmation" ],
+      [ "Views__ViewImports", "class_asp_net_core_1_1_views_____view_imports.html", "class_asp_net_core_1_1_views_____view_imports" ],
+      [ "Views__ViewStart", "class_asp_net_core_1_1_views_____view_start.html", "class_asp_net_core_1_1_views_____view_start" ],
+      [ "Views_Artists_Create", "class_asp_net_core_1_1_views___artists___create.html", "class_asp_net_core_1_1_views___artists___create" ],
+      [ "Views_Artists_Delete", "class_asp_net_core_1_1_views___artists___delete.html", "class_asp_net_core_1_1_views___artists___delete" ],
+      [ "Views_Artists_Details", "class_asp_net_core_1_1_views___artists___details.html", "class_asp_net_core_1_1_views___artists___details" ],
+      [ "Views_Artists_Edit", "class_asp_net_core_1_1_views___artists___edit.html", "class_asp_net_core_1_1_views___artists___edit" ],
+      [ "Views_Artists_Index", "class_asp_net_core_1_1_views___artists___index.html", "class_asp_net_core_1_1_views___artists___index" ],
+      [ "Views_Calendar_Index", "class_asp_net_core_1_1_views___calendar___index.html", "class_asp_net_core_1_1_views___calendar___index" ],
+      [ "Views_Home_Index", "class_asp_net_core_1_1_views___home___index.html", "class_asp_net_core_1_1_views___home___index" ],
+      [ "Views_Home_Privacy", "class_asp_net_core_1_1_views___home___privacy.html", "class_asp_net_core_1_1_views___home___privacy" ],
+      [ "Views_Images_Create", "class_asp_net_core_1_1_views___images___create.html", "class_asp_net_core_1_1_views___images___create" ],
+      [ "Views_Images_Delete", "class_asp_net_core_1_1_views___images___delete.html", "class_asp_net_core_1_1_views___images___delete" ],
+      [ "Views_Images_Details", "class_asp_net_core_1_1_views___images___details.html", "class_asp_net_core_1_1_views___images___details" ],
+      [ "Views_Images_Edit", "class_asp_net_core_1_1_views___images___edit.html", "class_asp_net_core_1_1_views___images___edit" ],
+      [ "Views_Images_Index", "class_asp_net_core_1_1_views___images___index.html", "class_asp_net_core_1_1_views___images___index" ],
+      [ "Views_MailingLists_Create", "class_asp_net_core_1_1_views___mailing_lists___create.html", "class_asp_net_core_1_1_views___mailing_lists___create" ],
+      [ "Views_MailingLists_Delete", "class_asp_net_core_1_1_views___mailing_lists___delete.html", "class_asp_net_core_1_1_views___mailing_lists___delete" ],
+      [ "Views_MailingLists_Details", "class_asp_net_core_1_1_views___mailing_lists___details.html", "class_asp_net_core_1_1_views___mailing_lists___details" ],
+      [ "Views_MailingLists_Edit", "class_asp_net_core_1_1_views___mailing_lists___edit.html", "class_asp_net_core_1_1_views___mailing_lists___edit" ],
+      [ "Views_MailingLists_Index", "class_asp_net_core_1_1_views___mailing_lists___index.html", "class_asp_net_core_1_1_views___mailing_lists___index" ],
+      [ "Views_Messages_Create", "class_asp_net_core_1_1_views___messages___create.html", "class_asp_net_core_1_1_views___messages___create" ],
+      [ "Views_Messages_Delete", "class_asp_net_core_1_1_views___messages___delete.html", "class_asp_net_core_1_1_views___messages___delete" ],
+      [ "Views_Messages_Details", "class_asp_net_core_1_1_views___messages___details.html", "class_asp_net_core_1_1_views___messages___details" ],
+      [ "Views_Messages_Edit", "class_asp_net_core_1_1_views___messages___edit.html", "class_asp_net_core_1_1_views___messages___edit" ],
+      [ "Views_Messages_GetMessageData", "class_asp_net_core_1_1_views___messages___get_message_data.html", "class_asp_net_core_1_1_views___messages___get_message_data" ],
+      [ "Views_Messages_Index", "class_asp_net_core_1_1_views___messages___index.html", "class_asp_net_core_1_1_views___messages___index" ],
+      [ "Views_Portfolios_Create", "class_asp_net_core_1_1_views___portfolios___create.html", "class_asp_net_core_1_1_views___portfolios___create" ],
+      [ "Views_Portfolios_Delete", "class_asp_net_core_1_1_views___portfolios___delete.html", "class_asp_net_core_1_1_views___portfolios___delete" ],
+      [ "Views_Portfolios_Details", "class_asp_net_core_1_1_views___portfolios___details.html", "class_asp_net_core_1_1_views___portfolios___details" ],
+      [ "Views_Portfolios_Edit", "class_asp_net_core_1_1_views___portfolios___edit.html", "class_asp_net_core_1_1_views___portfolios___edit" ],
+      [ "Views_Portfolios_Index", "class_asp_net_core_1_1_views___portfolios___index.html", "class_asp_net_core_1_1_views___portfolios___index" ],
+      [ "Views_Search_Index", "class_asp_net_core_1_1_views___search___index.html", "class_asp_net_core_1_1_views___search___index" ],
+      [ "Views_Servicos_Create", "class_asp_net_core_1_1_views___servicos___create.html", "class_asp_net_core_1_1_views___servicos___create" ],
+      [ "Views_Servicos_Delete", "class_asp_net_core_1_1_views___servicos___delete.html", "class_asp_net_core_1_1_views___servicos___delete" ],
+      [ "Views_Servicos_Details", "class_asp_net_core_1_1_views___servicos___details.html", "class_asp_net_core_1_1_views___servicos___details" ],
+      [ "Views_Servicos_Edit", "class_asp_net_core_1_1_views___servicos___edit.html", "class_asp_net_core_1_1_views___servicos___edit" ],
+      [ "Views_Servicos_Index", "class_asp_net_core_1_1_views___servicos___index.html", "class_asp_net_core_1_1_views___servicos___index" ],
+      [ "Views_Servicos_UpdateMessageBoard", "class_asp_net_core_1_1_views___servicos___update_message_board.html", "class_asp_net_core_1_1_views___servicos___update_message_board" ],
+      [ "Views_Shared__Layout", "class_asp_net_core_1_1_views___shared_____layout.html", "class_asp_net_core_1_1_views___shared_____layout" ],
+      [ "Views_Shared__LoginPartial", "class_asp_net_core_1_1_views___shared_____login_partial.html", "class_asp_net_core_1_1_views___shared_____login_partial" ],
+      [ "Views_Shared__ValidationScriptsPartial", "class_asp_net_core_1_1_views___shared_____validation_scripts_partial.html", "class_asp_net_core_1_1_views___shared_____validation_scripts_partial" ],
+      [ "Views_Shared_Components_Footer_Default", "class_asp_net_core_1_1_views___shared___components___footer___default.html", "class_asp_net_core_1_1_views___shared___components___footer___default" ],
+      [ "Views_Shared_Components_Navbar_Default", "class_asp_net_core_1_1_views___shared___components___navbar___default.html", "class_asp_net_core_1_1_views___shared___components___navbar___default" ],
+      [ "Views_Shared_Error", "class_asp_net_core_1_1_views___shared___error.html", "class_asp_net_core_1_1_views___shared___error" ]
+    ] ],
+    [ "FreebirdTech", "namespace_freebird_tech.html", [
+      [ "Areas", "namespace_freebird_tech_1_1_areas.html", [
+        [ "Identity", "namespace_freebird_tech_1_1_areas_1_1_identity.html", [
+          [ "Pages", "namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages.html", [
+            [ "Account", "namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account.html", [
+              [ "Manage", "namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage.html", [
+                [ "ChangePasswordModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_change_password_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_change_password_model" ],
+                [ "DeletePersonalDataModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model" ],
+                [ "Disable2faModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_disable2fa_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_disable2fa_model" ],
+                [ "DownloadPersonalDataModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_download_personal_data_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_download_personal_data_model" ],
+                [ "EmailModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_email_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_email_model" ],
+                [ "EnableAuthenticatorModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_enable_authenticator_model" ],
+                [ "ExternalLoginsModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_external_logins_model" ],
+                [ "GenerateRecoveryCodesModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model" ],
+                [ "IndexModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_index_model" ],
+                [ "PersonalDataModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_personal_data_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_personal_data_model" ],
+                [ "ResetAuthenticatorModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_reset_authenticator_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_reset_authenticator_model" ],
+                [ "SetPasswordModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_set_password_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_set_password_model" ],
+                [ "ShowRecoveryCodesModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_show_recovery_codes_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_show_recovery_codes_model" ],
+                [ "TwoFactorAuthenticationModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model" ]
+              ] ],
+              [ "AccessDeniedModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_access_denied_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_access_denied_model" ],
+              [ "ConfirmEmailChangeModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_confirm_email_change_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_confirm_email_change_model" ],
+              [ "ConfirmEmailModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_confirm_email_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_confirm_email_model" ],
+              [ "ExternalLoginModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_external_login_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_external_login_model" ],
+              [ "ForgotPasswordConfirmation", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_forgot_password_confirmation.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_forgot_password_confirmation" ],
+              [ "ForgotPasswordModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_forgot_password_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_forgot_password_model" ],
+              [ "LockoutModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_lockout_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_lockout_model" ],
+              [ "LoginModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_model" ],
+              [ "LoginWith2faModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with2fa_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with2fa_model" ],
+              [ "LoginWithRecoveryCodeModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_login_with_recovery_code_model" ],
+              [ "LogoutModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_logout_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_logout_model" ],
+              [ "RegisterConfirmationModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_confirmation_model" ],
+              [ "RegisterModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_register_model" ],
+              [ "ResendEmailConfirmationModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model" ],
+              [ "ResetPasswordConfirmationModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_reset_password_confirmation_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_reset_password_confirmation_model" ],
+              [ "ResetPasswordModel", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_reset_password_model.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_reset_password_model" ]
+            ] ]
+          ] ],
+          [ "IdentityHostingStartup", "class_freebird_tech_1_1_areas_1_1_identity_1_1_identity_hosting_startup.html", "class_freebird_tech_1_1_areas_1_1_identity_1_1_identity_hosting_startup" ]
+        ] ]
+      ] ],
+      [ "Controllers", "namespace_freebird_tech_1_1_controllers.html", [
+        [ "ArtistsController", "class_freebird_tech_1_1_controllers_1_1_artists_controller.html", "class_freebird_tech_1_1_controllers_1_1_artists_controller" ],
+        [ "CalendarController", "class_freebird_tech_1_1_controllers_1_1_calendar_controller.html", "class_freebird_tech_1_1_controllers_1_1_calendar_controller" ],
+        [ "HomeController", "class_freebird_tech_1_1_controllers_1_1_home_controller.html", "class_freebird_tech_1_1_controllers_1_1_home_controller" ],
+        [ "ImagesController", "class_freebird_tech_1_1_controllers_1_1_images_controller.html", "class_freebird_tech_1_1_controllers_1_1_images_controller" ],
+        [ "MailingListsController", "class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller.html", "class_freebird_tech_1_1_controllers_1_1_mailing_lists_controller" ],
+        [ "MessageNotificationController", "class_freebird_tech_1_1_controllers_1_1_message_notification_controller.html", "class_freebird_tech_1_1_controllers_1_1_message_notification_controller" ],
+        [ "MessagesApiController", "class_freebird_tech_1_1_controllers_1_1_messages_api_controller.html", "class_freebird_tech_1_1_controllers_1_1_messages_api_controller" ],
+        [ "MessagesController", "class_freebird_tech_1_1_controllers_1_1_messages_controller.html", "class_freebird_tech_1_1_controllers_1_1_messages_controller" ],
+        [ "PortfoliosController", "class_freebird_tech_1_1_controllers_1_1_portfolios_controller.html", "class_freebird_tech_1_1_controllers_1_1_portfolios_controller" ],
+        [ "SearchController", "class_freebird_tech_1_1_controllers_1_1_search_controller.html", "class_freebird_tech_1_1_controllers_1_1_search_controller" ],
+        [ "ServicosController", "class_freebird_tech_1_1_controllers_1_1_servicos_controller.html", "class_freebird_tech_1_1_controllers_1_1_servicos_controller" ]
+      ] ],
+      [ "Data", "namespace_freebird_tech_1_1_data.html", [
+        [ "ApplicationDbContext", "class_freebird_tech_1_1_data_1_1_application_db_context.html", "class_freebird_tech_1_1_data_1_1_application_db_context" ]
+      ] ],
+      [ "Migrations", "namespace_freebird_tech_1_1_migrations.html", [
+        [ "AddCalendarOwner", "class_freebird_tech_1_1_migrations_1_1_add_calendar_owner.html", "class_freebird_tech_1_1_migrations_1_1_add_calendar_owner" ],
+        [ "ApplicationDbContextModelSnapshot", "class_freebird_tech_1_1_migrations_1_1_application_db_context_model_snapshot.html", "class_freebird_tech_1_1_migrations_1_1_application_db_context_model_snapshot" ],
+        [ "Calendar", "class_freebird_tech_1_1_migrations_1_1_calendar.html", "class_freebird_tech_1_1_migrations_1_1_calendar" ],
+        [ "Categorias", "class_freebird_tech_1_1_migrations_1_1_categorias.html", "class_freebird_tech_1_1_migrations_1_1_categorias" ],
+        [ "ChatReadMessages", "class_freebird_tech_1_1_migrations_1_1_chat_read_messages.html", "class_freebird_tech_1_1_migrations_1_1_chat_read_messages" ],
+        [ "InitialCreate", "class_freebird_tech_1_1_migrations_1_1_initial_create.html", "class_freebird_tech_1_1_migrations_1_1_initial_create" ],
+        [ "messages", "class_freebird_tech_1_1_migrations_1_1messages.html", "class_freebird_tech_1_1_migrations_1_1messages" ]
+      ] ],
+      [ "Models", "namespace_freebird_tech_1_1_models.html", [
+        [ "Artist", "class_freebird_tech_1_1_models_1_1_artist.html", "class_freebird_tech_1_1_models_1_1_artist" ],
+        [ "CalendarEvent", "class_freebird_tech_1_1_models_1_1_calendar_event.html", "class_freebird_tech_1_1_models_1_1_calendar_event" ],
+        [ "Categorias", "class_freebird_tech_1_1_models_1_1_categorias.html", "class_freebird_tech_1_1_models_1_1_categorias" ],
+        [ "ErrorViewModel", "class_freebird_tech_1_1_models_1_1_error_view_model.html", "class_freebird_tech_1_1_models_1_1_error_view_model" ],
+        [ "Image", "class_freebird_tech_1_1_models_1_1_image.html", "class_freebird_tech_1_1_models_1_1_image" ],
+        [ "MailingList", "class_freebird_tech_1_1_models_1_1_mailing_list.html", "class_freebird_tech_1_1_models_1_1_mailing_list" ],
+        [ "Message", "class_freebird_tech_1_1_models_1_1_message.html", "class_freebird_tech_1_1_models_1_1_message" ],
+        [ "Portfolio", "class_freebird_tech_1_1_models_1_1_portfolio.html", "class_freebird_tech_1_1_models_1_1_portfolio" ],
+        [ "Servico", "class_freebird_tech_1_1_models_1_1_servico.html", "class_freebird_tech_1_1_models_1_1_servico" ]
+      ] ],
+      [ "Utility", "namespace_freebird_tech_1_1_utility.html", [
+        [ "ImageEncodingUtil", "class_freebird_tech_1_1_utility_1_1_image_encoding_util.html", null ]
+      ] ],
+      [ "ViewComponents", "namespace_freebird_tech_1_1_view_components.html", [
+        [ "CardInfo", "class_freebird_tech_1_1_view_components_1_1_card_info.html", "class_freebird_tech_1_1_view_components_1_1_card_info" ],
+        [ "FooterViewComponent", "class_freebird_tech_1_1_view_components_1_1_footer_view_component.html", "class_freebird_tech_1_1_view_components_1_1_footer_view_component" ],
+        [ "NavbarViewComponent", "class_freebird_tech_1_1_view_components_1_1_navbar_view_component.html", "class_freebird_tech_1_1_view_components_1_1_navbar_view_component" ],
+        [ "SearchViewModel", "class_freebird_tech_1_1_view_components_1_1_search_view_model.html", "class_freebird_tech_1_1_view_components_1_1_search_view_model" ]
+      ] ],
+      [ "ViewModels", "namespace_freebird_tech_1_1_view_models.html", [
+        [ "ChatViewModel", "class_freebird_tech_1_1_view_models_1_1_chat_view_model.html", "class_freebird_tech_1_1_view_models_1_1_chat_view_model" ],
+        [ "IndexViewModel", "class_freebird_tech_1_1_view_models_1_1_index_view_model.html", "class_freebird_tech_1_1_view_models_1_1_index_view_model" ],
+        [ "MessageListViewModel", "class_freebird_tech_1_1_view_models_1_1_message_list_view_model.html", "class_freebird_tech_1_1_view_models_1_1_message_list_view_model" ]
+      ] ],
+      [ "Program", "class_freebird_tech_1_1_program.html", null ],
+      [ "Startup", "class_freebird_tech_1_1_startup.html", "class_freebird_tech_1_1_startup" ]
+    ] ],
+    [ "Project", "namespace_project.html", [
+      [ "Controllers", "namespace_project_1_1_controllers.html", [
+        [ "CalendarEventsController", "class_project_1_1_controllers_1_1_calendar_events_controller.html", "class_project_1_1_controllers_1_1_calendar_events_controller" ]
+      ] ]
+    ] ]
+];

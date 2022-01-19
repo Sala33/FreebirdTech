@@ -1,0 +1,494 @@
+@charset "UTF-8";
+/**
+
+/*------------------------------------*\
+  # Controle de cores do tema
+\*------------------------------------*/
+
+
+/* Classes já utilizando as cores da paleta definida */
+
+/*Flex Card*/
+div.flexCards .flexCard1.cardClosed:after {
+  background-image: url(../img/ft_base.jpg);
+}
+
+div.flexCards .flexCard2.cardClosed:after {
+  background-image: url(../img/ft_base.jpg);
+}
+
+div.flexCards .flexCard3.cardClosed:after {
+  background-image: url(../img/ft_base.jpg);
+}
+/*Fim Flex Card*/
+
+a.links {
+  color: var(--cor1);
+}
+
+
+/*------------------------------------*\
+  # Modal - Ajustes
+\*------------------------------------*/
+
+.modal-dialog {
+  max-width: 70vh!important;
+  margin: 1.75rem auto;
+}
+
+.text_orange {
+  color: rgb(250, 72, 2);
+}
+
+.btn-orange
+{
+  color:rgb(250, 72, 2);
+}
+
+.btn-primary {
+  border-style: none !important;
+  background-color: rgb(250, 72, 2) !important;
+}
+
+
+.login  {
+  background-color: #0057fc;
+  color: white;   
+}
+/*------------------------------------*\
+  # Backgrounds
+\*------------------------------------*/
+.bg_capa {
+  /* background: url("../img/Capa.jpg")no-repeat; */
+  background-color: #f3ddd9;
+
+}
+
+.bg_orange {
+  /* background: url("../img/Capa.jpg")no-repeat; */
+  background-color: #f3ddd9;
+
+}
+
+.bg_musico {
+    /*background-image: url("../img/piano-banner.jpg");*/
+    background-image: url("../img/piano-banner.jpg");
+    height: 400px;
+    width: cover;
+    margin-top: 58px;
+}
+
+.bg_aluguel {
+    /*background-image: url("../img/piano-banner.jpg");*/
+    background-image: url("../img/aluguel-banner.jpg");
+    height: 400px;
+    width: cover;
+    margin-top: 58px;
+}
+
+.bg_cineasta {
+    /*background-image: url("../img/piano-banner.jpg");*/
+    background-image: url("../img/cineasta-banner.jpg");
+    height: 400px;
+    width: cover;
+    margin-top: 58px;
+}
+
+.bg_tecnologia {
+    /*background-image: url("../img/piano-banner.jpg");*/
+    background-image: url("../img/tecnologia-banner.jpg");
+    height: 400px;
+    width: cover;
+    margin-top: 58px;
+}
+
+.bg_roteirista {
+    /*background-image: url("../img/piano-banner.jpg");*/
+    background-image: url("../img/roteirista-banner.jpg");
+    height: 400px;
+    width: cover;
+    margin-top: 58px;
+}
+.bg_fotografo {
+    /*background-image: url("../img/piano-banner.jpg");*/
+    background-image: url("../img/photographer-banner.jpg");
+    height: 400px;
+    width: cover;
+    margin-top: 58px;
+}
+
+.bg_servico {
+    /*background-image: url("../img/piano-banner.jpg");*/
+    background-image: url("../img/services-banner.jpg");
+    height: 400px;
+    width: cover;
+    margin-top: 58px;
+}
+
+
+
+
+.bg_trab1 {
+  background-image: url("../img/image_dy@2x.png");
+  height: 400px;
+  width: cover;
+  margin-top: 58px;
+  
+}
+h1 {
+  text-align: left;
+}
+
+
+.wrapper {
+  height: 100%;
+  min-height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-top: 20vh;
+}
+
+figure .figure-caption{
+  line-height: 20px;
+}
+
+/*------------------------------------*\
+
+  # Rodapé
+\*------------------------------------*/
+
+
+
+
+
+/* Carousel */
+
+.carousel-caption {
+  position: relative;
+  left: 0%;
+  right: 0%;
+  bottom: 0px;
+  z-index: 10;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: #000;}
+
+.carousel {
+    position: relative;
+}
+
+img {
+  
+  max-width: 70%;
+  height: auto;
+}
+
+.controllers {
+    position: absolute;
+    top: 0px;
+}
+
+.feature_image {    
+  max-height:1080px;
+  width: auto;
+}
+
+.feature_image img{
+  height: 100%;
+  width: 100%;
+}
+
+/* CARDS */
+
+
+
+/*CAROUSEL CONTROLS COLOR */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  background-size: 100%, 100%;
+  background-image: none;
+}
+
+ /* .carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color:black;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color:black;
+}  */
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: .75rem;
+}
+  /* .text_orange {
+    color: rgb(250, 72, 2);
+  
+  } */
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+}
+.icon-link > .bi {
+  margin-top: .125rem;
+  margin-left: .125rem;
+  transition: transform .25s ease-in-out;
+  fill: currentColor;
+}
+.icon-link:hover > .bi {
+  transform: translate(.25rem);
+}
+
+.icon-square {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: .75rem;
+}
+
+.rounded-4 { border-radius: .5rem; }
+.rounded-5 { border-radius: 1rem; }
+
+.text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+.text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+.text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+
+.card-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+/* CAROUSEL */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 10));
+  }
+}
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 1260px;
+}
+.slider::before, .slider::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  animation: scroll 30s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+footer {
+ 
+  height: auto;
+  bottom: 0;
+  width: 100%;
+}
+
+/* SIDE NAVBAR */
+.sidenav {
+  height: 100%;
+  width: ;
+  position: fixed;
+  z-index: 1000;
+  top: 50;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: rgb(250, 72, 2) ;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #ff9100;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 50;
+  right: 25px;
+  font-size: 1rem;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* SIGN UP form */
+
+.form-control {
+  box-shadow: none;		
+  font-weight: normal;
+  font-size: 13px;
+}
+.form-control:focus {
+  border-color: #33cabb;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+
+.or-seperator {
+      margin-top: 32px;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  }
+  .or-seperator b {
+  color: #666;
+      padding: 0 8px;
+  width: 30px;
+  height: 30px;
+  font-size: 13px;
+  text-align: center;
+  line-height: 26px;
+  background: #fff;
+  display: inline-block;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  position: relative;
+  top: -15px;
+  z-index: 1;
+  }
+
+  /* BLUR */
+
+  .blur {
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(8px);
+    height: 100%;
+    width: auto;
+    
+    }
+
+    .hero {
+      width:100%;
+      height: 30px;
+      overflow: hidden;
+  }
+  input.transparent-input{
+    background-color:transparent !important;
+    /* border:none !important; */
+ }
+
+
+ /* DROPDOWN SIDE-MENU */
+
+ 
+ .dropbtn {
+  color: rgb(250, 72, 2) ;;
+  padding: 0 px;
+  font-size: 16px;
+  border: none;
+  
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  left: 15px;
+  z-index: 1;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 20px;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.dropdown-content a {
+  color: rgb(250, 72, 2) ;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  z-index: 1;
+  
+}
+
+
+
+.dropdown-content a:hover {background-color: gray ;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:'' ;}
+
+

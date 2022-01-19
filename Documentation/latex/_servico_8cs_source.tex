@@ -1,0 +1,84 @@
+\hypertarget{_servico_8cs_source}{}\doxysection{Servico.\+cs}
+\label{_servico_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Models/Servico.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Models/Servico.cs}}
+\mbox{\hyperlink{_servico_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00001}00001 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_data}{Data}};}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00002}00002 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_extensions}{Extensions}};}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00003}00003 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00004}00004 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00005}00005 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00006}00006 \textcolor{keyword}{using} System.ComponentModel.DataAnnotations;}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00007}00007 \textcolor{keyword}{using} System.ComponentModel.DataAnnotations.Schema;}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00008}00008 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00009}00009 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00011}00011 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_models}{FreebirdTech.Models}}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00012}00012 \{}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00017}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico}{00017}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico}{Servico}}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00018}00018     \{}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00019}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a3c38a6b07b513e2989efe764cbd4654b}{00019}}         \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a3c38a6b07b513e2989efe764cbd4654b}{Id}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00020}00020         [Required]}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00021}00021         [StringLength(50)]}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00022}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_ad225d301dd257a46a1f5721590ca04fa}{00022}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_ad225d301dd257a46a1f5721590ca04fa}{Title}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00023}00023         [Required]}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00024}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_aa4498684130c469b53d9c5eb69842590}{00024}}         \textcolor{keyword}{public} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_aa4498684130c469b53d9c5eb69842590}{Preco}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00025}00025         [Required]}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00026}00026         [StringLength(128)]}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00027}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_af72d857d9afd0a6519be1d25469899f2}{00027}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_af72d857d9afd0a6519be1d25469899f2}{BriefDescription}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00028}00028         [Required]}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00029}00029         [StringLength(1000)]}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00030}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_ae0bd02870a71461c8541865f69b00c05}{00030}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_ae0bd02870a71461c8541865f69b00c05}{LongDescription}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00031}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_acde7e4bf3fea0a6175744490c279076f}{00031}}         \textcolor{keyword}{public} List<string> \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_acde7e4bf3fea0a6175744490c279076f}{Topics}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00032}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_abe01e92895ab95bb7c02e806d39e1c76}{00032}}         \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_abe01e92895ab95bb7c02e806d39e1c76}{Publish}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00033}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a745632ed76885decffed1104ed04ae8d}{00033}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist}{Artist}} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a745632ed76885decffed1104ed04ae8d}{OwnerID}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00034}00034         [Required]}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00035}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_aaa131db884b3b7d9b0d884bcf3a93872}{00035}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_aaa131db884b3b7d9b0d884bcf3a93872}{GigCategory}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00036}00036         [Required]}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00037}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_aa4d37d9e02ba7a9105fe81be1743c28a}{00037}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_aa4d37d9e02ba7a9105fe81be1743c28a}{Address}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00038}00038         [NotMapped]}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00039}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_abb787ba83064e700d6b219c11ab912a8}{00039}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_abb787ba83064e700d6b219c11ab912a8}{PreviewImageURI}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00040}00040         [NotMapped]}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00041}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a9fbbffcb5bfa9ae32a47ee5ac950a1dd}{00041}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio}{Portfolio}}[] \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a9fbbffcb5bfa9ae32a47ee5ac950a1dd}{PortfolioData}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00042}00042         [NotMapped]}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00043}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_ab34cce8459676c93177f8ab969e3f5fa}{00043}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_message}{Message}}[] \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_ab34cce8459676c93177f8ab969e3f5fa}{Messages}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00044}00044         [NotMapped]}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00045}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a0fcb1dea2967b145c603e1564bca866b}{00045}}         \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a0fcb1dea2967b145c603e1564bca866b}{HasProfile}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00046}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_afb66e00601f3315e62a6611078f2d587}{00046}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_afb66e00601f3315e62a6611078f2d587}{Servico}}()}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00047}00047         \{}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00048}00048             \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a9fbbffcb5bfa9ae32a47ee5ac950a1dd}{PortfolioData}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio}{Portfolio}}[5];}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00050}00050             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a9fbbffcb5bfa9ae32a47ee5ac950a1dd}{PortfolioData}}.Length; i++)}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00051}00051             \{}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00052}00052                 \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a9fbbffcb5bfa9ae32a47ee5ac950a1dd}{PortfolioData}}[i] = \textcolor{keyword}{new} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio}{Portfolio}}();}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00053}00053             \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00055}00055             \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_acde7e4bf3fea0a6175744490c279076f}{Topics}} = \textcolor{keyword}{new} List<string> \{ \textcolor{stringliteral}{"{}"{}}, \textcolor{stringliteral}{"{}"{}},\textcolor{stringliteral}{"{}"{}},\textcolor{stringliteral}{"{}"{}},\textcolor{stringliteral}{"{}"{}} \};}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00057}00057         \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00059}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_adf9fb4422f3f7884dc8376b2f1f63a5f}{00059}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_adf9fb4422f3f7884dc8376b2f1f63a5f}{Servico}}(\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}} context, \textcolor{keywordtype}{string} ownerId)}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00060}00060         \{}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00061}00061             \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a9fbbffcb5bfa9ae32a47ee5ac950a1dd}{PortfolioData}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio}{Portfolio}}[5];}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00063}00063             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a9fbbffcb5bfa9ae32a47ee5ac950a1dd}{PortfolioData}}.Length; i++)}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00064}00064             \{}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00065}00065                 \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a9fbbffcb5bfa9ae32a47ee5ac950a1dd}{PortfolioData}}[i] = \textcolor{keyword}{new} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio}{Portfolio}}();}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00066}00066             \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00068}00068             \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_acde7e4bf3fea0a6175744490c279076f}{Topics}} = \textcolor{keyword}{new} List<string> \{ \textcolor{stringliteral}{"{}"{}}, \textcolor{stringliteral}{"{}"{}}, \textcolor{stringliteral}{"{}"{}}, \textcolor{stringliteral}{"{}"{}}, \textcolor{stringliteral}{"{}"{}} \};}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00070}00070             \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a745632ed76885decffed1104ed04ae8d}{OwnerID}} = context.\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_aa68326f170778db7665e7db2454b9d0c}{Artists}}.AsNoTracking().Where(m => m.OwnerId == ownerId).Include(m => m.AvatarImage).FirstOrDefault();}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00072}00072             \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a745632ed76885decffed1104ed04ae8d}{OwnerID}}.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_af05f78919beae8b6087eb93f4383c787}{AvatarImageURI}} = \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a745632ed76885decffed1104ed04ae8d}{OwnerID}}.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_aa46ba613b041af3a3e24806e965ffe8d}{AvatarImage}}.DecodeImage();}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00073}00073         \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00075}\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a4bb2af448393684a3adf7a958d2abd2d}{00075}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a4bb2af448393684a3adf7a958d2abd2d}{PopulateOwnerData}}(\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}} context, \textcolor{keywordtype}{string} ownerId)}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00076}00076         \{}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00077}00077             \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a745632ed76885decffed1104ed04ae8d}{OwnerID}} = context.\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_aa68326f170778db7665e7db2454b9d0c}{Artists}}.AsNoTracking().Where(m => m.OwnerId == ownerId).Include(m => m.AvatarImage).FirstOrDefault();}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00079}00079             \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a745632ed76885decffed1104ed04ae8d}{OwnerID}}.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_af05f78919beae8b6087eb93f4383c787}{AvatarImageURI}} = \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_a745632ed76885decffed1104ed04ae8d}{OwnerID}}.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist_aa46ba613b041af3a3e24806e965ffe8d}{AvatarImage}}.DecodeImage();}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00080}00080         \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00081}00081     \}}
+\DoxyCodeLine{\Hypertarget{_servico_8cs_source_l00082}00082 \}}
+
+\end{DoxyCode}

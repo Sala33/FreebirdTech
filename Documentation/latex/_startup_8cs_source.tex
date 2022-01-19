@@ -1,0 +1,88 @@
+\hypertarget{_startup_8cs_source}{}\doxysection{Startup.\+cs}
+\label{_startup_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Startup.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Startup.cs}}
+\mbox{\hyperlink{_startup_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00001}00001 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_data}{Data}};}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00002}00002 \textcolor{keyword}{using} Microsoft.AspNetCore.Builder;}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00003}00003 \textcolor{keyword}{using} Microsoft.AspNetCore.Hosting;}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00004}00004 \textcolor{keyword}{using} Microsoft.AspNetCore.HttpsPolicy;}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00005}00005 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity.UI;}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00007}00007 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00008}00008 \textcolor{keyword}{using} Microsoft.Extensions.Configuration;}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00009}00009 \textcolor{keyword}{using} Microsoft.Extensions.DependencyInjection;}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00010}00010 \textcolor{keyword}{using} Microsoft.Extensions.Hosting;}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00011}00011 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00012}00012 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00013}00013 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00014}00014 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00016}00016 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00017}00017 \{}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00018}\mbox{\hyperlink{class_freebird_tech_1_1_startup}{00018}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_startup}{Startup}}}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00019}00019     \{}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00020}\mbox{\hyperlink{class_freebird_tech_1_1_startup_a614cc993cdc24674e53ef69876713e88}{00020}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_startup_a614cc993cdc24674e53ef69876713e88}{Startup}}(IConfiguration configuration)}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00021}00021         \{}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00022}00022             \mbox{\hyperlink{class_freebird_tech_1_1_startup_a88ecf75e2b0b77fb0b5ba1d228fd3a01}{Configuration}} = configuration;}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00023}00023         \}}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00025}\mbox{\hyperlink{class_freebird_tech_1_1_startup_a88ecf75e2b0b77fb0b5ba1d228fd3a01}{00025}}         \textcolor{keyword}{public} IConfiguration \mbox{\hyperlink{class_freebird_tech_1_1_startup_a88ecf75e2b0b77fb0b5ba1d228fd3a01}{Configuration}} \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00027}00027         \textcolor{comment}{// This method gets called by the runtime. Use this method to add services to the container.}}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00028}\mbox{\hyperlink{class_freebird_tech_1_1_startup_ac8f0801c8875135e4c366c868d757c3c}{00028}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_freebird_tech_1_1_startup_ac8f0801c8875135e4c366c868d757c3c}{ConfigureServices}}(IServiceCollection services)}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00029}00029         \{}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00030}00030             services.AddDbContext<\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}}>(options =>}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00031}00031                 options.UseNpgsql(}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00032}00032                     \mbox{\hyperlink{class_freebird_tech_1_1_startup_a88ecf75e2b0b77fb0b5ba1d228fd3a01}{Configuration}}.GetConnectionString(\textcolor{stringliteral}{"{}DefaultConnection"{}})));}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00033}00033             services.AddDatabaseDeveloperPageExceptionFilter();}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00035}00035             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00036}00036                 .AddEntityFrameworkStores<ApplicationDbContext>();}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00037}00037             services.AddControllersWithViews();}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00039}00039             services.ConfigureApplicationCookie(options =>}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00040}00040             \{}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00041}00041                 \textcolor{comment}{// Cookie settings}}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00042}00042                 options.Cookie.HttpOnly = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00043}00043                 options.ExpireTimeSpan = TimeSpan.FromMinutes(120);}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00045}00045                 options.LoginPath = \textcolor{stringliteral}{"{}/Identity/Account/Login"{}};}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00046}00046                 options.AccessDeniedPath = \textcolor{stringliteral}{"{}/Identity/Account/AccessDenied"{}};}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00047}00047                 options.SlidingExpiration = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00048}00048             \});}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00049}00049         \}}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00051}00051         \textcolor{comment}{// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.}}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00052}\mbox{\hyperlink{class_freebird_tech_1_1_startup_a8a90345225c252ce96c65202d9f16a75}{00052}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_freebird_tech_1_1_startup_a8a90345225c252ce96c65202d9f16a75}{Configure}}(IApplicationBuilder app, IWebHostEnvironment env)}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00053}00053         \{}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00054}00054             \textcolor{keywordflow}{if} (env.IsDevelopment())}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00055}00055             \{}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00056}00056                 app.UseDeveloperExceptionPage();}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00057}00057                 app.UseMigrationsEndPoint();}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00058}00058             \}}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00059}00059             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00060}00060             \{}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00061}00061                 app.UseExceptionHandler(\textcolor{stringliteral}{"{}/Home/Error"{}});}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00062}00062                 \textcolor{comment}{// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-\/hsts.}}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00063}00063                 app.UseHsts();}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00064}00064             \}}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00065}00065             app.UseHttpsRedirection();}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00066}00066             app.UseStaticFiles();}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00068}00068             app.UseRouting();}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00070}00070             app.UseAuthentication();}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00071}00071             app.UseAuthorization();}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00073}00073             app.UseEndpoints(endpoints =>}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00074}00074             \{}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00075}00075                 endpoints.MapControllerRoute(}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00076}00076                     name: \textcolor{stringliteral}{"{}default"{}},}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00077}00077                     pattern: \textcolor{stringliteral}{"{}\{controller=Home\}/\{action=Index\}/\{id?\}"{}});}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00078}00078                 endpoints.MapRazorPages();}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00079}00079             \});}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00080}00080         \}}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00081}00081     \}}
+\DoxyCodeLine{\Hypertarget{_startup_8cs_source_l00082}00082 \}}
+
+\end{DoxyCode}

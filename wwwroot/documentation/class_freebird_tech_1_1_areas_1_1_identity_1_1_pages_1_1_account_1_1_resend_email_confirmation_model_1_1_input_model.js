@@ -1,0 +1,4 @@
+var class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_1_1_input_model =
+[
+    [ "Email", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_resend_email_confirmation_model_1_1_input_model.html#a859ac90af4e7f1ed01cbfa48f2c3385c", null ]
+];

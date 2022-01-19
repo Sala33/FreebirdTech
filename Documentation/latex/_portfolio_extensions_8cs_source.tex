@@ -1,0 +1,84 @@
+\hypertarget{_portfolio_extensions_8cs_source}{}\doxysection{Portfolio\+Extensions.\+cs}
+\label{_portfolio_extensions_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Extensions/PortfolioExtensions.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Extensions/PortfolioExtensions.cs}}
+\mbox{\hyperlink{_portfolio_extensions_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00001}00001 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_data}{Data}};}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00002}00002 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_models}{Models}};}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00003}00003 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_utility}{Utility}};}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00004}00004 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00005}00005 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00006}00006 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00007}00007 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00009}00009 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_extensions}{FreebirdTech.Extensions}}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00011}00011     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{class }PortfolioExtensions}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00012}00012     \{}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00013}00013         \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{bool} SavePortfolio(\textcolor{keyword}{this} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio}{Portfolio}}[] portfolio, \mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}} context, \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico}{Servico}} owner, \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist}{Artist}} ownerArtist)}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00014}00014         \{}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00015}00015             \textcolor{keywordtype}{bool} s = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00017}00017             \textcolor{keywordflow}{foreach} (var entry \textcolor{keywordflow}{in} portfolio)}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00018}00018             \{}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00020}00020                 var type = entry.PortfolioType.ConvertToPortfolioType();}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00022}00022                 \textcolor{keywordflow}{if} (type == \mbox{\hyperlink{namespace_freebird_tech_1_1_utility_a8107f6bfce3a4659129d1fd490c646ce}{EPortfolioType}}.NONE) \textcolor{keywordflow}{continue}; \textcolor{comment}{//delete portfolio if exists}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00024}00024                 \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio}{Portfolio}} p = context.\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_a4a0bd7643a783b5eda02549c00a06d47}{Portfolios}}.Find(entry.Id);}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00026}00026                 \textcolor{keywordflow}{if} (p == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00027}00027                 \{}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00028}00028                     p = \textcolor{keyword}{new} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio}{Portfolio}}();}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00029}00029                 \}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00031}00031                 \textcolor{keywordtype}{bool} isCurrentImage = p.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio_a70ebc62af124ebba5de645a71975b654}{Type}} == \mbox{\hyperlink{namespace_freebird_tech_1_1_utility_a8107f6bfce3a4659129d1fd490c646ce}{EPortfolioType}}.IMAGEM || p.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio_a70ebc62af124ebba5de645a71975b654}{Type}} == \mbox{\hyperlink{namespace_freebird_tech_1_1_utility_a8107f6bfce3a4659129d1fd490c646ce}{EPortfolioType}}.IMAGEM\_CAPA;}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00033}00033                 \textcolor{keywordflow}{if} (type != \mbox{\hyperlink{namespace_freebird_tech_1_1_utility_a8107f6bfce3a4659129d1fd490c646ce}{EPortfolioType}}.EMBED)}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00034}00034                 \{}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00035}00035                     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{string}.IsNullOrEmpty(entry.EmbedLink)) \textcolor{keywordflow}{continue}; \textcolor{comment}{// error}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00037}00037                     \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image}{Image}} img = \textcolor{keyword}{new} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_image}{Image}}();}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00039}00039                     \textcolor{keywordflow}{if} (isCurrentImage)}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00040}00040                     \{}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00041}00041                         \textcolor{comment}{//Updates old Image to new one}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00042}00042                         context.Entry(p).Reference(l => l.Image).Load();}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00043}00043                         img = p.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio_ac0cf9eed01661235170b6cfcdca7d00d}{Image}};}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00044}00044                     \}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00045}00045                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00046}00046                     \{}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00047}00047                         \textcolor{comment}{//Delete old link for sanity purposes}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00048}00048                         p.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio_aefa092b82309a645c319da1029232e11}{EmbedLink}} = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00049}00049                     \}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00051}00051                     p.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio_ac0cf9eed01661235170b6cfcdca7d00d}{Image}} = entry.EmbedLink.EncodeImage(owner.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico_ad225d301dd257a46a1f5721590ca04fa}{Title}}, \mbox{\hyperlink{namespace_freebird_tech_1_1_extensions_ab451e9ae1721506caf8a306c8c7f4bd4}{EImageType}}.PORTFOLIO, img);}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00053}00053                 \}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00054}00054                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00055}00055                 \{}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00056}00056                     \textcolor{keywordflow}{if} (isCurrentImage)}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00057}00057                     \{}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00058}00058                         \textcolor{comment}{//Delete old image to save DB Space}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00059}00059                         context.Entry(p).Reference(l => l.Image).Load();}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00060}00060                         context.\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_a3bc0238fae8cdc2277085f103953c4b6}{Images}}.Remove(p.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio_ac0cf9eed01661235170b6cfcdca7d00d}{Image}});}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00061}00061                     \}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00063}00063                     p.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio_aefa092b82309a645c319da1029232e11}{EmbedLink}} = entry.PageEmbed;}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00064}00064                 \}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00066}00066                 p.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio_ae2a069bb5c10c066ad23a2db18c2e602}{PortfolioType}} = entry.PortfolioType;}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00067}00067                 p.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio_a15cbec39cedc360e5d4c0af40cfb1cf3}{OwnerArtist}} = ownerArtist;}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00068}00068                 p.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_portfolio_ad87fac5652fb303b37ca554875be505b}{OwnerServico}} = owner;}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00070}00070                 s = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00072}00072                 context.\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context_a4a0bd7643a783b5eda02549c00a06d47}{Portfolios}}.Update(p);}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00073}00073             \}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00074}00074           }
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00075}00075             \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00076}00076         \}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00077}00077     \}}
+\DoxyCodeLine{\Hypertarget{_portfolio_extensions_8cs_source_l00078}00078 \}}
+
+\end{DoxyCode}

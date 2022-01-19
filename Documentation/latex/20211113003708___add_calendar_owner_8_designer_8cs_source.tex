@@ -1,0 +1,600 @@
+\hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source}{}\doxysection{20211113003708\+\_\+\+Add\+Calendar\+Owner.\+Designer.\+cs}
+\label{20211113003708___add_calendar_owner_8_designer_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Migrations/20211113003708\_AddCalendarOwner.Designer.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Migrations/20211113003708\_AddCalendarOwner.Designer.cs}}
+\mbox{\hyperlink{20211113003708___add_calendar_owner_8_designer_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00001}00001 \textcolor{comment}{// <auto-\/generated />}}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00004}00004 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_data}{Data}};}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00005}00005 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore.Infrastructure;}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00007}00007 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore.Migrations;}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00008}00008 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore.Storage.ValueConversion;}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00009}00009 \textcolor{keyword}{using} Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00011}00011 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_migrations}{FreebirdTech.Migrations}}}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00012}00012 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00013}00013     [DbContext(typeof(\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}}))]}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00014}00014     [Migration(\textcolor{stringliteral}{"{}20211113003708\_AddCalendarOwner"{}})]}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00015}00015     \textcolor{keyword}{partial class }AddCalendarOwner}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00016}00016     \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00017}\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_add_calendar_owner_a33c8f29d911a9c2f4749d17260dd44d6}{00017}}         \textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_add_calendar_owner_a33c8f29d911a9c2f4749d17260dd44d6}{BuildTargetModel}}(ModelBuilder modelBuilder)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00018}00018         \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00019}00019 \textcolor{preprocessor}{\#pragma warning disable 612, 618}}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00020}00020             modelBuilder}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00021}00021                 .HasAnnotation(\textcolor{stringliteral}{"{}Relational:MaxIdentifierLength"{}}, 63)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00022}00022                 .HasAnnotation(\textcolor{stringliteral}{"{}ProductVersion"{}}, \textcolor{stringliteral}{"{}5.0.11"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00023}00023                 .HasAnnotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00025}00025             modelBuilder.Entity(\textcolor{stringliteral}{"{}FreebirdTech.Models.Artist"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00026}00026                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00027}00027                     b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00028}00028                         .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00029}00029                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00030}00030                         .HasAnnotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00032}00032                     b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}AvatarImageId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00033}00033                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00035}00035                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}BriefDescription"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00036}00036                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00037}00037                         .HasMaxLength(150)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00038}00038                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(150)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00040}00040                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Categoria"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00041}00041                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00042}00042                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00044}00044                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Contact"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00045}00045                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00046}00046                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00048}00048                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Description"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00049}00049                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00050}00050                         .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00051}00051                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(500)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00053}00053                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Name"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00054}00054                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00055}00055                         .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00056}00056                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(100)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00058}00058                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}OwnerId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00059}00059                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00060}00060                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00062}00062                     b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00064}00064                     b.HasIndex(\textcolor{stringliteral}{"{}AvatarImageId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00066}00066                     b.ToTable(\textcolor{stringliteral}{"{}Artists"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00067}00067                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00069}00069             modelBuilder.Entity(\textcolor{stringliteral}{"{}FreebirdTech.Models.CalendarEvent"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00070}00070                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00071}00071                     b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00072}00072                         .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00073}00073                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00074}00074                         .HasAnnotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00076}00076                     b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}ArtistId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00077}00077                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00079}00079                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Color"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00080}00080                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00082}00082                     b.Property<DateTime>(\textcolor{stringliteral}{"{}End"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00083}00083                         .HasColumnType(\textcolor{stringliteral}{"{}timestamp without time zone"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00085}00085                     b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}ServicoId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00086}00086                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00088}00088                     b.Property<DateTime>(\textcolor{stringliteral}{"{}Start"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00089}00089                         .HasColumnType(\textcolor{stringliteral}{"{}timestamp without time zone"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00091}00091                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Text"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00092}00092                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00094}00094                     b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00096}00096                     b.HasIndex(\textcolor{stringliteral}{"{}ArtistId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00098}00098                     b.HasIndex(\textcolor{stringliteral}{"{}ServicoId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00100}00100                     b.ToTable(\textcolor{stringliteral}{"{}CalendarEvent"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00101}00101                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00103}00103             modelBuilder.Entity(\textcolor{stringliteral}{"{}FreebirdTech.Models.Categorias"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00104}00104                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00105}00105                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Categoria"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00106}00106                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00108}00108                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ParentCategoria"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00109}00109                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00111}00111                     b.HasKey(\textcolor{stringliteral}{"{}Categoria"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00113}00113                     b.HasIndex(\textcolor{stringliteral}{"{}ParentCategoria"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00115}00115                     b.ToTable(\textcolor{stringliteral}{"{}Categorias"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00116}00116                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00118}00118             modelBuilder.Entity(\textcolor{stringliteral}{"{}FreebirdTech.Models.Image"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00119}00119                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00120}00120                     b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00121}00121                         .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00122}00122                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00123}00123                         .HasAnnotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00125}00125                     b.Property<\textcolor{keywordtype}{byte}[]>(\textcolor{stringliteral}{"{}ImageData"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00126}00126                         .HasColumnType(\textcolor{stringliteral}{"{}bytea"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00128}00128                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ImageTitle"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00129}00129                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00131}00131                     b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00133}00133                     b.ToTable(\textcolor{stringliteral}{"{}Images"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00134}00134                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00136}00136             modelBuilder.Entity(\textcolor{stringliteral}{"{}FreebirdTech.Models.MailingList"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00137}00137                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00138}00138                     b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00139}00139                         .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00140}00140                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00141}00141                         .HasAnnotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00143}00143                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Email"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00144}00144                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00145}00145                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00147}00147                     b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00148}00148 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00149}00149                     b.ToTable(\textcolor{stringliteral}{"{}MailingList"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00150}00150                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00151}00151 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00152}00152             modelBuilder.Entity(\textcolor{stringliteral}{"{}FreebirdTech.Models.Message"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00153}00153                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00154}00154                     b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}ID"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00155}00155                         .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00156}00156                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00157}00157                         .HasAnnotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00158}00158 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00159}00159                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}MessageText"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00160}00160                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00161}00161                         .HasMaxLength(170)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00162}00162                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(170)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00164}00164                     b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}ReceiverId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00165}00165                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00166}00166 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00167}00167                     b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}SenderId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00168}00168                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00169}00169 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00170}00170                     b.Property<DateTime>(\textcolor{stringliteral}{"{}Time"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00171}00171                         .HasColumnType(\textcolor{stringliteral}{"{}timestamp without time zone"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00172}00172 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00173}00173                     b.HasKey(\textcolor{stringliteral}{"{}ID"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00174}00174 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00175}00175                     b.HasIndex(\textcolor{stringliteral}{"{}ReceiverId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00176}00176 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00177}00177                     b.HasIndex(\textcolor{stringliteral}{"{}SenderId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00179}00179                     b.ToTable(\textcolor{stringliteral}{"{}Message"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00180}00180                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00181}00181 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00182}00182             modelBuilder.Entity(\textcolor{stringliteral}{"{}FreebirdTech.Models.Portfolio"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00183}00183                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00184}00184                     b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00185}00185                         .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00186}00186                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00187}00187                         .HasAnnotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00188}00188 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00189}00189                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}EmbedLink"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00190}00190                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00191}00191 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00192}00192                     b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}ImageId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00193}00193                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00194}00194 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00195}00195                     b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}OwnerArtistId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00196}00196                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00197}00197 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00198}00198                     b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}OwnerServicoId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00199}00199                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00200}00200 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00201}00201                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PortfolioType"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00202}00202                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00203}00203                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00204}00204 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00205}00205                     b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00206}00206 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00207}00207                     b.HasIndex(\textcolor{stringliteral}{"{}ImageId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00208}00208 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00209}00209                     b.HasIndex(\textcolor{stringliteral}{"{}OwnerArtistId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00210}00210 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00211}00211                     b.HasIndex(\textcolor{stringliteral}{"{}OwnerServicoId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00212}00212 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00213}00213                     b.ToTable(\textcolor{stringliteral}{"{}Portfolios"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00214}00214                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00215}00215 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00216}00216             modelBuilder.Entity(\textcolor{stringliteral}{"{}FreebirdTech.Models.Servico"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00217}00217                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00218}00218                     b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00219}00219                         .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00220}00220                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00221}00221                         .HasAnnotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00222}00222 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00223}00223                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Address"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00224}00224                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00225}00225                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00226}00226 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00227}00227                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}BriefDescription"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00228}00228                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00229}00229                         .HasMaxLength(128)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00230}00230                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(128)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00231}00231 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00232}00232                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}GigCategory"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00233}00233                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00234}00234                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00235}00235 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00236}00236                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}LongDescription"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00237}00237                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00238}00238                         .HasMaxLength(1000)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00239}00239                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(1000)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00240}00240 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00241}00241                     b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}OwnerIDId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00242}00242                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00243}00243 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00244}00244                     b.Property<\textcolor{keywordtype}{float}>(\textcolor{stringliteral}{"{}Preco"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00245}00245                         .HasColumnType(\textcolor{stringliteral}{"{}real"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00246}00246 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00247}00247                     b.Property<\textcolor{keywordtype}{bool}>(\textcolor{stringliteral}{"{}Publish"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00248}00248                         .HasColumnType(\textcolor{stringliteral}{"{}boolean"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00249}00249 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00250}00250                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Title"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00251}00251                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00252}00252                         .HasMaxLength(50)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00253}00253                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(50)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00254}00254 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00255}00255                     b.Property<List<string>>(\textcolor{stringliteral}{"{}Topics"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00256}00256                         .HasColumnType(\textcolor{stringliteral}{"{}text[]"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00257}00257 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00258}00258                     b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00259}00259 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00260}00260                     b.HasIndex(\textcolor{stringliteral}{"{}OwnerIDId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00261}00261 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00262}00262                     b.ToTable(\textcolor{stringliteral}{"{}Servicos"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00263}00263                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00264}00264 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00265}00265             modelBuilder.Entity(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityRole"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00266}00266                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00267}00267                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00268}00268                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00269}00269 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00270}00270                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ConcurrencyStamp"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00271}00271                         .IsConcurrencyToken()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00272}00272                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00273}00273 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00274}00274                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Name"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00275}00275                         .HasMaxLength(256)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00276}00276                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(256)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00277}00277 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00278}00278                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}NormalizedName"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00279}00279                         .HasMaxLength(256)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00280}00280                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(256)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00281}00281 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00282}00282                     b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00283}00283 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00284}00284                     b.HasIndex(\textcolor{stringliteral}{"{}NormalizedName"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00285}00285                         .IsUnique()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00286}00286                         .HasDatabaseName(\textcolor{stringliteral}{"{}RoleNameIndex"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00287}00287 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00288}00288                     b.ToTable(\textcolor{stringliteral}{"{}AspNetRoles"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00289}00289                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00290}00290 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00291}00291             modelBuilder.Entity(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00292}00292                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00293}00293                     b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00294}00294                         .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00295}00295                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00296}00296                         .HasAnnotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00297}00297 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00298}00298                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ClaimType"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00299}00299                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00300}00300 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00301}00301                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ClaimValue"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00302}00302                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00303}00303 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00304}00304                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}RoleId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00305}00305                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00306}00306                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00307}00307 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00308}00308                     b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00309}00309 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00310}00310                     b.HasIndex(\textcolor{stringliteral}{"{}RoleId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00311}00311 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00312}00312                     b.ToTable(\textcolor{stringliteral}{"{}AspNetRoleClaims"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00313}00313                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00314}00314 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00315}00315             modelBuilder.Entity(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityUser"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00316}00316                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00317}00317                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00318}00318                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00319}00319 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00320}00320                     b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}AccessFailedCount"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00321}00321                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00322}00322 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00323}00323                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ConcurrencyStamp"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00324}00324                         .IsConcurrencyToken()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00325}00325                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00326}00326 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00327}00327                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Email"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00328}00328                         .HasMaxLength(256)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00329}00329                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(256)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00330}00330 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00331}00331                     b.Property<\textcolor{keywordtype}{bool}>(\textcolor{stringliteral}{"{}EmailConfirmed"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00332}00332                         .HasColumnType(\textcolor{stringliteral}{"{}boolean"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00333}00333 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00334}00334                     b.Property<\textcolor{keywordtype}{bool}>(\textcolor{stringliteral}{"{}LockoutEnabled"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00335}00335                         .HasColumnType(\textcolor{stringliteral}{"{}boolean"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00336}00336 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00337}00337                     b.Property<DateTimeOffset?>(\textcolor{stringliteral}{"{}LockoutEnd"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00338}00338                         .HasColumnType(\textcolor{stringliteral}{"{}timestamp with time zone"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00339}00339 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00340}00340                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}NormalizedEmail"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00341}00341                         .HasMaxLength(256)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00342}00342                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(256)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00343}00343 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00344}00344                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}NormalizedUserName"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00345}00345                         .HasMaxLength(256)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00346}00346                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(256)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00347}00347 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00348}00348                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PasswordHash"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00349}00349                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00350}00350 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00351}00351                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PhoneNumber"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00352}00352                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00353}00353 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00354}00354                     b.Property<\textcolor{keywordtype}{bool}>(\textcolor{stringliteral}{"{}PhoneNumberConfirmed"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00355}00355                         .HasColumnType(\textcolor{stringliteral}{"{}boolean"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00356}00356 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00357}00357                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}SecurityStamp"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00358}00358                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00359}00359 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00360}00360                     b.Property<\textcolor{keywordtype}{bool}>(\textcolor{stringliteral}{"{}TwoFactorEnabled"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00361}00361                         .HasColumnType(\textcolor{stringliteral}{"{}boolean"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00362}00362 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00363}00363                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}UserName"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00364}00364                         .HasMaxLength(256)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00365}00365                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(256)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00366}00366 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00367}00367                     b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00368}00368 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00369}00369                     b.HasIndex(\textcolor{stringliteral}{"{}NormalizedEmail"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00370}00370                         .HasDatabaseName(\textcolor{stringliteral}{"{}EmailIndex"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00371}00371 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00372}00372                     b.HasIndex(\textcolor{stringliteral}{"{}NormalizedUserName"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00373}00373                         .IsUnique()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00374}00374                         .HasDatabaseName(\textcolor{stringliteral}{"{}UserNameIndex"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00375}00375 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00376}00376                     b.ToTable(\textcolor{stringliteral}{"{}AspNetUsers"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00377}00377                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00378}00378 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00379}00379             modelBuilder.Entity(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityUserClaim<string>"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00380}00380                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00381}00381                     b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00382}00382                         .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00383}00383                         .HasColumnType(\textcolor{stringliteral}{"{}integer"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00384}00384                         .HasAnnotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00385}00385 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00386}00386                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ClaimType"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00387}00387                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00388}00388 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00389}00389                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ClaimValue"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00390}00390                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00391}00391 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00392}00392                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}UserId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00393}00393                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00394}00394                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00395}00395 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00396}00396                     b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00397}00397 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00398}00398                     b.HasIndex(\textcolor{stringliteral}{"{}UserId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00399}00399 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00400}00400                     b.ToTable(\textcolor{stringliteral}{"{}AspNetUserClaims"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00401}00401                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00402}00402 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00403}00403             modelBuilder.Entity(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityUserLogin<string>"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00404}00404                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00405}00405                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}LoginProvider"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00406}00406                         .HasMaxLength(128)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00407}00407                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(128)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00408}00408 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00409}00409                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ProviderKey"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00410}00410                         .HasMaxLength(128)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00411}00411                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(128)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00412}00412 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00413}00413                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ProviderDisplayName"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00414}00414                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00415}00415 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00416}00416                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}UserId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00417}00417                         .IsRequired()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00418}00418                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00419}00419 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00420}00420                     b.HasKey(\textcolor{stringliteral}{"{}LoginProvider"{}}, \textcolor{stringliteral}{"{}ProviderKey"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00421}00421 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00422}00422                     b.HasIndex(\textcolor{stringliteral}{"{}UserId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00423}00423 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00424}00424                     b.ToTable(\textcolor{stringliteral}{"{}AspNetUserLogins"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00425}00425                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00426}00426 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00427}00427             modelBuilder.Entity(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityUserRole<string>"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00428}00428                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00429}00429                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}UserId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00430}00430                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00431}00431 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00432}00432                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}RoleId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00433}00433                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00434}00434 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00435}00435                     b.HasKey(\textcolor{stringliteral}{"{}UserId"{}}, \textcolor{stringliteral}{"{}RoleId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00436}00436 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00437}00437                     b.HasIndex(\textcolor{stringliteral}{"{}RoleId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00438}00438 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00439}00439                     b.ToTable(\textcolor{stringliteral}{"{}AspNetUserRoles"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00440}00440                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00441}00441 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00442}00442             modelBuilder.Entity(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityUserToken<string>"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00443}00443                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00444}00444                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}UserId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00445}00445                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00446}00446 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00447}00447                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}LoginProvider"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00448}00448                         .HasMaxLength(128)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00449}00449                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(128)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00450}00450 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00451}00451                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Name"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00452}00452                         .HasMaxLength(128)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00453}00453                         .HasColumnType(\textcolor{stringliteral}{"{}character varying(128)"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00454}00454 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00455}00455                     b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Value"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00456}00456                         .HasColumnType(\textcolor{stringliteral}{"{}text"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00457}00457 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00458}00458                     b.HasKey(\textcolor{stringliteral}{"{}UserId"{}}, \textcolor{stringliteral}{"{}LoginProvider"{}}, \textcolor{stringliteral}{"{}Name"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00459}00459 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00460}00460                     b.ToTable(\textcolor{stringliteral}{"{}AspNetUserTokens"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00461}00461                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00462}00462 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00463}00463             modelBuilder.Entity(\textcolor{stringliteral}{"{}FreebirdTech.Models.Artist"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00464}00464                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00465}00465                     b.HasOne(\textcolor{stringliteral}{"{}FreebirdTech.Models.Image"{}}, \textcolor{stringliteral}{"{}AvatarImage"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00466}00466                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00467}00467                         .HasForeignKey(\textcolor{stringliteral}{"{}AvatarImageId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00468}00468 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00469}00469                     b.Navigation(\textcolor{stringliteral}{"{}AvatarImage"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00470}00470                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00471}00471 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00472}00472             modelBuilder.Entity(\textcolor{stringliteral}{"{}FreebirdTech.Models.CalendarEvent"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00473}00473                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00474}00474                     b.HasOne(\textcolor{stringliteral}{"{}FreebirdTech.Models.Artist"{}}, \textcolor{stringliteral}{"{}Artist"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00475}00475                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00476}00476                         .HasForeignKey(\textcolor{stringliteral}{"{}ArtistId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00477}00477 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00478}00478                     b.HasOne(\textcolor{stringliteral}{"{}FreebirdTech.Models.Servico"{}}, \textcolor{stringliteral}{"{}Servico"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00479}00479                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00480}00480                         .HasForeignKey(\textcolor{stringliteral}{"{}ServicoId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00481}00481 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00482}00482                     b.Navigation(\textcolor{stringliteral}{"{}Artist"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00483}00483 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00484}00484                     b.Navigation(\textcolor{stringliteral}{"{}Servico"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00485}00485                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00486}00486 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00487}00487             modelBuilder.Entity(\textcolor{stringliteral}{"{}FreebirdTech.Models.Categorias"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00488}00488                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00489}00489                     b.HasOne(\textcolor{stringliteral}{"{}FreebirdTech.Models.Categorias"{}}, \textcolor{stringliteral}{"{}Parent"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00490}00490                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00491}00491                         .HasForeignKey(\textcolor{stringliteral}{"{}ParentCategoria"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00492}00492 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00493}00493                     b.Navigation(\textcolor{stringliteral}{"{}Parent"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00494}00494                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00495}00495 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00496}00496             modelBuilder.Entity(\textcolor{stringliteral}{"{}FreebirdTech.Models.Message"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00497}00497                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00498}00498                     b.HasOne(\textcolor{stringliteral}{"{}FreebirdTech.Models.Artist"{}}, \textcolor{stringliteral}{"{}Receiver"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00499}00499                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00500}00500                         .HasForeignKey(\textcolor{stringliteral}{"{}ReceiverId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00501}00501 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00502}00502                     b.HasOne(\textcolor{stringliteral}{"{}FreebirdTech.Models.Artist"{}}, \textcolor{stringliteral}{"{}Sender"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00503}00503                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00504}00504                         .HasForeignKey(\textcolor{stringliteral}{"{}SenderId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00505}00505 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00506}00506                     b.Navigation(\textcolor{stringliteral}{"{}Receiver"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00507}00507 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00508}00508                     b.Navigation(\textcolor{stringliteral}{"{}Sender"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00509}00509                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00510}00510 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00511}00511             modelBuilder.Entity(\textcolor{stringliteral}{"{}FreebirdTech.Models.Portfolio"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00512}00512                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00513}00513                     b.HasOne(\textcolor{stringliteral}{"{}FreebirdTech.Models.Image"{}}, \textcolor{stringliteral}{"{}Image"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00514}00514                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00515}00515                         .HasForeignKey(\textcolor{stringliteral}{"{}ImageId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00516}00516 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00517}00517                     b.HasOne(\textcolor{stringliteral}{"{}FreebirdTech.Models.Artist"{}}, \textcolor{stringliteral}{"{}OwnerArtist"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00518}00518                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00519}00519                         .HasForeignKey(\textcolor{stringliteral}{"{}OwnerArtistId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00520}00520 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00521}00521                     b.HasOne(\textcolor{stringliteral}{"{}FreebirdTech.Models.Servico"{}}, \textcolor{stringliteral}{"{}OwnerServico"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00522}00522                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00523}00523                         .HasForeignKey(\textcolor{stringliteral}{"{}OwnerServicoId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00524}00524 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00525}00525                     b.Navigation(\textcolor{stringliteral}{"{}Image"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00526}00526 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00527}00527                     b.Navigation(\textcolor{stringliteral}{"{}OwnerArtist"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00528}00528 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00529}00529                     b.Navigation(\textcolor{stringliteral}{"{}OwnerServico"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00530}00530                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00531}00531 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00532}00532             modelBuilder.Entity(\textcolor{stringliteral}{"{}FreebirdTech.Models.Servico"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00533}00533                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00534}00534                     b.HasOne(\textcolor{stringliteral}{"{}FreebirdTech.Models.Artist"{}}, \textcolor{stringliteral}{"{}OwnerID"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00535}00535                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00536}00536                         .HasForeignKey(\textcolor{stringliteral}{"{}OwnerIDId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00537}00537 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00538}00538                     b.Navigation(\textcolor{stringliteral}{"{}OwnerID"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00539}00539                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00540}00540 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00541}00541             modelBuilder.Entity(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00542}00542                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00543}00543                     b.HasOne(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityRole"{}}, \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00544}00544                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00545}00545                         .HasForeignKey(\textcolor{stringliteral}{"{}RoleId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00546}00546                         .OnDelete(DeleteBehavior.Cascade)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00547}00547                         .IsRequired();}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00548}00548                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00549}00549 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00550}00550             modelBuilder.Entity(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityUserClaim<string>"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00551}00551                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00552}00552                     b.HasOne(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityUser"{}}, \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00553}00553                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00554}00554                         .HasForeignKey(\textcolor{stringliteral}{"{}UserId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00555}00555                         .OnDelete(DeleteBehavior.Cascade)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00556}00556                         .IsRequired();}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00557}00557                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00558}00558 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00559}00559             modelBuilder.Entity(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityUserLogin<string>"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00560}00560                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00561}00561                     b.HasOne(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityUser"{}}, \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00562}00562                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00563}00563                         .HasForeignKey(\textcolor{stringliteral}{"{}UserId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00564}00564                         .OnDelete(DeleteBehavior.Cascade)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00565}00565                         .IsRequired();}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00566}00566                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00567}00567 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00568}00568             modelBuilder.Entity(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityUserRole<string>"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00569}00569                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00570}00570                     b.HasOne(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityRole"{}}, \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00571}00571                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00572}00572                         .HasForeignKey(\textcolor{stringliteral}{"{}RoleId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00573}00573                         .OnDelete(DeleteBehavior.Cascade)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00574}00574                         .IsRequired();}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00575}00575 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00576}00576                     b.HasOne(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityUser"{}}, \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00577}00577                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00578}00578                         .HasForeignKey(\textcolor{stringliteral}{"{}UserId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00579}00579                         .OnDelete(DeleteBehavior.Cascade)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00580}00580                         .IsRequired();}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00581}00581                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00582}00582 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00583}00583             modelBuilder.Entity(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityUserToken<string>"{}}, b =>}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00584}00584                 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00585}00585                     b.HasOne(\textcolor{stringliteral}{"{}Microsoft.AspNetCore.Identity.IdentityUser"{}}, \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00586}00586                         .WithMany()}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00587}00587                         .HasForeignKey(\textcolor{stringliteral}{"{}UserId"{}})}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00588}00588                         .OnDelete(DeleteBehavior.Cascade)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00589}00589                         .IsRequired();}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00590}00590                 \});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00591}00591 \textcolor{preprocessor}{\#pragma warning restore 612, 618}}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00592}00592         \}}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00593}00593     \}}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8_designer_8cs_source_l00594}00594 \}}
+
+\end{DoxyCode}

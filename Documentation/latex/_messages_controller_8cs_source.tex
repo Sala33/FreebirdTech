@@ -1,0 +1,238 @@
+\hypertarget{_messages_controller_8cs_source}{}\doxysection{Messages\+Controller.\+cs}
+\label{_messages_controller_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Controllers/MessagesController.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Controllers/MessagesController.cs}}
+\mbox{\hyperlink{_messages_controller_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00005}00005 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.Rendering;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00007}00007 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00008}00008 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_data}{Data}};}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00009}00009 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_models}{Models}};}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00010}00010 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00011}00011 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_view_models}{ViewModels}};}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00012}00012 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_extensions}{Extensions}};}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00014}00014 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_controllers}{FreebirdTech.Controllers}}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00015}00015 \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00031}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller}{00031}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller}{MessagesController}} : Controller}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00032}00032     \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00033}00033         \textcolor{keyword}{private} readonly \mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}} \_context;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00034}00034         \textcolor{keyword}{private} readonly UserManager<IdentityUser> \_userManager;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00042}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_abf99247e937380604b43f11eabd8e3d3}{00042}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_abf99247e937380604b43f11eabd8e3d3}{MessagesController}}(\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{ApplicationDbContext}} context, UserManager<IdentityUser> userManager)}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00043}00043         \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00044}00044             \_context = context;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00045}00045             \_userManager = userManager;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00046}00046         \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00052}00052         \textcolor{comment}{// GET: Messages}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00053}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a1d461096e94c14b09d7e9ff268229168}{00053}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a1d461096e94c14b09d7e9ff268229168}{Index}}()}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00054}00054         \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00055}00055             \textcolor{keywordflow}{return} View(await \_context.Message.ToListAsync());}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00056}00056         \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00063}00063         \textcolor{comment}{// GET: Messages/Details/5}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00064}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a2e976bd8b188441aea39b3f10a2fdb1d}{00064}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a2e976bd8b188441aea39b3f10a2fdb1d}{Details}}(\textcolor{keywordtype}{int}? \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00065}00065         \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00066}00066             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00067}00067             \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00068}00068                 \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00069}00069             \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00071}00071             var message = await \_context.Message}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00072}00072                 .FirstOrDefaultAsync(m => m.ID == \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00073}00073             \textcolor{keywordflow}{if} (message == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00074}00074             \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00075}00075                 \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00076}00076             \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00078}00078             \textcolor{keywordflow}{return} View(message);}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00079}00079         \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00086}00086         \textcolor{comment}{// GET: Messages/Create}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00087}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a4efb60aff0e21fe452c0f43743dad3f0}{00087}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a4efb60aff0e21fe452c0f43743dad3f0}{CreateAsync}}(\textcolor{keywordtype}{string} userid)}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00088}00088         \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00089}00089             var artist = await GetArtistAsync();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00090}00090             \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist}{Artist}} sender;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00091}00091             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{string}.IsNullOrEmpty(userid))}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00092}00092                 sender = artist;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00093}00093             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00094}00094                 sender = GetArtist(userid);}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00096}00096             var messages = \_context.Message.AsNoTracking().Include(m => m.Sender).Include(m => m.Receiver).Where(m => m.Receiver == artist \&\& m.Sender == sender).ToArray();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00098}00098             var messageLog = \textcolor{keyword}{new} HashSet<Artist>();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00100}00100             var messageLogArtists = \_context.Message}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00101}00101                                             .Include(m => m.Sender)}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00102}00102                                             .Where(m => m.Receiver == artist).ToArray();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00104}00104             \textcolor{keywordflow}{foreach} (var item \textcolor{keywordflow}{in} messageLogArtists)}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00105}00105             \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00106}00106                 messageLog.Add(item.Sender);}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00107}00107             \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00109}00109             \textcolor{keywordflow}{foreach} (var item \textcolor{keywordflow}{in} messageLog)}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00110}00110             \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00111}00111                 \_context.Entry(item).Reference(m => m.AvatarImage).Load();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00112}00112                 item.AvatarImageURI = item.AvatarImage.DecodeImage();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00113}00113             \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00115}00115             artist.AvatarImageURI = artist.AvatarImage.DecodeImage();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00117}00117             var vm = \textcolor{keyword}{new} \mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model}{ChatViewModel}}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00118}00118             \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00119}00119                 MessageLog = messageLog.ToArray(),}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00120}00120                 Messages = messages,}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00121}00121                 Reciever = artist,}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00122}00122                 SenderID = sender.OwnerId,}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00123}00123                 ReceiverID = artist.OwnerId}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00124}00124             \};}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00126}00126             \textcolor{keywordflow}{return} View(vm);}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00127}00127         \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00134}00134         \textcolor{comment}{// POST: Messages/Create}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00135}00135         \textcolor{comment}{// To protect from overposting attacks, enable the specific properties you want to bind to.}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00136}00136         \textcolor{comment}{// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00137}00137         [HttpPost]}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00138}00138         [ValidateAntiForgeryToken]}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00139}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a6abdcb6998cbd2fb57571b89b488917e}{00139}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a6abdcb6998cbd2fb57571b89b488917e}{Create}}([Bind(\textcolor{stringliteral}{"{}MessageToSend"{}})] \mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model}{ChatViewModel}} messageViewModel)}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00140}00140         \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00141}00141             \textcolor{keywordflow}{if} (ModelState.IsValid)}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00142}00142             \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00143}00143                 \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_message}{Message}} message = messageViewModel.\mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model_a9374eaf49be28f4947bebdc4306062a1}{MessageToSend}};}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00144}00144                 var artist = await GetArtistAsync();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00145}00145                 message.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_message_a166f49ace0d3b733ecef9f7032ff0b40}{Time}} = DateTime.Now;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00146}00146                 message.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_message_af84a22813550a68d684b5cbfa589189a}{Sender}} = artist;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00147}00147                 message.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_message_a708dc98dc510cc9dd87e8225d0a8f3eb}{Receiver}} = artist;}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00148}00148                 \_context.Add(message);}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00149}00149                 await \_context.SaveChangesAsync();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00150}00150                 \textcolor{keywordflow}{return} RedirectToAction(nameof(\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a6abdcb6998cbd2fb57571b89b488917e}{Create}}));}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00151}00151             \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00152}00152             \textcolor{keywordflow}{return} View(messageViewModel);}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00153}00153         \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00154}00154 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00160}00160         \textcolor{comment}{// GET: Messages/Edit/5}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00161}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a7d08e2e5335984a60f70f38a55b6db8c}{00161}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a7d08e2e5335984a60f70f38a55b6db8c}{Edit}}(\textcolor{keywordtype}{int}? \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00162}00162         \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00163}00163             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00164}00164             \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00165}00165                 \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00166}00166             \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00168}00168             var message = await \_context.Message.FindAsync(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00169}00169             \textcolor{keywordflow}{if} (message == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00170}00170             \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00171}00171                 \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00172}00172             \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00173}00173             \textcolor{keywordflow}{return} View(message);}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00174}00174         \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00175}00175 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00182}00182         \textcolor{comment}{// POST: Messages/Edit/5}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00183}00183         \textcolor{comment}{// To protect from overposting attacks, enable the specific properties you want to bind to.}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00184}00184         \textcolor{comment}{// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00185}00185         [HttpPost]}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00186}00186         [ValidateAntiForgeryToken]}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00187}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a4ef58ff9d0f1b90110ff6cd3de3f5c66}{00187}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a4ef58ff9d0f1b90110ff6cd3de3f5c66}{Edit}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, [Bind(\textcolor{stringliteral}{"{}ID,Time,MessageText"{}})] \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_message}{Message}} message)}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00188}00188         \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00189}00189             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} != message.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_message_aee48f3f817dce176599496c3007431e4}{ID}})}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00190}00190             \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00191}00191                 \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00192}00192             \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00193}00193 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00194}00194             \textcolor{keywordflow}{if} (ModelState.IsValid)}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00195}00195             \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00196}00196                 \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00197}00197                 \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00198}00198                     \_context.Update(message);}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00199}00199                     await \_context.SaveChangesAsync();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00200}00200                 \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00201}00201                 \textcolor{keywordflow}{catch} (DbUpdateConcurrencyException)}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00202}00202                 \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00203}00203                     \textcolor{keywordflow}{if} (!MessageExists(message.\mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_message_aee48f3f817dce176599496c3007431e4}{ID}}))}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00204}00204                     \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00205}00205                         \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00206}00206                     \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00207}00207                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00208}00208                     \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00209}00209                         \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00210}00210                     \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00211}00211                 \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00212}00212                 \textcolor{keywordflow}{return} RedirectToAction(nameof(\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a1d461096e94c14b09d7e9ff268229168}{Index}}));}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00213}00213             \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00214}00214             \textcolor{keywordflow}{return} View(message);}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00215}00215         \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00216}00216 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00222}00222         \textcolor{comment}{// GET: Messages/Delete/5}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00223}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a14a9b83f7324667f10223d616c1c43b4}{00223}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a14a9b83f7324667f10223d616c1c43b4}{Delete}}(\textcolor{keywordtype}{int}? \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00224}00224         \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00225}00225             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00226}00226             \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00227}00227                 \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00228}00228             \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00229}00229 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00230}00230             var message = await \_context.Message}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00231}00231                 .FirstOrDefaultAsync(m => m.ID == \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00232}00232             \textcolor{keywordflow}{if} (message == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00233}00233             \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00234}00234                 \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00235}00235             \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00236}00236 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00237}00237             \textcolor{keywordflow}{return} View(message);}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00238}00238         \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00239}00239 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00245}00245         \textcolor{comment}{// POST: Messages/Delete/5}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00246}00246         [HttpPost, ActionName(\textcolor{stringliteral}{"{}Delete"{}})]}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00247}00247         [ValidateAntiForgeryToken]}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00248}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_aad0abfb87e47d43985e2967bfe7b6f4a}{00248}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_aad0abfb87e47d43985e2967bfe7b6f4a}{DeleteConfirmed}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00249}00249         \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00250}00250             var message = await \_context.Message.FindAsync(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00251}00251             \_context.Message.Remove(message);}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00252}00252             await \_context.SaveChangesAsync();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00253}00253             \textcolor{keywordflow}{return} RedirectToAction(nameof(\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a1d461096e94c14b09d7e9ff268229168}{Index}}));}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00254}00254         \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00255}00255 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00256}\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a69b357153d29d288c3dc4bc6661ee401}{00256}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_messages_controller_a69b357153d29d288c3dc4bc6661ee401}{GetMessageDataAsync}}(\textcolor{keywordtype}{string} sender)}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00257}00257         \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00258}00258             \textcolor{keywordflow}{if} (!User.Identity.IsAuthenticated) \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00259}00259 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00260}00260             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00261}00261 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00262}00262             var messages = \_context.Message}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00263}00263                                     .AsNoTracking()}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00264}00264                                     .Include(m => m.Sender)}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00265}00265                                     .Include(m => m.Receiver).Where(m => m.Receiver.OwnerId == user.Id \&\& m.Sender.OwnerId == sender)}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00266}00266                                     .ToArray();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00267}00267 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00268}00268             var vm = \textcolor{keyword}{new} \mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_message_list_view_model}{MessageListViewModel}}()}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00269}00269             \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00270}00270                 Messages = messages,}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00271}00271                 OwnerID = user.Id}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00272}00272             \};}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00273}00273 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00274}00274             \textcolor{keywordflow}{return} View(vm);}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00275}00275         \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00276}00276 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00282}00282         \textcolor{keyword}{private} \textcolor{keywordtype}{bool} MessageExists(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00283}00283         \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00284}00284             \textcolor{keywordflow}{return} \_context.Message.Any(e => e.ID == \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00285}00285         \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00286}00286 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00292}00292         \textcolor{keyword}{private} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist}{Artist}} GetArtist(\textcolor{keywordtype}{string} ownerId)}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00293}00293         \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00294}00294             \textcolor{keywordflow}{return} \_context.Artists.Where(m => m.OwnerId == ownerId).Include(m => m.AvatarImage).FirstOrDefault();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00295}00295         \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00296}00296 }
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00301}00301         \textcolor{keyword}{private} async Task<Artist> GetArtistAsync()}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00302}00302         \{}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00303}00303             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00304}00304             \textcolor{keywordflow}{return} \_context.Artists.Where(m => m.OwnerId == user.Id).Include(m => m.AvatarImage).FirstOrDefault();}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00305}00305         \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00306}00306     \}}
+\DoxyCodeLine{\Hypertarget{_messages_controller_8cs_source_l00307}00307 \}}
+
+\end{DoxyCode}

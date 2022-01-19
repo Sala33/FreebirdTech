@@ -1,0 +1,62 @@
+\hypertarget{_download_personal_data_8cshtml_8cs_source}{}\doxysection{Download\+Personal\+Data.\+cshtml.\+cs}
+\label{_download_personal_data_8cshtml_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml.cs}}
+\mbox{\hyperlink{_download_personal_data_8cshtml_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Text;}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00005}00005 \textcolor{keyword}{using} System.Text.Json;}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00006}00006 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00007}00007 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00008}00008 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00009}00009 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.RazorPages;}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00010}00010 \textcolor{keyword}{using} Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00012}00012 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage}{FreebirdTech.Areas.Identity.Pages.Account.Manage}}}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00014}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_download_personal_data_model}{00014}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_download_personal_data_model}{DownloadPersonalDataModel}} : PageModel}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00015}00015     \{}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00016}00016         \textcolor{keyword}{private} readonly UserManager<IdentityUser> \_userManager;}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00017}00017         \textcolor{keyword}{private} readonly ILogger<DownloadPersonalDataModel> \_logger;}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00019}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_download_personal_data_model_a2461c2e785a447f37ff1eb1118f1b84f}{00019}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_download_personal_data_model_a2461c2e785a447f37ff1eb1118f1b84f}{DownloadPersonalDataModel}}(}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00020}00020             UserManager<IdentityUser> userManager,}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00021}00021             ILogger<DownloadPersonalDataModel> logger)}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00022}00022         \{}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00023}00023             \_userManager = userManager;}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00024}00024             \_logger = logger;}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00025}00025         \}}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00027}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_download_personal_data_model_a3f23cea746fe2a7d9b5e4cb54cb23da3}{00027}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_download_personal_data_model_a3f23cea746fe2a7d9b5e4cb54cb23da3}{OnPostAsync}}()}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00028}00028         \{}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00029}00029             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00030}00030             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00031}00031             \{}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00032}00032                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID '\{\_userManager.GetUserId(User)\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00033}00033             \}}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00035}00035             \_logger.LogInformation(\textcolor{stringliteral}{"{}User with ID '\{UserId\}' asked for their personal data."{}}, \_userManager.GetUserId(User));}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00037}00037             \textcolor{comment}{// Only include personal data for download}}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00038}00038             var personalData = \textcolor{keyword}{new} Dictionary<string, string>();}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00039}00039             var personalDataProps = typeof(IdentityUser).GetProperties().Where(}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00040}00040                             prop => Attribute.IsDefined(prop, typeof(PersonalDataAttribute)));}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00041}00041             \textcolor{keywordflow}{foreach} (var p \textcolor{keywordflow}{in} personalDataProps)}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00042}00042             \{}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00043}00043                 personalData.Add(p.Name, p.GetValue(user)?.ToString() ?? \textcolor{stringliteral}{"{}null"{}});}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00044}00044             \}}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00046}00046             var logins = await \_userManager.GetLoginsAsync(user);}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00047}00047             \textcolor{keywordflow}{foreach} (var l \textcolor{keywordflow}{in} logins)}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00048}00048             \{}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00049}00049                 personalData.Add(\$\textcolor{stringliteral}{"{}\{l.LoginProvider\} external login provider key"{}}, l.ProviderKey);}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00050}00050             \}}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00052}00052             Response.Headers.Add(\textcolor{stringliteral}{"{}Content-\/Disposition"{}}, \textcolor{stringliteral}{"{}attachment; filename=PersonalData.json"{}});}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00053}00053             \textcolor{keywordflow}{return} \textcolor{keyword}{new} FileContentResult(JsonSerializer.SerializeToUtf8Bytes(personalData), \textcolor{stringliteral}{"{}application/json"{}});}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00054}00054         \}}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{_download_personal_data_8cshtml_8cs_source_l00056}00056 \}}
+
+\end{DoxyCode}

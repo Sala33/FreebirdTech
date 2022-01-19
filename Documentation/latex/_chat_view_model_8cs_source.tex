@@ -1,0 +1,25 @@
+\hypertarget{_chat_view_model_8cs_source}{}\doxysection{Chat\+View\+Model.\+cs}
+\label{_chat_view_model_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/ViewModels/ChatViewModel.cs@{C:/Users/Danilo/source/repos/FreebirdTech/ViewModels/ChatViewModel.cs}}
+\mbox{\hyperlink{_chat_view_model_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00001}00001 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_freebird_tech}{FreebirdTech}}.\mbox{\hyperlink{namespace_freebird_tech_1_1_models}{Models}};}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00004}00004 \textcolor{keyword}{using} System.ComponentModel.DataAnnotations;}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00005}00005 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00006}00006 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00008}\mbox{\hyperlink{namespace_freebird_tech_1_1_view_models}{00008}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_view_models}{FreebirdTech.ViewModels}}}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00010}\mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model}{00010}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model}{ChatViewModel}}}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00011}00011     \{}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00012}\mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model_a188f2ee1ed8b727316427a43c0be46f8}{00012}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist}{Artist}} \mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model_a188f2ee1ed8b727316427a43c0be46f8}{Reciever}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00013}\mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model_a948133dfe3b439783e4269af607ddae7}{00013}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_message}{Message}}[] \mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model_a948133dfe3b439783e4269af607ddae7}{Messages}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00014}\mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model_aafc0de3910cf2e0a503859730a4e6dde}{00014}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_artist}{Artist}}[] \mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model_aafc0de3910cf2e0a503859730a4e6dde}{MessageLog}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00015}\mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model_a9374eaf49be28f4947bebdc4306062a1}{00015}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_message}{Message}} \mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model_a9374eaf49be28f4947bebdc4306062a1}{MessageToSend}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00016}\mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model_a58127d0a1aa6f0049184cc2199b70e06}{00016}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model_a58127d0a1aa6f0049184cc2199b70e06}{SenderID}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00017}\mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model_a6238027de1dadd9748474969a31fd256}{00017}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_view_models_1_1_chat_view_model_a6238027de1dadd9748474969a31fd256}{ReceiverID}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00018}00018     \}}
+\DoxyCodeLine{\Hypertarget{_chat_view_model_8cs_source_l00019}00019 \}}
+
+\end{DoxyCode}

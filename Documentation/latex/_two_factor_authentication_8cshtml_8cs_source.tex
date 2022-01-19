@@ -1,0 +1,77 @@
+\hypertarget{_two_factor_authentication_8cshtml_8cs_source}{}\doxysection{Two\+Factor\+Authentication.\+cshtml.\+cs}
+\label{_two_factor_authentication_8cshtml_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml.cs}}
+\mbox{\hyperlink{_two_factor_authentication_8cshtml_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00005}00005 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00007}00007 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.RazorPages;}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00008}00008 \textcolor{keyword}{using} Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00010}00010 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage}{FreebirdTech.Areas.Identity.Pages.Account.Manage}}}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00012}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model}{00012}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model}{TwoFactorAuthenticationModel}} : PageModel}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00014}00014         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{string} AuthenicatorUriFormat = \textcolor{stringliteral}{"{}otpauth://totp/\{0\}:\{1\}?secret=\{2\}\&issuer=\{0\}"{}};}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00016}00016         \textcolor{keyword}{private} readonly UserManager<IdentityUser> \_userManager;}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00017}00017         \textcolor{keyword}{private} readonly SignInManager<IdentityUser> \_signInManager;}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00018}00018         \textcolor{keyword}{private} readonly ILogger<TwoFactorAuthenticationModel> \_logger;}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00020}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a53d162fd5102d1734a3ac592a45907e0}{00020}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a53d162fd5102d1734a3ac592a45907e0}{TwoFactorAuthenticationModel}}(}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00021}00021             UserManager<IdentityUser> userManager,}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00022}00022             SignInManager<IdentityUser> signInManager,}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00023}00023             ILogger<TwoFactorAuthenticationModel> logger)}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00024}00024         \{}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00025}00025             \_userManager = userManager;}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00026}00026             \_signInManager = signInManager;}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00027}00027             \_logger = logger;}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00028}00028         \}}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00030}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a0d4eea714a3a63ab8f4adf25a1fc98a4}{00030}}         \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a0d4eea714a3a63ab8f4adf25a1fc98a4}{HasAuthenticator}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00032}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a8741d18f1eadc3e4f0e49ee4c2d1a35f}{00032}}         \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a8741d18f1eadc3e4f0e49ee4c2d1a35f}{RecoveryCodesLeft}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00034}00034         [BindProperty]}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00035}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_ab6692e6e82245d5a2af29536ccf514ce}{00035}}         \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_ab6692e6e82245d5a2af29536ccf514ce}{Is2faEnabled}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00037}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a35106c8685cd8575ccac677cd9f7c3f8}{00037}}         \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a35106c8685cd8575ccac677cd9f7c3f8}{IsMachineRemembered}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00039}00039         [TempData]}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00040}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a7dfc63ae81e696b8397da34b957e211a}{00040}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a7dfc63ae81e696b8397da34b957e211a}{StatusMessage}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00042}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a38856a3ad26340b78592b1b51e75e652}{00042}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a38856a3ad26340b78592b1b51e75e652}{OnGet}}()}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00043}00043         \{}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00044}00044             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00045}00045             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00046}00046             \{}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00047}00047                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID '\{\_userManager.GetUserId(User)\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00048}00048             \}}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00050}00050             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a0d4eea714a3a63ab8f4adf25a1fc98a4}{HasAuthenticator}} = await \_userManager.GetAuthenticatorKeyAsync(user) != \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00051}00051             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_ab6692e6e82245d5a2af29536ccf514ce}{Is2faEnabled}} = await \_userManager.GetTwoFactorEnabledAsync(user);}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00052}00052             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a35106c8685cd8575ccac677cd9f7c3f8}{IsMachineRemembered}} = await \_signInManager.IsTwoFactorClientRememberedAsync(user);}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00053}00053             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a8741d18f1eadc3e4f0e49ee4c2d1a35f}{RecoveryCodesLeft}} = await \_userManager.CountRecoveryCodesAsync(user);}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00055}00055             \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00056}00056         \}}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00058}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a97218fd57debebaaf140a30a7aaec9e5}{00058}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a97218fd57debebaaf140a30a7aaec9e5}{OnPost}}()}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00059}00059         \{}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00060}00060             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00061}00061             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00062}00062             \{}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00063}00063                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID '\{\_userManager.GetUserId(User)\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00064}00064             \}}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00066}00066             await \_signInManager.ForgetTwoFactorClientAsync();}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00067}00067             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_two_factor_authentication_model_a7dfc63ae81e696b8397da34b957e211a}{StatusMessage}} = \textcolor{stringliteral}{"{}The current browser has been forgotten. When you login again from this browser you will be prompted for your 2fa code."{}};}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00068}00068             \textcolor{keywordflow}{return} RedirectToPage();}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00069}00069         \}}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00070}00070     \}}
+\DoxyCodeLine{\Hypertarget{_two_factor_authentication_8cshtml_8cs_source_l00071}00071 \}}
+
+\end{DoxyCode}

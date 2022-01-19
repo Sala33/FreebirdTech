@@ -1,0 +1,36 @@
+\hypertarget{_show_recovery_codes_8cshtml_8cs_source}{}\doxysection{Show\+Recovery\+Codes.\+cshtml.\+cs}
+\label{_show_recovery_codes_8cshtml_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml.cs}}
+\mbox{\hyperlink{_show_recovery_codes_8cshtml_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00005}00005 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00007}00007 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.RazorPages;}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00008}00008 \textcolor{keyword}{using} Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00010}00010 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage}{FreebirdTech.Areas.Identity.Pages.Account.Manage}}}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00012}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_show_recovery_codes_model}{00012}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_show_recovery_codes_model}{ShowRecoveryCodesModel}} : PageModel}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00014}00014         [TempData]}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00015}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_show_recovery_codes_model_aa99bd6c4880ec7f77c462c835d85ae68}{00015}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string}[] \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_show_recovery_codes_model_aa99bd6c4880ec7f77c462c835d85ae68}{RecoveryCodes}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00017}00017         [TempData]}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00018}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_show_recovery_codes_model_a694cdb5b736ae1800a0049be8030da4a}{00018}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_show_recovery_codes_model_a694cdb5b736ae1800a0049be8030da4a}{StatusMessage}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00020}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_show_recovery_codes_model_ac7727fd5c55daeb88847617dc073f6d4}{00020}}         \textcolor{keyword}{public} IActionResult \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_show_recovery_codes_model_ac7727fd5c55daeb88847617dc073f6d4}{OnGet}}()}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00021}00021         \{}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00022}00022             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_show_recovery_codes_model_aa99bd6c4880ec7f77c462c835d85ae68}{RecoveryCodes}} == \textcolor{keyword}{null} || \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_show_recovery_codes_model_aa99bd6c4880ec7f77c462c835d85ae68}{RecoveryCodes}}.Length == 0)}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00023}00023             \{}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00024}00024                 \textcolor{keywordflow}{return} RedirectToPage(\textcolor{stringliteral}{"{}./TwoFactorAuthentication"{}});}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00025}00025             \}}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00027}00027             \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00028}00028         \}}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00029}00029     \}}
+\DoxyCodeLine{\Hypertarget{_show_recovery_codes_8cshtml_8cs_source_l00030}00030 \}}
+
+\end{DoxyCode}

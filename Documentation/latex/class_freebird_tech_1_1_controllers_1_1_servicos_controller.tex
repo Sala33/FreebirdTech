@@ -1,0 +1,274 @@
+\hypertarget{class_freebird_tech_1_1_controllers_1_1_servicos_controller}{}\doxysection{Freebird\+Tech.\+Controllers.\+Servicos\+Controller Class Reference}
+\label{class_freebird_tech_1_1_controllers_1_1_servicos_controller}\index{FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}}
+
+
+This class is responsible for controlling the servico. Some of it\textquotesingle{}s responsabilities are\+:  
+
+
+Inheritance diagram for Freebird\+Tech.\+Controllers.\+Servicos\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_freebird_tech_1_1_controllers_1_1_servicos_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a99efdd9fb94f8c0ec517a44147662a46}{Servicos\+Controller}} (\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}} context, User\+Manager$<$ Identity\+User $>$ user\+Manager)
+\begin{DoxyCompactList}\small\item\em The method defines the context and user manager of the controller \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_abdc362a9518d630decda82a623ad85f5}{Index}} ()
+\begin{DoxyCompactList}\small\item\em The method is responsible for returning a list of servicos. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_aae2dfc14d9c841832dc73ed78329a816}{Details}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method searches for an existing servico to exhibit it\textquotesingle{}s details \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_ac8b12cf91a92b733f2eacf3cf63221fe}{Create\+Async}} ()
+\begin{DoxyCompactList}\small\item\em The method gets the data necessary for creating a servico \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a8a04ddeb8282397f0b36497e2e69c88a}{Create}} (\mbox{[}Bind(\char`\"{}Id,Title,Preco,Brief\+Description,Long\+Description,Topics,Publish,Gig\+Category,Address,Portfolio\+Data\char`\"{})\mbox{]} Servico servico)
+\begin{DoxyCompactList}\small\item\em The method sends the data necessary for creating a servico \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a5a136b04032451b77ec604b94ac55150}{Edit}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method edits an existing servico. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a96d80f2a1756190062d1535cd2c4a180}{Edit}} (int id, \mbox{[}Bind(\char`\"{}Id,Title,Preco,Brief\+Description,Long\+Description,Topics,Publish,Gig\+Category,Address,Portfolio\+Data,Owner\+ID\char`\"{})\mbox{]} Servico servico)
+\begin{DoxyCompactList}\small\item\em The method edits a servico and saves the changes in the database \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a0a6a6b76fcac81344999aceda8602025}{Delete}} (int? id)
+\begin{DoxyCompactList}\small\item\em The method deletes a servico from the database \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_ae943ea1e932eed0514f9ddf92e07d702}{Delete\+Confirmed}} (int id)
+\begin{DoxyCompactList}\small\item\em The method confirms if a servico was deleted \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_ac64fa3b253721812d8368394ead4a88c}{Update\+Message\+Board\+Async}} (string receiver)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is responsible for controlling the servico. Some of it\textquotesingle{}s responsabilities are\+: 
+
+
+\begin{DoxyItemize}
+\item define context and user \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller}{Servicos\+Controller}}
+\item show Index \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_abdc362a9518d630decda82a623ad85f5}{Index}}
+\item exhibit servico Details \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_aae2dfc14d9c841832dc73ed78329a816}{Details(int?)}}
+\item Create a View with a servico \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_ac8b12cf91a92b733f2eacf3cf63221fe}{Create\+Async()}}
+\item Create a servico \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a8a04ddeb8282397f0b36497e2e69c88a}{Create(\+Servico)}}
+\item Retrieves the servico to be edited \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a5a136b04032451b77ec604b94ac55150}{Edit(int?)}}
+\item Edits a servico in the database \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a96d80f2a1756190062d1535cd2c4a180}{Edit(int, Servico)}}
+\item Deletes a servico \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a0a6a6b76fcac81344999aceda8602025}{Delete(int?)}}
+\item Checks the deletion of a servico \mbox{\hyperlink{class_freebird_tech_1_1_controllers_1_1_servicos_controller_ae943ea1e932eed0514f9ddf92e07d702}{Delete\+Confirmed(int)}}
+\item Check if a servico exists Servico\+Exists(int)
+\item Get the artist based on an id Artist\+Exists(int).
+\item Get the artist based on an owner\+Id Artist\+Exists(string).
+\item Get the artist Get\+Artist(string) 
+\end{DoxyItemize}
+
+~\newline
+ 
+
+Definition at line \mbox{\hyperlink{_servicos_controller_8cs_source_l00035}{35}} of file \mbox{\hyperlink{_servicos_controller_8cs_source}{Servicos\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a99efdd9fb94f8c0ec517a44147662a46}\label{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a99efdd9fb94f8c0ec517a44147662a46}} 
+\index{FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}!ServicosController@{ServicosController}}
+\index{ServicosController@{ServicosController}!FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}}
+\doxysubsubsection{\texorpdfstring{ServicosController()}{ServicosController()}}
+{\footnotesize\ttfamily Freebird\+Tech.\+Controllers.\+Servicos\+Controller.\+Servicos\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_freebird_tech_1_1_data_1_1_application_db_context}{Application\+Db\+Context}}}]{context,  }\item[{User\+Manager$<$ Identity\+User $>$}]{user\+Manager }\end{DoxyParamCaption})}
+
+
+
+The method defines the context and user manager of the controller 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The Application\+Db\+Context of the controller\\
+\hline
+{\em user\+Manager} & The User\+Manager of the controller\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_servicos_controller_8cs_source_l00046}{46}} of file \mbox{\hyperlink{_servicos_controller_8cs_source}{Servicos\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a8a04ddeb8282397f0b36497e2e69c88a}\label{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a8a04ddeb8282397f0b36497e2e69c88a}} 
+\index{FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}!Create@{Create}}
+\index{Create@{Create}!FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Servicos\+Controller.\+Create (\begin{DoxyParamCaption}\item[{\mbox{[}\+Bind(\char`\"{}\+Id,\+Title,\+Preco,\+Brief\+Description,\+Long\+Description,\+Topics,\+Publish,\+Gig\+Category,\+Address,\+Portfolio\+Data\char`\"{})\mbox{]} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico}{Servico}}}]{servico }\end{DoxyParamCaption})}
+
+
+
+The method sends the data necessary for creating a servico 
+
+\begin{DoxyReturn}{Returns}
+A view of the servico
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_servicos_controller_8cs_source_l00135}{135}} of file \mbox{\hyperlink{_servicos_controller_8cs_source}{Servicos\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_servicos_controller_ac8b12cf91a92b733f2eacf3cf63221fe}\label{class_freebird_tech_1_1_controllers_1_1_servicos_controller_ac8b12cf91a92b733f2eacf3cf63221fe}} 
+\index{FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}!CreateAsync@{CreateAsync}}
+\index{CreateAsync@{CreateAsync}!FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}}
+\doxysubsubsection{\texorpdfstring{CreateAsync()}{CreateAsync()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Servicos\+Controller.\+Create\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method gets the data necessary for creating a servico 
+
+\begin{DoxyReturn}{Returns}
+A view of the servico
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_servicos_controller_8cs_source_l00111}{111}} of file \mbox{\hyperlink{_servicos_controller_8cs_source}{Servicos\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a0a6a6b76fcac81344999aceda8602025}\label{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a0a6a6b76fcac81344999aceda8602025}} 
+\index{FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}!Delete@{Delete}}
+\index{Delete@{Delete}!FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Servicos\+Controller.\+Delete (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method deletes a servico from the database 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The servico id \begin{DoxyReturn}{Returns}
+A view with the servico or Not\+Found
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_servicos_controller_8cs_source_l00290}{290}} of file \mbox{\hyperlink{_servicos_controller_8cs_source}{Servicos\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_servicos_controller_ae943ea1e932eed0514f9ddf92e07d702}\label{class_freebird_tech_1_1_controllers_1_1_servicos_controller_ae943ea1e932eed0514f9ddf92e07d702}} 
+\index{FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}!DeleteConfirmed@{DeleteConfirmed}}
+\index{DeleteConfirmed@{DeleteConfirmed}!FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}}
+\doxysubsubsection{\texorpdfstring{DeleteConfirmed()}{DeleteConfirmed()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Servicos\+Controller.\+Delete\+Confirmed (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+The method confirms if a servico was deleted 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The servico id \begin{DoxyReturn}{Returns}
+A Redirect\+To\+Action
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_servicos_controller_8cs_source_l00315}{315}} of file \mbox{\hyperlink{_servicos_controller_8cs_source}{Servicos\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_servicos_controller_aae2dfc14d9c841832dc73ed78329a816}\label{class_freebird_tech_1_1_controllers_1_1_servicos_controller_aae2dfc14d9c841832dc73ed78329a816}} 
+\index{FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}!Details@{Details}}
+\index{Details@{Details}!FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}}
+\doxysubsubsection{\texorpdfstring{Details()}{Details()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Servicos\+Controller.\+Details (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method searches for an existing servico to exhibit it\textquotesingle{}s details 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The Id of the servico \begin{DoxyReturn}{Returns}
+A new view of the servico selected
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_servicos_controller_8cs_source_l00069}{69}} of file \mbox{\hyperlink{_servicos_controller_8cs_source}{Servicos\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a96d80f2a1756190062d1535cd2c4a180}\label{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a96d80f2a1756190062d1535cd2c4a180}} 
+\index{FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}!Edit@{Edit}}
+\index{Edit@{Edit}!FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Servicos\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{[}\+Bind(\char`\"{}\+Id,\+Title,\+Preco,\+Brief\+Description,\+Long\+Description,\+Topics,\+Publish,\+Gig\+Category,\+Address,\+Portfolio\+Data,\+Owner\+ID\char`\"{})\mbox{]} \mbox{\hyperlink{class_freebird_tech_1_1_models_1_1_servico}{Servico}}}]{servico }\end{DoxyParamCaption})}
+
+
+
+The method edits a servico and saves the changes in the database 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The servico id 
+\begin{DoxyParams}{Parameters}
+{\em servico} & The servico to be sent \begin{DoxyReturn}{Returns}
+A view with the servico, Not\+Found or a Redirect\+To\+Action
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_servicos_controller_8cs_source_l00223}{223}} of file \mbox{\hyperlink{_servicos_controller_8cs_source}{Servicos\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a5a136b04032451b77ec604b94ac55150}\label{class_freebird_tech_1_1_controllers_1_1_servicos_controller_a5a136b04032451b77ec604b94ac55150}} 
+\index{FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}!Edit@{Edit}}
+\index{Edit@{Edit}!FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Servicos\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
+
+
+
+The method edits an existing servico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The servico id \begin{DoxyReturn}{Returns}
+A new view of the servico
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_servicos_controller_8cs_source_l00172}{172}} of file \mbox{\hyperlink{_servicos_controller_8cs_source}{Servicos\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_servicos_controller_abdc362a9518d630decda82a623ad85f5}\label{class_freebird_tech_1_1_controllers_1_1_servicos_controller_abdc362a9518d630decda82a623ad85f5}} 
+\index{FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}!Index@{Index}}
+\index{Index@{Index}!FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Servicos\+Controller.\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method is responsible for returning a list of servicos. 
+
+\begin{DoxyReturn}{Returns}
+A new view with a list of servicos
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_servicos_controller_8cs_source_l00057}{57}} of file \mbox{\hyperlink{_servicos_controller_8cs_source}{Servicos\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{class_freebird_tech_1_1_controllers_1_1_servicos_controller_ac64fa3b253721812d8368394ead4a88c}\label{class_freebird_tech_1_1_controllers_1_1_servicos_controller_ac64fa3b253721812d8368394ead4a88c}} 
+\index{FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}!UpdateMessageBoardAsync@{UpdateMessageBoardAsync}}
+\index{UpdateMessageBoardAsync@{UpdateMessageBoardAsync}!FreebirdTech.Controllers.ServicosController@{FreebirdTech.Controllers.ServicosController}}
+\doxysubsubsection{\texorpdfstring{UpdateMessageBoardAsync()}{UpdateMessageBoardAsync()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Freebird\+Tech.\+Controllers.\+Servicos\+Controller.\+Update\+Message\+Board\+Async (\begin{DoxyParamCaption}\item[{string}]{receiver }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_servicos_controller_8cs_source_l00328}{328}} of file \mbox{\hyperlink{_servicos_controller_8cs_source}{Servicos\+Controller.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Danilo/source/repos/\+Freebird\+Tech/\+Controllers/\mbox{\hyperlink{_servicos_controller_8cs}{Servicos\+Controller.\+cs}}\end{DoxyCompactItemize}

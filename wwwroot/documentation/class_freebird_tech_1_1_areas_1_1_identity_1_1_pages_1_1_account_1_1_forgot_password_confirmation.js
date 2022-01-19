@@ -1,0 +1,4 @@
+var class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_forgot_password_confirmation =
+[
+    [ "OnGet", "class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_forgot_password_confirmation.html#a0899c869caa46cd6d9ec42384db82ffe", null ]
+];

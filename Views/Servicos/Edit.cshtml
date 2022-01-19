@@ -1,0 +1,575 @@
+﻿@using FreebirdTech.Utility
+@using FreebirdTech.Extensions
+@model FreebirdTech.Models.Servico
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" integrity="sha512-0SPWAwpC/17yYyZ/4HSllgaK7/gg9OlVozq8K7rf3J8LvCjYEEIfzzpnA2/SSjpGIunCSD18r3UhvDcu/xncWA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<style type="text/css">
+    /* Set the size of the div element that contains the map */
+    #map {
+        height: 400px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+    }
+
+    #description {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    #infowindow-content .title {
+        font-weight: bold;
+    }
+
+    #infowindow-content {
+        display: none;
+    }
+
+    #map #infowindow-content {
+        display: inline;
+    }
+
+    .pac-card {
+        background-color: #fff;
+        border: 0;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+        margin: 10px;
+        padding: 0 0.5em;
+        font: 400 18px Roboto, Arial, sans-serif;
+        overflow: hidden;
+        font-family: Roboto;
+        padding: 0;
+    }
+
+    #pac-container {
+        padding-bottom: 12px;
+        margin-right: 12px;
+    }
+
+    .pac-controls {
+        display: inline-block;
+        padding: 5px 11px;
+    }
+
+        .pac-controls label {
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+    #pac-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 400px;
+    }
+
+        #pac-input:focus {
+            border-color: #4d90fe;
+        }
+
+    #title {
+        color: #fff;
+        background-color: #4d90fe;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 6px 12px;
+    }
+
+    #target {
+        width: 345px;
+    }
+
+    .image-upload > input {
+        display: none;
+    }
+
+    .img-container img {
+        max-width: 100%;
+    }
+
+    .image-upload img {
+        cursor: pointer;
+    }
+</style>
+<script>
+    // This example adds a search box to a map, using the Google Place Autocomplete
+    // feature. People can enter geographical searches. The search box will return a
+    // pick list containing a mix of places and predicted search terms.
+    // This example requires the Places library. Include the libraries=places
+    // parameter when you first load the API. For example:
+    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+    function initAutocomplete() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: -22.6617, lng: -50.4184 },
+            zoom: 13,
+            mapTypeId: "roadmap",
+
+        });
+        // Create the search box and link it to the UI element.
+        const input = document.getElementById("pac-input");
+        const searchBox = new google.maps.places.SearchBox(input);
+
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener("bounds_changed", () => {
+            searchBox.setBounds(map.getBounds());
+        });
+
+        let markers = [];
+
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place.
+        searchBox.addListener("places_changed", () => {
+            const places = searchBox.getPlaces();
+
+            if (places.length == 0) {
+                return;
+            }
+
+            // Clear out the old markers.
+            markers.forEach((marker) => {
+                marker.setMap(null);
+            });
+            markers = [];
+
+            // For each place, get the icon, name and location.
+            const bounds = new google.maps.LatLngBounds();
+
+            places.forEach((place) => {
+
+                console.log(place)
+                if (!place.geometry || !place.geometry.location) {
+                    console.log("Returned place contains no geometry");
+                    return;
+                }
+
+                const icon = {
+                    url: place.icon,
+                    size: new google.maps.Size(71, 71),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(17, 34),
+                    scaledSize: new google.maps.Size(25, 25),
+                };
+
+                // Create a marker for each place.
+                markers.push(
+                    new google.maps.Marker({
+                        map,
+                        icon,
+                        title: place.name,
+                        position: place.geometry.location,
+                    })
+                );
+                if (place.geometry.viewport) {
+                    // Only geocodes have viewport.
+                    bounds.union(place.geometry.viewport);
+                } else {
+                    bounds.extend(place.geometry.location);
+                }
+            });
+            map.fitBounds(bounds);
+        });
+    }
+</script>
+
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+    <div class="container px-0 pt-5">
+        <!-- HERO -->
+        <div class="row row-cols-12 row-cols-md-1 mb-2 mt-2">
+            <hr style="margin-left: auto; margin-right: auto; height:2px; width:100%; border-width:0; color:rgb(219, 216, 214);">
+            <!-- TITLE -->
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GigCategory" class="control-label"></label>
+                @*<select asp-for="GigCategory" class="form-select" asp-items="Html.GetEnumSelectList<ECategoriaProfissional>()"></select>*@
+                @Html.DropDownListFor(Model => Model.GigCategory, new SelectList(Model.Categorias), Model.GigCategory, new { @class = "form-control" })
+                <span asp-validation-for="GigCategory" class="text-danger"></span>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-sm-6 col-md-8 d-flex mb-2 ">
+                <div class="card  card-body border-light  justify-content-between text-white shadow">
+
+                    <!-- SPACE -->
+                    <div class=" text-dark mb-0 ">
+                    </div>
+                    <!-- BANNER -->
+                    <div class="d-flex align-items-left">
+                        <div class="meta-author">
+                            <img class="d-block img-fluid rounded-circle shadow" src="@PageRenderHelper.ValidateProfilePicture(Model.OwnerID.AvatarImageURI)"
+                                 alt="author avatar" style="max-height:100px; width:auto;">
+                        </div>
+                        <div class="m-2">
+                            <h5 class="text-dark justify-content-left">@Model.OwnerID.Name</h5>
+
+                            <ul class="list-unstyled d-flex j text-warning mb-0">
+                                <p class="text-muted">@Model.OwnerID.BriefDescription</p>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <!-- GOHAN??? -->
+                    <div class="container-sm" style="width:80%;">
+                        <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="container">
+                                        <div class="col image-upload">
+
+                                            <input asp-for="PortfolioData[0].PortfolioType" value=@EPortfolioType.IMAGEM_CAPA hidden />
+                                            <input id="Base64Avatar_0" asp-for="PortfolioData[0].EmbedLink" type="text" hidden>
+                                            <input asp-for="PortfolioData[0].Id" type="text" hidden>
+                                            <div class="row align">
+                                                <label for="imagem-portfolio_0">
+                                                    <img class="d-block img-thumbnail" id="avatar_0" src="@PageRenderHelper.ValidateCoverImage(@Model.PortfolioData[0].EmbedLink)" alt="First slide" style="object-fit: contain; margin: auto">
+                                                </label>
+                                            </div>
+                                            <div class="row image-upload">
+                                                <span class="input-group-text" id="basic-addon1">Capa do Trabalho</span>
+                                                <input id="imagem-portfolio_0" type="file" onchange="SetUpCrop(0, event)" accept="image/jpeg">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                @for (int i = 1; i < Model.PortfolioData.Length; i++)
+                                {
+                                    <div class="carousel-item">
+                                        <div class="container">
+                                            <div class="col">
+                                                <input id="Base64Avatar_@i" asp-for="PortfolioData[i].EmbedLink" type="text" hidden>
+                                                <input asp-for="PortfolioData[i].Id" type="text" hidden>
+                                                <div class="row align">
+                                                    <div id="request-response_@i">
+                                                        <img id="avatar_@i" class="d-block img-thumbnaill hideButtons m-auto" src="@PageRenderHelper.ValidateCoverImage(@Model.PortfolioData[i].EmbedLink)" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <select style="margin: 10px" class="selectorID" id="Selector_@i" onchange="ShowButton(@i, this.value)" asp-for="PortfolioData[i].PortfolioType"
+                                                            asp-items="Html.GetEnumSelectList<EPortfolioType>().Where(x => x.Text != @PageRenderHelper.GetPortfolioCapa() )">
+                                                        <option>@Model.PortfolioData[i].Type</option>
+                                                    </select>
+                                                    <input class="hideButtons" id="imagem-portfolio_@i" type="file" onchange="SetUpCrop(@i, event)" accept="image/jpeg">
+                                                    <div class="input-group mb-3 hideButtons" id="link-portfolio_@i">
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-outline-secondary" type="button" onclick="ReloadFrame(@i,
+                                                                document.getElementById('Selector_@i').value,
+                                                                document.getElementById('link-input_@i').value)">
+                                                                Preview
+                                                            </button>
+                                                        </div>
+                                                        <textarea type="text" class="form-control" asp-for="PortfolioData[i].PageEmbed"
+                                                                  id="link-input_@i" placeholder="<iframe width='560' height='315' src='https://www.youtube.com/embed/0LV3Mg6uDG0' ....></iframe>" aria-label="Recipient's username" aria-describedby="basic-addon2" rows="4">
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            <div class="col-12 justify-content-center text-center mt-5">
+                                <a class="btn btn-primary mb-5 mr-1" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <i class="fa fa-arrow-left"></i>
+                                </a>
+                                <a class="btn btn-primary mb-5 " href="#carouselExampleControls" role="button" data-slide="next">
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- PRICING CARD -->
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+
+                    <div class="card-body">
+                        <!-- PRICE -->
+                        <div class="form-group">
+                            <label asp-for="Preco" class="control-label"></label>
+                            <input asp-for="Preco" class="form-control" />
+                            <span asp-validation-for="Preco" class="text-danger"></span>
+                            <small class="text-muted fw-light"> /hora</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="BriefDescription" class="control-label"></label>
+                            <input asp-for="BriefDescription" class="form-control" />
+                            <span asp-validation-for="BriefDescription" class="text-danger"></span>
+                        </div>
+
+                        <hr style="margin-left: auto; margin-right: auto; height:2px; width:80%; border-width:0; color:rgb(194, 189, 188);">
+
+                        <!-- BULLET POINTS -->
+                        <div class="form-group">
+
+                            @for (int i = 0; i < Model.Topics.Count(); i++)
+                            {
+                                <input style="margin-top:15px; margin-bottom:15px" asp-for="Topics[i]" type="text" id="edit-email" class="form-control" value=@Model.Topics[i]>
+                            }
+
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="Publish" /> @Html.DisplayNameFor(model => model.Publish)
+                            </label>
+                            <button type="submit" value="Create" class="btn btn-primary rounded-pill pull-left col-lg-11 btn-sm">
+                                Save
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='container-fluid text_orange px-0 py-0'></div>
+
+
+        <hr style="margin-left: auto; margin-right: auto; height:2px; width:100%; border-width:0; color:rgb(194, 189, 188);">
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+        <!--ABOUT THE GIG-->
+        <div class='row justify-content-left align-items-left mt-5'>
+            <div class="form-group">
+                <label asp-for="LongDescription" class="control-label"></label>
+                <textarea asp-for="LongDescription" class="form-control" rows="10"> </textarea>
+                <span asp-validation-for="LongDescription" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Address"></label>
+            <input asp-for="Address" id="pac-input" class="controls" type="text" placeholder="Endereço do Serviço" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+
+
+        <div id="map"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAV9pf7KNH3vdLClT61MNGobaJIHiKMKVU&callback=initAutocomplete&libraries=places&v=weekly"
+                async></script>
+
+
+        <hr style="margin-left: auto; margin-right: auto; height:2px; width:100%; border-width:0; color:rgb(219, 216, 214);">
+
+        <!--ARTIST CARD-->
+        <div class='row  align-items-left'>
+            <div class='col-12 col-md-2'>
+
+                <figure class="figure mt-2">
+                    <img src='@PageRenderHelper.ValidateProfilePicture(Model.OwnerID.AvatarImageURI)' class='figure-img rounded-circle img-fluid w-85'>
+                </figure>
+            </div>
+            <div class="m-2">
+                <a asp-action="Detail" asp-controller="Artists" asp-route-id="@Model.OwnerID.Id"><h5 class="text-dark justify-content-left">@Model.OwnerID.Name</h5></a>
+
+                <ul class="list-unstyled d-flex j text-warning mb-0">
+                    <p class="text-muted">@Model.OwnerID.BriefDescription</p>
+                </ul>
+
+            </div>
+        </div>
+
+        <!--ARTIST DESCRIPTION-->
+        <div class='row justify-content-left align-items-left mt-2'>
+            <div class='col-sm-6'>
+
+                <p class="text-left mb-4 text-dark">
+                    <small>
+                        @Model.OwnerID.Description
+                    </small>
+                </p>
+                <i class="text_orange far fa-comment-alt"></i>
+                <a class="mt-5 text_orange" href="mailto:@Model.OwnerID.Contact">fale comigo</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Crop the image</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="img-container">
+                    <img id="image" src="https://avatars0.githubusercontent.com/u/3456749">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="crop">Crop</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+    <script>
+
+    var currentPortfolioType;
+
+    function ReloadFrame(index, portfolioType, url) {
+        $.ajax({
+            url: "/ArtistArea/GetFrameValidation?id=" + index + "&portfolioType=" + portfolioType + "&URL=" + url, success: function (result) {
+                $("#request-response_" + index).html(result);
+            }
+        });
+    }
+
+    function ShowButton(id, type) {
+        if (type == @(EPortfolioType.NONE.ToInt()))
+        {
+            $('#imagem-portfolio_' + id).hide();
+            $('#avatar_' + id).hide();
+            $('#link-portfolio_' + id).hide();
+        }
+        else if (type !=  @(EPortfolioType.IMAGEM.ToInt()))
+        {
+            $('#link-portfolio_' + id).show();
+            $('#imagem-portfolio_' + id).hide();
+            $('#avatar_' + id).hide();
+        }
+        else
+        {
+            $('#imagem-portfolio_' + id).show();
+            $('#avatar_' + id).show();
+            $('#link-portfolio_' + id).hide();
+        }
+    }
+
+    // hide all the divs
+    $('.hideButtons').hide()
+
+    $(".selectorID").each(function (index) {
+        if (this.value != @EPortfolioType.NONE.ToInt()) {
+        currentPortfolioType = this.value;
+        if (this.value != @EPortfolioType.IMAGEM.ToInt())
+        {
+                $('#link-portfolio_' + (index + 1)).show();
+            }
+            else {
+                $('#imagem-portfolio_' + (index + 1)).show();
+                $('#avatar_' + index + 1).show();
+            }
+        }
+        else
+        {
+            currentPortfolioType = null;
+        }
+    });
+
+    $('#CategoriaProfissional').change(function () {
+        $("#BannerTrabalho").load("GetBannerDiv?id=" + $(this).val() + " #BannerTrabalho");
+    })
+
+
+    var Base64Avatar;
+    var avatar;
+
+    function SetUpCrop(index, event) {
+        avatar = document.getElementById('avatar_' + index);
+        //var image = document.getElementById('image');
+        var input = document.getElementById('imagem-portfolio_' + index);
+        Base64Avatar = document.getElementById('Base64Avatar_' + index);
+        var $modal = $('#modal');
+
+
+        var files = event.target.files;
+        var done = function (url) {
+            input.value = '';
+            image.src = url;
+            $modal.modal('show');
+        };
+        var reader;
+        var file;
+        var url;
+
+        if (files && files.length > 0) {
+            file = files[0];
+
+            if (URL) {
+                done(URL.createObjectURL(file));
+            } else if (FileReader) {
+                reader = new FileReader();
+                reader.onload = function (e) {
+                    done(reader.result);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', function () {
+        var image = document.getElementById('image');
+        //var input = document.getElementById('input');
+        var $modal = $('#modal');
+        var cropper;
+
+        $modal.on('shown.bs.modal', function () {
+            console.log("called show");
+            cropper = new Cropper(image, {
+                aspectRatio: 1.78,
+                viewMode: 3,
+            });
+        }).on('hidden.bs.modal', function () {
+            console.log("called destroy");
+            cropper.destroy();
+            cropper = null;
+        });
+
+        document.getElementById('crop').addEventListener('click', function () {
+            var initialAvatarURL;
+            var canvas;
+
+            $modal.modal('hide');
+            console.log("cracker")
+
+            if (cropper) {
+
+                canvas = cropper.getCroppedCanvas({
+                    width: 800,
+                    height: 447,
+                });
+                initialAvatarURL = avatar.src;
+                var dataURL = canvas.toDataURL();
+                avatar.src = dataURL;
+                Base64Avatar.value = dataURL;
+            }
+            avatar = null;
+            Base64Avatar = null;
+        });
+    });
+
+    </script>

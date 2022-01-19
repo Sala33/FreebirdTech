@@ -1,0 +1,78 @@
+\hypertarget{_generate_recovery_codes_8cshtml_8cs_source}{}\doxysection{Generate\+Recovery\+Codes.\+cshtml.\+cs}
+\label{_generate_recovery_codes_8cshtml_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml.cs}}
+\mbox{\hyperlink{_generate_recovery_codes_8cshtml_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00005}00005 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00007}00007 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.RazorPages;}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00008}00008 \textcolor{keyword}{using} Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00010}00010 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage}{FreebirdTech.Areas.Identity.Pages.Account.Manage}}}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00012}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model}{00012}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model}{GenerateRecoveryCodesModel}} : PageModel}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00014}00014         \textcolor{keyword}{private} readonly UserManager<IdentityUser> \_userManager;}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00015}00015         \textcolor{keyword}{private} readonly ILogger<GenerateRecoveryCodesModel> \_logger;}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00017}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model_a623b36a324123ceb5e829b0534fde927}{00017}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model_a623b36a324123ceb5e829b0534fde927}{GenerateRecoveryCodesModel}}(}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00018}00018             UserManager<IdentityUser> userManager,}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00019}00019             ILogger<GenerateRecoveryCodesModel> logger)}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00020}00020         \{}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00021}00021             \_userManager = userManager;}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00022}00022             \_logger = logger;}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00023}00023         \}}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00025}00025         [TempData]}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00026}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model_abf077726bda97eb4bcfdfe73023dc495}{00026}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string}[] \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model_abf077726bda97eb4bcfdfe73023dc495}{RecoveryCodes}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00028}00028         [TempData]}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00029}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model_a00a9d34b14392a29ed702b53aa1c8a87}{00029}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model_a00a9d34b14392a29ed702b53aa1c8a87}{StatusMessage}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00031}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model_a50ee54536feec16e55afd09dd9efacb2}{00031}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model_a50ee54536feec16e55afd09dd9efacb2}{OnGetAsync}}()}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00032}00032         \{}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00033}00033             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00034}00034             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00035}00035             \{}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00036}00036                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID '\{\_userManager.GetUserId(User)\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00037}00037             \}}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00039}00039             var isTwoFactorEnabled = await \_userManager.GetTwoFactorEnabledAsync(user);}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00040}00040             \textcolor{keywordflow}{if} (!isTwoFactorEnabled)}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00041}00041             \{}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00042}00042                 var userId = await \_userManager.GetUserIdAsync(user);}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00043}00043                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} InvalidOperationException(\$\textcolor{stringliteral}{"{}Cannot generate recovery codes for user with ID '\{userId\}' because they do not have 2FA enabled."{}});}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00044}00044             \}}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00046}00046             \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00047}00047         \}}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00049}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model_a670a712b7185ab32849184449b26747b}{00049}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model_a670a712b7185ab32849184449b26747b}{OnPostAsync}}()}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00050}00050         \{}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00051}00051             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00052}00052             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00053}00053             \{}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00054}00054                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID '\{\_userManager.GetUserId(User)\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00055}00055             \}}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00057}00057             var isTwoFactorEnabled = await \_userManager.GetTwoFactorEnabledAsync(user);}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00058}00058             var userId = await \_userManager.GetUserIdAsync(user);}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00059}00059             \textcolor{keywordflow}{if} (!isTwoFactorEnabled)}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00060}00060             \{}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00061}00061                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} InvalidOperationException(\$\textcolor{stringliteral}{"{}Cannot generate recovery codes for user with ID '\{userId\}' as they do not have 2FA enabled."{}});}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00062}00062             \}}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00064}00064             var recoveryCodes = await \_userManager.GenerateNewTwoFactorRecoveryCodesAsync(user, 10);}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00065}00065             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model_abf077726bda97eb4bcfdfe73023dc495}{RecoveryCodes}} = recoveryCodes.ToArray();}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00067}00067             \_logger.LogInformation(\textcolor{stringliteral}{"{}User with ID '\{UserId\}' has generated new 2FA recovery codes."{}}, userId);}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00068}00068             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_generate_recovery_codes_model_a00a9d34b14392a29ed702b53aa1c8a87}{StatusMessage}} = \textcolor{stringliteral}{"{}You have generated new recovery codes."{}};}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00069}00069             \textcolor{keywordflow}{return} RedirectToPage(\textcolor{stringliteral}{"{}./ShowRecoveryCodes"{}});}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00070}00070         \}}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00071}00071     \}}
+\DoxyCodeLine{\Hypertarget{_generate_recovery_codes_8cshtml_8cs_source_l00072}00072 \}}
+
+\end{DoxyCode}

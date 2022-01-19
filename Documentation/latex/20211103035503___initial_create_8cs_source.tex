@@ -1,0 +1,363 @@
+\hypertarget{20211103035503___initial_create_8cs_source}{}\doxysection{20211103035503\+\_\+\+Initial\+Create.\+cs}
+\label{20211103035503___initial_create_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Migrations/20211103035503\_InitialCreate.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Migrations/20211103035503\_InitialCreate.cs}}
+\mbox{\hyperlink{20211103035503___initial_create_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00003}00003 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore.Migrations;}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00004}00004 \textcolor{keyword}{using} Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00006}\mbox{\hyperlink{namespace_freebird_tech_1_1_migrations}{00006}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_migrations}{FreebirdTech.Migrations}}}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00008}\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_initial_create}{00008}}     \textcolor{keyword}{public} \textcolor{keyword}{partial class }\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_initial_create}{InitialCreate}} : Migration}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00009}00009     \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00010}\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_initial_create_a8c44e859b9f7a83b798f2db32e9ff5a5}{00010}}         \textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_initial_create_a8c44e859b9f7a83b798f2db32e9ff5a5}{Up}}(MigrationBuilder migrationBuilder)}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00011}00011         \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00012}00012             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00013}00013                 name: \textcolor{stringliteral}{"{}AspNetRoles"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00014}00014                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00015}00015                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00016}00016                     Id = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00017}00017                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(256)"{}}, maxLength: 256, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00018}00018                     NormalizedName = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(256)"{}}, maxLength: 256, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00019}00019                     ConcurrencyStamp = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00020}00020                 \},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00021}00021                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00022}00022                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00023}00023                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_AspNetRoles"{}}, x => x.Id);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00024}00024                 \});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00026}00026             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00027}00027                 name: \textcolor{stringliteral}{"{}AspNetUsers"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00028}00028                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00029}00029                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00030}00030                     Id = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00031}00031                     UserName = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(256)"{}}, maxLength: 256, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00032}00032                     NormalizedUserName = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(256)"{}}, maxLength: 256, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00033}00033                     Email = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(256)"{}}, maxLength: 256, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00034}00034                     NormalizedEmail = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(256)"{}}, maxLength: 256, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00035}00035                     EmailConfirmed = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}boolean"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00036}00036                     PasswordHash = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00037}00037                     SecurityStamp = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00038}00038                     ConcurrencyStamp = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00039}00039                     PhoneNumber = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00040}00040                     PhoneNumberConfirmed = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}boolean"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00041}00041                     TwoFactorEnabled = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}boolean"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00042}00042                     LockoutEnd = table.Column<DateTimeOffset>(type: \textcolor{stringliteral}{"{}timestamp with time zone"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00043}00043                     LockoutEnabled = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}boolean"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00044}00044                     AccessFailedCount = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00045}00045                 \},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00046}00046                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00047}00047                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00048}00048                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_AspNetUsers"{}}, x => x.Id);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00049}00049                 \});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00051}00051             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00052}00052                 name: \textcolor{stringliteral}{"{}Images"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00053}00053                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00054}00054                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00055}00055                     Id = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00056}00056                         .Annotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00057}00057                     ImageTitle = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00058}00058                     ImageData = table.Column<\textcolor{keywordtype}{byte}[]>(type: \textcolor{stringliteral}{"{}bytea"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00059}00059                 \},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00060}00060                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00061}00061                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00062}00062                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Images"{}}, x => x.Id);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00063}00063                 \});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00065}00065             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00066}00066                 name: \textcolor{stringliteral}{"{}AspNetRoleClaims"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00067}00067                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00068}00068                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00069}00069                     Id = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00070}00070                         .Annotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00071}00071                     RoleId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00072}00072                     ClaimType = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00073}00073                     ClaimValue = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00074}00074                 \},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00075}00075                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00076}00076                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00077}00077                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_AspNetRoleClaims"{}}, x => x.Id);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00078}00078                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00079}00079                         name: \textcolor{stringliteral}{"{}FK\_AspNetRoleClaims\_AspNetRoles\_RoleId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00080}00080                         column: x => x.RoleId,}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00081}00081                         principalTable: \textcolor{stringliteral}{"{}AspNetRoles"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00082}00082                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00083}00083                         onDelete: ReferentialAction.Cascade);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00084}00084                 \});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00086}00086             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00087}00087                 name: \textcolor{stringliteral}{"{}AspNetUserClaims"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00088}00088                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00089}00089                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00090}00090                     Id = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00091}00091                         .Annotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00092}00092                     UserId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00093}00093                     ClaimType = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00094}00094                     ClaimValue = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00095}00095                 \},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00096}00096                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00097}00097                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00098}00098                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_AspNetUserClaims"{}}, x => x.Id);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00099}00099                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00100}00100                         name: \textcolor{stringliteral}{"{}FK\_AspNetUserClaims\_AspNetUsers\_UserId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00101}00101                         column: x => x.UserId,}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00102}00102                         principalTable: \textcolor{stringliteral}{"{}AspNetUsers"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00103}00103                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00104}00104                         onDelete: ReferentialAction.Cascade);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00105}00105                 \});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00107}00107             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00108}00108                 name: \textcolor{stringliteral}{"{}AspNetUserLogins"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00109}00109                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00110}00110                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00111}00111                     LoginProvider = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(128)"{}}, maxLength: 128, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00112}00112                     ProviderKey = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(128)"{}}, maxLength: 128, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00113}00113                     ProviderDisplayName = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00114}00114                     UserId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00115}00115                 \},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00116}00116                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00117}00117                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00118}00118                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_AspNetUserLogins"{}}, x => \textcolor{keyword}{new} \{ x.LoginProvider, x.ProviderKey \});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00119}00119                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00120}00120                         name: \textcolor{stringliteral}{"{}FK\_AspNetUserLogins\_AspNetUsers\_UserId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00121}00121                         column: x => x.UserId,}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00122}00122                         principalTable: \textcolor{stringliteral}{"{}AspNetUsers"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00123}00123                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00124}00124                         onDelete: ReferentialAction.Cascade);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00125}00125                 \});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00127}00127             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00128}00128                 name: \textcolor{stringliteral}{"{}AspNetUserRoles"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00129}00129                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00130}00130                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00131}00131                     UserId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00132}00132                     RoleId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00133}00133                 \},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00134}00134                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00135}00135                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00136}00136                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_AspNetUserRoles"{}}, x => \textcolor{keyword}{new} \{ x.UserId, x.RoleId \});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00137}00137                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00138}00138                         name: \textcolor{stringliteral}{"{}FK\_AspNetUserRoles\_AspNetRoles\_RoleId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00139}00139                         column: x => x.RoleId,}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00140}00140                         principalTable: \textcolor{stringliteral}{"{}AspNetRoles"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00141}00141                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00142}00142                         onDelete: ReferentialAction.Cascade);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00143}00143                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00144}00144                         name: \textcolor{stringliteral}{"{}FK\_AspNetUserRoles\_AspNetUsers\_UserId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00145}00145                         column: x => x.UserId,}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00146}00146                         principalTable: \textcolor{stringliteral}{"{}AspNetUsers"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00147}00147                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00148}00148                         onDelete: ReferentialAction.Cascade);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00149}00149                 \});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00151}00151             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00152}00152                 name: \textcolor{stringliteral}{"{}AspNetUserTokens"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00153}00153                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00154}00154                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00155}00155                     UserId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00156}00156                     LoginProvider = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(128)"{}}, maxLength: 128, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00157}00157                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(128)"{}}, maxLength: 128, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00158}00158                     Value = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00159}00159                 \},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00160}00160                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00161}00161                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00162}00162                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_AspNetUserTokens"{}}, x => \textcolor{keyword}{new} \{ x.UserId, x.LoginProvider, x.Name \});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00163}00163                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00164}00164                         name: \textcolor{stringliteral}{"{}FK\_AspNetUserTokens\_AspNetUsers\_UserId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00165}00165                         column: x => x.UserId,}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00166}00166                         principalTable: \textcolor{stringliteral}{"{}AspNetUsers"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00167}00167                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00168}00168                         onDelete: ReferentialAction.Cascade);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00169}00169                 \});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00170}00170 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00171}00171             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00172}00172                 name: \textcolor{stringliteral}{"{}Artists"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00173}00173                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00174}00174                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00175}00175                     Id = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00176}00176                         .Annotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00177}00177                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00178}00178                     Categoria = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00179}00179                     BriefDescription = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(150)"{}}, maxLength: 150, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00180}00180                     Contact = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00181}00181                     Description = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(500)"{}}, maxLength: 500, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00182}00182                     OwnerId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00183}00183                     AvatarImageId = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00184}00184                 \},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00185}00185                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00186}00186                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00187}00187                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Artists"{}}, x => x.Id);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00188}00188                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00189}00189                         name: \textcolor{stringliteral}{"{}FK\_Artists\_Images\_AvatarImageId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00190}00190                         column: x => x.AvatarImageId,}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00191}00191                         principalTable: \textcolor{stringliteral}{"{}Images"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00192}00192                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00193}00193                         onDelete: ReferentialAction.Restrict);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00194}00194                 \});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00195}00195 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00196}00196             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00197}00197                 name: \textcolor{stringliteral}{"{}Servicos"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00198}00198                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00199}00199                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00200}00200                     Id = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00201}00201                         .Annotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00202}00202                     Title = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(50)"{}}, maxLength: 50, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00203}00203                     Preco = table.Column<\textcolor{keywordtype}{float}>(type: \textcolor{stringliteral}{"{}real"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00204}00204                     BriefDescription = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(128)"{}}, maxLength: 128, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00205}00205                     LongDescription = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}character varying(1000)"{}}, maxLength: 1000, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00206}00206                     Topics = table.Column<List<string>>(type: \textcolor{stringliteral}{"{}text[]"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00207}00207                     Publish = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}boolean"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00208}00208                     OwnerIDId = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00209}00209                     GigCategory = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00210}00210                     Address = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00211}00211                 \},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00212}00212                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00213}00213                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00214}00214                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Servicos"{}}, x => x.Id);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00215}00215                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00216}00216                         name: \textcolor{stringliteral}{"{}FK\_Servicos\_Artists\_OwnerIDId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00217}00217                         column: x => x.OwnerIDId,}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00218}00218                         principalTable: \textcolor{stringliteral}{"{}Artists"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00219}00219                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00220}00220                         onDelete: ReferentialAction.Restrict);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00221}00221                 \});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00222}00222 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00223}00223             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00224}00224                 name: \textcolor{stringliteral}{"{}Portfolios"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00225}00225                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00226}00226                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00227}00227                     Id = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00228}00228                         .Annotation(\textcolor{stringliteral}{"{}Npgsql:ValueGenerationStrategy"{}}, NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00229}00229                     OwnerArtistId = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00230}00230                     OwnerServicoId = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00231}00231                     PortfolioType = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00232}00232                     EmbedLink = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}text"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00233}00233                     ImageId = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}integer"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00234}00234                 \},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00235}00235                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00236}00236                 \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00237}00237                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Portfolios"{}}, x => x.Id);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00238}00238                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00239}00239                         name: \textcolor{stringliteral}{"{}FK\_Portfolios\_Artists\_OwnerArtistId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00240}00240                         column: x => x.OwnerArtistId,}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00241}00241                         principalTable: \textcolor{stringliteral}{"{}Artists"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00242}00242                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00243}00243                         onDelete: ReferentialAction.Restrict);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00244}00244                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00245}00245                         name: \textcolor{stringliteral}{"{}FK\_Portfolios\_Images\_ImageId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00246}00246                         column: x => x.ImageId,}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00247}00247                         principalTable: \textcolor{stringliteral}{"{}Images"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00248}00248                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00249}00249                         onDelete: ReferentialAction.Restrict);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00250}00250                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00251}00251                         name: \textcolor{stringliteral}{"{}FK\_Portfolios\_Servicos\_OwnerServicoId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00252}00252                         column: x => x.OwnerServicoId,}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00253}00253                         principalTable: \textcolor{stringliteral}{"{}Servicos"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00254}00254                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00255}00255                         onDelete: ReferentialAction.Restrict);}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00256}00256                 \});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00257}00257 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00258}00258             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00259}00259                 name: \textcolor{stringliteral}{"{}IX\_Artists\_AvatarImageId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00260}00260                 table: \textcolor{stringliteral}{"{}Artists"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00261}00261                 column: \textcolor{stringliteral}{"{}AvatarImageId"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00262}00262 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00263}00263             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00264}00264                 name: \textcolor{stringliteral}{"{}IX\_AspNetRoleClaims\_RoleId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00265}00265                 table: \textcolor{stringliteral}{"{}AspNetRoleClaims"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00266}00266                 column: \textcolor{stringliteral}{"{}RoleId"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00267}00267 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00268}00268             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00269}00269                 name: \textcolor{stringliteral}{"{}RoleNameIndex"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00270}00270                 table: \textcolor{stringliteral}{"{}AspNetRoles"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00271}00271                 column: \textcolor{stringliteral}{"{}NormalizedName"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00272}00272                 unique: \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00273}00273 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00274}00274             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00275}00275                 name: \textcolor{stringliteral}{"{}IX\_AspNetUserClaims\_UserId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00276}00276                 table: \textcolor{stringliteral}{"{}AspNetUserClaims"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00277}00277                 column: \textcolor{stringliteral}{"{}UserId"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00278}00278 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00279}00279             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00280}00280                 name: \textcolor{stringliteral}{"{}IX\_AspNetUserLogins\_UserId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00281}00281                 table: \textcolor{stringliteral}{"{}AspNetUserLogins"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00282}00282                 column: \textcolor{stringliteral}{"{}UserId"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00283}00283 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00284}00284             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00285}00285                 name: \textcolor{stringliteral}{"{}IX\_AspNetUserRoles\_RoleId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00286}00286                 table: \textcolor{stringliteral}{"{}AspNetUserRoles"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00287}00287                 column: \textcolor{stringliteral}{"{}RoleId"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00288}00288 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00289}00289             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00290}00290                 name: \textcolor{stringliteral}{"{}EmailIndex"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00291}00291                 table: \textcolor{stringliteral}{"{}AspNetUsers"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00292}00292                 column: \textcolor{stringliteral}{"{}NormalizedEmail"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00293}00293 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00294}00294             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00295}00295                 name: \textcolor{stringliteral}{"{}UserNameIndex"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00296}00296                 table: \textcolor{stringliteral}{"{}AspNetUsers"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00297}00297                 column: \textcolor{stringliteral}{"{}NormalizedUserName"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00298}00298                 unique: \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00299}00299 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00300}00300             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00301}00301                 name: \textcolor{stringliteral}{"{}IX\_Portfolios\_ImageId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00302}00302                 table: \textcolor{stringliteral}{"{}Portfolios"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00303}00303                 column: \textcolor{stringliteral}{"{}ImageId"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00304}00304 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00305}00305             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00306}00306                 name: \textcolor{stringliteral}{"{}IX\_Portfolios\_OwnerArtistId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00307}00307                 table: \textcolor{stringliteral}{"{}Portfolios"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00308}00308                 column: \textcolor{stringliteral}{"{}OwnerArtistId"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00309}00309 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00310}00310             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00311}00311                 name: \textcolor{stringliteral}{"{}IX\_Portfolios\_OwnerServicoId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00312}00312                 table: \textcolor{stringliteral}{"{}Portfolios"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00313}00313                 column: \textcolor{stringliteral}{"{}OwnerServicoId"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00314}00314 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00315}00315             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00316}00316                 name: \textcolor{stringliteral}{"{}IX\_Servicos\_OwnerIDId"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00317}00317                 table: \textcolor{stringliteral}{"{}Servicos"{}},}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00318}00318                 column: \textcolor{stringliteral}{"{}OwnerIDId"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00319}00319         \}}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00320}00320 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00321}\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_initial_create_a7c34c3c02a3c0ecb6f1b1496b589ae98}{00321}}         \textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_initial_create_a7c34c3c02a3c0ecb6f1b1496b589ae98}{Down}}(MigrationBuilder migrationBuilder)}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00322}00322         \{}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00323}00323             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00324}00324                 name: \textcolor{stringliteral}{"{}AspNetRoleClaims"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00325}00325 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00326}00326             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00327}00327                 name: \textcolor{stringliteral}{"{}AspNetUserClaims"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00328}00328 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00329}00329             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00330}00330                 name: \textcolor{stringliteral}{"{}AspNetUserLogins"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00331}00331 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00332}00332             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00333}00333                 name: \textcolor{stringliteral}{"{}AspNetUserRoles"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00334}00334 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00335}00335             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00336}00336                 name: \textcolor{stringliteral}{"{}AspNetUserTokens"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00337}00337 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00338}00338             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00339}00339                 name: \textcolor{stringliteral}{"{}Portfolios"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00340}00340 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00341}00341             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00342}00342                 name: \textcolor{stringliteral}{"{}AspNetRoles"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00343}00343 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00344}00344             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00345}00345                 name: \textcolor{stringliteral}{"{}AspNetUsers"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00346}00346 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00347}00347             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00348}00348                 name: \textcolor{stringliteral}{"{}Servicos"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00349}00349 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00350}00350             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00351}00351                 name: \textcolor{stringliteral}{"{}Artists"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00352}00352 }
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00353}00353             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00354}00354                 name: \textcolor{stringliteral}{"{}Images"{}});}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00355}00355         \}}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00356}00356     \}}
+\DoxyCodeLine{\Hypertarget{20211103035503___initial_create_8cs_source_l00357}00357 \}}
+
+\end{DoxyCode}

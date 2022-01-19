@@ -1,0 +1,101 @@
+\hypertarget{20211113003708___add_calendar_owner_8cs_source}{}\doxysection{20211113003708\+\_\+\+Add\+Calendar\+Owner.\+cs}
+\label{20211113003708___add_calendar_owner_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Migrations/20211113003708\_AddCalendarOwner.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Migrations/20211113003708\_AddCalendarOwner.cs}}
+\mbox{\hyperlink{20211113003708___add_calendar_owner_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00001}00001 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore.Migrations;}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_migrations}{FreebirdTech.Migrations}}}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00004}00004 \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00005}\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_add_calendar_owner}{00005}}     \textcolor{keyword}{public} \textcolor{keyword}{partial class }\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_add_calendar_owner}{AddCalendarOwner}} : Migration}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00006}00006     \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00007}\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_add_calendar_owner_a7d4847f1ed544291876cc0f7d94c9c06}{00007}}         \textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_add_calendar_owner_a7d4847f1ed544291876cc0f7d94c9c06}{Up}}(MigrationBuilder migrationBuilder)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00008}00008         \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00009}00009             migrationBuilder.AlterColumn<\textcolor{keywordtype}{string}>(}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00010}00010                 name: \textcolor{stringliteral}{"{}MessageText"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00011}00011                 table: \textcolor{stringliteral}{"{}Message"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00012}00012                 type: \textcolor{stringliteral}{"{}character varying(170)"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00013}00013                 maxLength: 170,}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00014}00014                 nullable: \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00015}00015                 defaultValue: \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00016}00016                 oldClrType: typeof(\textcolor{keywordtype}{string}),}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00017}00017                 oldType: \textcolor{stringliteral}{"{}text"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00018}00018                 oldNullable: \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00020}00020             migrationBuilder.AddColumn<\textcolor{keywordtype}{int}>(}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00021}00021                 name: \textcolor{stringliteral}{"{}ArtistId"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00022}00022                 table: \textcolor{stringliteral}{"{}CalendarEvent"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00023}00023                 type: \textcolor{stringliteral}{"{}integer"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00024}00024                 nullable: \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00026}00026             migrationBuilder.AddColumn<\textcolor{keywordtype}{int}>(}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00027}00027                 name: \textcolor{stringliteral}{"{}ServicoId"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00028}00028                 table: \textcolor{stringliteral}{"{}CalendarEvent"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00029}00029                 type: \textcolor{stringliteral}{"{}integer"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00030}00030                 nullable: \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00032}00032             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00033}00033                 name: \textcolor{stringliteral}{"{}IX\_CalendarEvent\_ArtistId"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00034}00034                 table: \textcolor{stringliteral}{"{}CalendarEvent"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00035}00035                 column: \textcolor{stringliteral}{"{}ArtistId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00037}00037             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00038}00038                 name: \textcolor{stringliteral}{"{}IX\_CalendarEvent\_ServicoId"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00039}00039                 table: \textcolor{stringliteral}{"{}CalendarEvent"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00040}00040                 column: \textcolor{stringliteral}{"{}ServicoId"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00042}00042             migrationBuilder.AddForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00043}00043                 name: \textcolor{stringliteral}{"{}FK\_CalendarEvent\_Artists\_ArtistId"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00044}00044                 table: \textcolor{stringliteral}{"{}CalendarEvent"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00045}00045                 column: \textcolor{stringliteral}{"{}ArtistId"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00046}00046                 principalTable: \textcolor{stringliteral}{"{}Artists"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00047}00047                 principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00048}00048                 onDelete: ReferentialAction.Restrict);}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00050}00050             migrationBuilder.AddForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00051}00051                 name: \textcolor{stringliteral}{"{}FK\_CalendarEvent\_Servicos\_ServicoId"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00052}00052                 table: \textcolor{stringliteral}{"{}CalendarEvent"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00053}00053                 column: \textcolor{stringliteral}{"{}ServicoId"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00054}00054                 principalTable: \textcolor{stringliteral}{"{}Servicos"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00055}00055                 principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00056}00056                 onDelete: ReferentialAction.Restrict);}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00057}00057         \}}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00059}\mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_add_calendar_owner_a5e0411ef7d4d6726f80d8a5211758bbf}{00059}}         \textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_freebird_tech_1_1_migrations_1_1_add_calendar_owner_a5e0411ef7d4d6726f80d8a5211758bbf}{Down}}(MigrationBuilder migrationBuilder)}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00060}00060         \{}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00061}00061             migrationBuilder.DropForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00062}00062                 name: \textcolor{stringliteral}{"{}FK\_CalendarEvent\_Artists\_ArtistId"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00063}00063                 table: \textcolor{stringliteral}{"{}CalendarEvent"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00065}00065             migrationBuilder.DropForeignKey(}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00066}00066                 name: \textcolor{stringliteral}{"{}FK\_CalendarEvent\_Servicos\_ServicoId"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00067}00067                 table: \textcolor{stringliteral}{"{}CalendarEvent"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00069}00069             migrationBuilder.DropIndex(}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00070}00070                 name: \textcolor{stringliteral}{"{}IX\_CalendarEvent\_ArtistId"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00071}00071                 table: \textcolor{stringliteral}{"{}CalendarEvent"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00073}00073             migrationBuilder.DropIndex(}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00074}00074                 name: \textcolor{stringliteral}{"{}IX\_CalendarEvent\_ServicoId"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00075}00075                 table: \textcolor{stringliteral}{"{}CalendarEvent"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00077}00077             migrationBuilder.DropColumn(}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00078}00078                 name: \textcolor{stringliteral}{"{}ArtistId"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00079}00079                 table: \textcolor{stringliteral}{"{}CalendarEvent"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00081}00081             migrationBuilder.DropColumn(}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00082}00082                 name: \textcolor{stringliteral}{"{}ServicoId"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00083}00083                 table: \textcolor{stringliteral}{"{}CalendarEvent"{}});}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00085}00085             migrationBuilder.AlterColumn<\textcolor{keywordtype}{string}>(}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00086}00086                 name: \textcolor{stringliteral}{"{}MessageText"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00087}00087                 table: \textcolor{stringliteral}{"{}Message"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00088}00088                 type: \textcolor{stringliteral}{"{}text"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00089}00089                 nullable: \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00090}00090                 oldClrType: typeof(\textcolor{keywordtype}{string}),}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00091}00091                 oldType: \textcolor{stringliteral}{"{}character varying(170)"{}},}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00092}00092                 oldMaxLength: 170);}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00093}00093         \}}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00094}00094     \}}
+\DoxyCodeLine{\Hypertarget{20211113003708___add_calendar_owner_8cs_source_l00095}00095 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,89 @@
+\hypertarget{_delete_personal_data_8cshtml_8cs_source}{}\doxysection{Delete\+Personal\+Data.\+cshtml.\+cs}
+\label{_delete_personal_data_8cshtml_8cs_source}\index{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml.cs@{C:/Users/Danilo/source/repos/FreebirdTech/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml.cs}}
+\mbox{\hyperlink{_delete_personal_data_8cshtml_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00002}00002 \textcolor{keyword}{using} System.ComponentModel.DataAnnotations;}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00004}00004 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00005}00005 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.RazorPages;}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00007}00007 \textcolor{keyword}{using} Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00009}00009 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage}{FreebirdTech.Areas.Identity.Pages.Account.Manage}}}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00011}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model}{00011}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model}{DeletePersonalDataModel}} : PageModel}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00012}00012     \{}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00013}00013         \textcolor{keyword}{private} readonly UserManager<IdentityUser> \_userManager;}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00014}00014         \textcolor{keyword}{private} readonly SignInManager<IdentityUser> \_signInManager;}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00015}00015         \textcolor{keyword}{private} readonly ILogger<DeletePersonalDataModel> \_logger;}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00017}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_a6c4c0cffeebe7296477ff89d920aff03}{00017}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_a6c4c0cffeebe7296477ff89d920aff03}{DeletePersonalDataModel}}(}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00018}00018             UserManager<IdentityUser> userManager,}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00019}00019             SignInManager<IdentityUser> signInManager,}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00020}00020             ILogger<DeletePersonalDataModel> logger)}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00021}00021         \{}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00022}00022             \_userManager = userManager;}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00023}00023             \_signInManager = signInManager;}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00024}00024             \_logger = logger;}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00025}00025         \}}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00027}00027         [BindProperty]}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00028}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_aa24d9eaa38b0bc5d39a466303d98ab17}{00028}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_1_1_input_model}{InputModel}} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_aa24d9eaa38b0bc5d39a466303d98ab17}{Input}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00030}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_1_1_input_model}{00030}}         \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_1_1_input_model}{InputModel}}}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00031}00031         \{}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00032}00032             [Required]}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00033}00033             [DataType(DataType.Password)]}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00034}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_1_1_input_model_aa234ef69123300341ffd6977ba81b791}{00034}}             \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_1_1_input_model_aa234ef69123300341ffd6977ba81b791}{Password}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00035}00035         \}}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00037}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_afe6ccb2bab2c75203074e04b7da9bcb7}{00037}}         \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_afe6ccb2bab2c75203074e04b7da9bcb7}{RequirePassword}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00039}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_aa8b7dee93066b1d49e5c51e8586127c4}{00039}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_aa8b7dee93066b1d49e5c51e8586127c4}{OnGet}}()}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00040}00040         \{}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00041}00041             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00042}00042             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00043}00043             \{}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00044}00044                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID '\{\_userManager.GetUserId(User)\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00045}00045             \}}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00047}00047             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_afe6ccb2bab2c75203074e04b7da9bcb7}{RequirePassword}} = await \_userManager.HasPasswordAsync(user);}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00048}00048             \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00049}00049         \}}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00051}\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_a231d501b57a855ed960be0f7508f47b5}{00051}}         \textcolor{keyword}{public} async Task<IActionResult> \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_a231d501b57a855ed960be0f7508f47b5}{OnPostAsync}}()}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00052}00052         \{}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00053}00053             var user = await \_userManager.GetUserAsync(User);}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00054}00054             \textcolor{keywordflow}{if} (user == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00055}00055             \{}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00056}00056                 \textcolor{keywordflow}{return} NotFound(\$\textcolor{stringliteral}{"{}Unable to load user with ID '\{\_userManager.GetUserId(User)\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00057}00057             \}}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00059}00059             \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_afe6ccb2bab2c75203074e04b7da9bcb7}{RequirePassword}} = await \_userManager.HasPasswordAsync(user);}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00060}00060             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_afe6ccb2bab2c75203074e04b7da9bcb7}{RequirePassword}})}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00061}00061             \{}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00062}00062                 \textcolor{keywordflow}{if} (!await \_userManager.CheckPasswordAsync(user, \mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_aa24d9eaa38b0bc5d39a466303d98ab17}{Input}}.\mbox{\hyperlink{class_freebird_tech_1_1_areas_1_1_identity_1_1_pages_1_1_account_1_1_manage_1_1_delete_personal_data_model_1_1_input_model_aa234ef69123300341ffd6977ba81b791}{Password}}))}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00063}00063                 \{}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00064}00064                     ModelState.AddModelError(\textcolor{keywordtype}{string}.Empty, \textcolor{stringliteral}{"{}Incorrect password."{}});}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00065}00065                     \textcolor{keywordflow}{return} Page();}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00066}00066                 \}}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00067}00067             \}}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00069}00069             var result = await \_userManager.DeleteAsync(user);}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00070}00070             var userId = await \_userManager.GetUserIdAsync(user);}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00071}00071             \textcolor{keywordflow}{if} (!result.Succeeded)}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00072}00072             \{}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00073}00073                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} InvalidOperationException(\$\textcolor{stringliteral}{"{}Unexpected error occurred deleting user with ID '\{userId\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00074}00074             \}}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00076}00076             await \_signInManager.SignOutAsync();}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00078}00078             \_logger.LogInformation(\textcolor{stringliteral}{"{}User with ID '\{UserId\}' deleted themselves."{}}, userId);}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00080}00080             \textcolor{keywordflow}{return} Redirect(\textcolor{stringliteral}{"{}\string~/"{}});}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00081}00081         \}}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00082}00082     \}}
+\DoxyCodeLine{\Hypertarget{_delete_personal_data_8cshtml_8cs_source_l00083}00083 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,17 @@
+	<svg class="freebird-logo" xmlns="http://www.w3.org/2000/svg" width="40.999"
+				height="44.274" viewBox="0 0 40.999 44.274">
+				<g id="Group_90" data-name="Group 90" transform="translate(-886 -56.864)">
+					<path id="Path_22" data-name="Path 22"
+						d="M152.241,226.188h-8.533a4,4,0,0,1-3.657-5.615,13.95,13.95,0,0,1,12.16-8.317.581.581,0,0,1,.608.579V225.61A.579.579,0,0,1,152.241,226.188Z"
+						transform="translate(746.293 -155.379)" fill="#fe9d08" />
+					<path id="Path_23" data-name="Path 23"
+						d="M175.818,234.348V214.859a2.644,2.644,0,0,1,2.988-2.624,22.316,22.316,0,0,1,19.323,22.113Z"
+						transform="translate(720.253 -155.348)" fill="#eb4424" />
+					<path id="Path_24" data-name="Path 24"
+						d="M194.838,234.8h0a4.057,4.057,0,0,1-4.057,4.057h0a4.057,4.057,0,0,1,0-8.114h0a4.057,4.057,0,0,1,4.057,4.057"
+						transform="translate(712.389 -168.713)" fill="#fff" />
+					<path id="Path_25" data-name="Path 25"
+						d="M198.129,291.585v19.488a2.645,2.645,0,0,1-2.988,2.624,22.316,22.316,0,0,1-19.323-22.113Z"
+						transform="translate(720.253 -212.584)" fill="#fe9d08" />
+				</g>
+			</svg>

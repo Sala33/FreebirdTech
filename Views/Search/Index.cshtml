@@ -1,0 +1,76 @@
+﻿@using FreebirdTech.Utility
+@model FreebirdTech.ViewComponents.SearchViewModel
+@*
+	For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<section>
+	<div class='container-fluid my-5' style="right:50%">
+		<div class="row my-5 py-5">
+			<!-- LEFT MENU -->
+			<div class="sidenav col-md-2">
+
+				@foreach (string i in Model.Categorias)
+				{
+					<a asp-controller="Search" asp-action="Index" asp-route-category="true" asp-route-search="@i" asp-route-iscategory="true">
+						@i
+					</a>
+				}
+
+			</div>
+
+			<!-- SPACE -->
+			<div class="vl" style='border-left:1px solid #c8cccf;
+				height:500px;
+				position:absolute;
+				left:220px;
+				top:180px; '></div>
+
+			<!-- CARDS -->
+			<div class="col-md-10">
+				<div class="container recursoCards" style='background-color: rgb(248, 246, 246);'>
+					<div class="card-columns">
+
+						@if (Model.Cards.Length == 0)
+						{
+							<h3>
+								<a class="text_orange" href="index.html">
+									<strong>
+										Nenhum Profissional encontrado
+									</strong>
+								</a>
+							</h3>
+
+						}
+						else
+						{
+
+							@foreach (var item in Model.Cards)
+							{
+								<div class="card shadow-lg">
+									<img class="card-img-top" src=@item.ImageData alt="Card image cap">
+									<div class="card-body">
+										<a asp-controller="Servicos" asp-action="Details" asp-route-id="@item.ID">
+											<h5 class="card-title">@item.Title</h5>
+										</a>
+										<div class="p-3 text-right">
+											<blockquote class="blockquote mb-0">
+												<p>@item.BriefDescription</p>
+												<footer class="blockquote-footer">
+													<small class="text-muted">
+														@item.Categoria <cite title="Source Title">• @item.OwnerName</cite>
+													</small>
+												</footer>
+											</blockquote>
+										</div>
+									</div>
+								</div>
+							}
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
