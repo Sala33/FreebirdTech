@@ -42,7 +42,7 @@ namespace FreebirdTech.Controllers
 
             var Categorias = _context.Categorias.AsNoTracking().ToArray();
 
-            if (!string.IsNullOrEmpty(search))
+            if (!string.IsNullOrEmpty(iscategory) && iscategory.Equals("true"))
             {
                 if (iscategory.Equals("true"))
                 {
