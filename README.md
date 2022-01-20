@@ -7,7 +7,7 @@
 ![Size](https://img.shields.io/github/repo-size/Sala33/FreebirdTech)
 ![License](https://img.shields.io/github/license/Sala33/FreebirdTech)
 
-<img src="wwwroot/img/backg1.png" alt="exemplo imagem">
+<img src="Readme/Opcao2.png" alt="exemplo imagem">
 
 >Ferramenta Open Source para fomentar empresas, ecossistemas, organizações e associações da Indústria Criativa. Cada usuário tem liberdade para executar, acessar, modificar e desenvolver o código fonte para ser implementado em ecossistemas criativos.
 
@@ -96,7 +96,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/c0nundrum">
         <img src="https://avatars.githubusercontent.com/u/7014553?s=400&u=065c83fe069588dff1cbf06aa54690f50fda7e2c&v=4" width="100px;" alt="Foto do Danilo Ribeiro no GitHub"/><br>
         <sub>
           <b>Danilo Ribeiro</b>
@@ -104,16 +104,35 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
-      <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/24363588?v=4" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+      <a href="https://github.com/enirya">
+        <img src="https://avatars.githubusercontent.com/u/24363588?v=4" width="100px;" alt="Foto da Tayrine"/><br>
         <sub>
           <b>Tayrine Lopes</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/fabricciocanhete">
+        <img src="https://avatars.githubusercontent.com/u/82179914?v=4" width="100px;" alt="Foto do Fabriccio"/><br>
+        <sub>
+          <b>Fabriccio Canhete</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/guscooke">
+        <img src="https://avatars.githubusercontent.com/u/54864329?v=4" width="100px;" alt="Foto do Gustavo"/><br>
+        <sub>
+          <b>Gustavo Cooke</b>
         </sub>
       </a>
     </td>
   </tr>
 </table>
 
+## Agradecimentos
+
+<img src="Readme/regua.png" alt="logos">
 
 ## 📝 Licença
 
