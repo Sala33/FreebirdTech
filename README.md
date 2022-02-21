@@ -9,13 +9,13 @@
 
 <img src="Readme/Opcao2.png" alt="exemplo imagem">
 
->Ferramenta Open Source para fomentar empresas, ecossistemas, organizações e associações da Indústria Criativa. Cada usuário tem liberdade para executar, acessar, modificar e desenvolver o código fonte para ser implementado em ecossistemas criativos.
+>Ferramenta Open Source para fomentar empresas, ecossistemas, organizações e associações da Indústria Criativa. Cada usuário tem liberdade para executar, acessar, modificar e desenvolver o código fonte para ser implementado em ecossistemas criativos. Esta é a versão plug and play. Tambem está [disponível](https://github.com/Sala33/freebird-react-api) a versão Serverless focada em extensão de microsserviços.
 
 ## Implementações
 
-O Freebird vem em três formas:
+O Freebird vem em duas formas:
 * A versão em [MVC](https://towardsdatascience.com/everything-you-need-to-know-about-mvc-architecture-3c827930b4c1) desse repositório
-* A versão orientada à microsserviços, separada em API/Cliente - Programada para o dia 31/01
+* A versão Serverless orientada à [microsserviços](https://github.com/Sala33/freebird-react-api), separada em API/Cliente.
 * A linguagem do Back-end é c# .NetCore 5.0
 * O front end do MVC está em [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor)
 * O front end do cliente está em React.
@@ -27,8 +27,9 @@ Roadmap:
 - [x] Arquitetura MVC em Blazor
 - [x] Back end .NetCore
 - [x] Modificação para MicroServiços
-- [ ] Habilitação da API em .NetCore
-- [ ] Habilitação de plugins de Front-End em React
+- [x] Solução [Serverless](https://github.com/Sala33/freebird-react-api) focada em Microsserviços
+- [x] Habilitação de plugins de Front-End em React
+- [X] Criação de Back end NoSQL de fácil implantação
 
 ## 💻 Pré-requisitos
 <!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
