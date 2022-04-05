@@ -97,6 +97,14 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
+      <a href="https://github.com/iangigliotti">
+        <img src="https://avatars.githubusercontent.com/u/42014993?v=4" width="100px;" alt="Foto do Ian Gigliotti no GitHub"/><br>
+        <sub>
+          <b>Ian Gigliotti</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
       <a href="https://github.com/c0nundrum">
         <img src="https://avatars.githubusercontent.com/u/7014553?s=400&u=065c83fe069588dff1cbf06aa54690f50fda7e2c&v=4" width="100px;" alt="Foto do Danilo Ribeiro no GitHub"/><br>
         <sub>
